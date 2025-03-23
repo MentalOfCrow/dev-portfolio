@@ -84,9 +84,9 @@ echo "Généré le " . date('Y-m-d H:i:s') . "\n";
 // Polyfills pour PHP < 8.0
 if (!function_exists('str_ends_with')) {
     function str_ends_with($haystack, $needle) {
-        if ($needle === '') return true;
-        if ($haystack === '') return false;
-        return substr($haystack, -strlen($needle)) === $needle;
+        $length = strlen($needle);
+        if ($length == 0) return true;
+        return substr($haystack, -$length) === $needle;
     }
 }
 
