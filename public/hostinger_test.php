@@ -3,6 +3,30 @@
  * Fichier de test pour vérifier la configuration sur Hostinger
  */
 
+// Entête pour l'affichage en texte brut
+header('Content-Type: text/plain');
+
+echo "=== VÉRIFICATION DU DOCUMENT ROOT ===\n\n";
+
+echo "Document Root: " . $_SERVER['DOCUMENT_ROOT'] . "\n";
+echo "Chemin absolu du script: " . __FILE__ . "\n";
+echo "Chemin relatif: " . $_SERVER['PHP_SELF'] . "\n\n";
+
+// Vérifier si public est bien le document root
+$expectedPath = '/public_html/public';
+$documentRoot = $_SERVER['DOCUMENT_ROOT'];
+
+// Version compatible avec PHP 7.x - PAS DE str_ends_with
+$publicCheck = substr($documentRoot, -7) === '/public';
+
+if ($publicCheck) {
+    echo "✓ CORRECT: Le document root se termine bien par '/public'\n";
+} else {
+    echo "✗ ERREUR: Le document root ne se termine pas par '/public'\n";
+    echo "  → Vous devez configurer le document root pour qu'il pointe vers le dossier 'public'\n";
+    echo "  → Dans Hostinger, allez dans Hébergement > Paramètres > Document Root\n";
+}
+
 // Afficher les informations système
 echo "<h1>Test de configuration Hostinger</h1>";
 
