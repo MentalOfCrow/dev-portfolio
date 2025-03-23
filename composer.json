@@ -1,0 +1,31 @@
+{
+    "name": "hugobisserier/portfolio",
+    "description": "Portfolio professionnel de Hugo Bisserier",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hugo Bisserier",
+            "email": "hugo.bisserier.pro@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "backend/app/"
+        },
+        "files": [
+            "backend/includes/functions.php",
+            "backend/includes/config.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+} 
