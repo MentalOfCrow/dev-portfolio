@@ -1,5 +1,7 @@
 <?php
-// Script de vérification du document root
+// Définition des constantes essentielles
+define('ACCESS_GRANTED', true);
+define('ACCESS', true);
 
 // Entête pour forcer l'affichage en texte brut
 header('Content-Type: text/plain');
@@ -14,7 +16,10 @@ echo "Chemin relatif: " . $_SERVER['PHP_SELF'] . "\n\n";
 $expectedPath = '/public_html/public';
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
 
-if (str_ends_with($documentRoot, '/public')) {
+// Version compatible PHP 7.x
+$publicCheck = (substr($documentRoot, -7) === '/public');
+
+if ($publicCheck) {
     echo "✓ CORRECT: Le document root se termine bien par '/public'\n";
 } else {
     echo "✗ ERREUR: Le document root ne se termine pas par '/public'\n";
@@ -75,4 +80,16 @@ foreach ($staticFiles as $file) {
 
 echo "=== FIN DE LA VÉRIFICATION ===\n";
 echo "Généré le " . date('Y-m-d H:i:s') . "\n";
+
+// Polyfills pour PHP < 8.0
+if (!function_exists('str_ends_with')) {
+    function str_ends_with($haystack, $needle) {
+        if ($needle === '') return true;
+        if ($haystack === '') return false;
+        return substr($haystack, -strlen($needle)) === $needle;
+    }
+}
+
+// Redirection vers le dossier public
+include_once __DIR__ . '/public/index.php';
 ?> 
