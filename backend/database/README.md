@@ -36,3 +36,11 @@ La base de données comprend les tables suivantes:
 - `project_images`: Pour les images associées aux projets
 - `skills`: Pour les compétences techniques
 - `messages`: Pour les messages envoyés via le formulaire de contact 
+
+```php
+// Configuration BD pour Hostinger
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'portfolio'); // ou le nom que vous avez choisi
+define('DB_USER', 'portfolio_user'); // remplacez par votre utilisateur Hostinger
+define('DB_PASS', 'portfolio_password'); // remplacez par votre mot de passe Hostinger
+```
