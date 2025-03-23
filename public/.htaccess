@@ -1,16 +1,17 @@
 # Activation du module de réécriture d'URL
 RewriteEngine On
 
-# Définition du répertoire de base
-RewriteBase /portfolio/
+# Définition du répertoire de base (commenté pour être compatible avec Hostinger)
+# RewriteBase /portfolio/
+RewriteBase /
 
 # Redirection de www vers non-www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
-# Redirection de HTTP vers HTTPS (à décommenter en production)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Redirection de HTTP vers HTTPS (pour la production)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Protection des fichiers sensibles
 <FilesMatch "^\.">
@@ -25,10 +26,15 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 </Files>
 
 # Protection des fichiers de configuration
-<FilesMatch "^(composer\.json|composer\.lock|package\.json|package-lock\.json|README\.md)$">
+<FilesMatch "^(composer\.json|composer\.lock|package\.json|package-lock\.json|README\.md|\.(env|md|sql|json|lock|gitignore|htaccess))$">
     Order allow,deny
     Deny from all
 </FilesMatch>
+
+# Bloquer l'accès au dossier backend
+<IfModule mod_rewrite.c>
+    RewriteRule ^backend(/.*)?$ - [F,L]
+</IfModule>
 
 # Redirection de toutes les requêtes vers index.php
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -90,7 +96,7 @@ DefaultType application/x-httpd-php
 AddDefaultCharset UTF-8
 
 # Définition de la page d'erreur 404
-ErrorDocument 404 /portfolio/404
+ErrorDocument 404 /404
 
 # Définition de la page d'erreur 500
-ErrorDocument 500 /portfolio/500 
+ErrorDocument 500 /500 
