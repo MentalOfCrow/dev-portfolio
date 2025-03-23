@@ -26,10 +26,12 @@ echo "Chemin absolu du script: " . __FILE__ . "\n";
 echo "Chemin relatif: " . $_SERVER['PHP_SELF'] . "\n\n";
 
 // Vérifier si public est bien le document root
-$expectedPath = '/public_html/public';
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
 
-if (str_ends_with($documentRoot, '/public')) {
+// Version compatible avec PHP 7.x
+$publicCheck = (substr($documentRoot, -7) === '/public');
+
+if ($publicCheck) {
     echo "✓ CORRECT: Le document root se termine bien par '/public'\n";
 } else {
     echo "✗ ERREUR: Le document root ne se termine pas par '/public'\n";
@@ -40,7 +42,7 @@ if (str_ends_with($documentRoot, '/public')) {
 echo "\n=== VÉRIFICATION DES DOSSIERS CRITIQUES ===\n\n";
 
 // Vérifier l'accès au dossier backend
-$backendPath = dirname($_SERVER['DOCUMENT_ROOT']) . '/backend';
+$backendPath = dirname(__DIR__) . '/backend';
 if (is_dir($backendPath)) {
     echo "✓ Le dossier backend est accessible\n";
 } else {
@@ -48,46 +50,10 @@ if (is_dir($backendPath)) {
     echo "  → Vérifiez que la structure de dossiers est correcte\n";
 }
 
-// Vérifier l'existence des fichiers clés
-$files = [
-    'assets/js/main.js' => __DIR__ . '/assets/js/main.js',
-    'assets/css/style.css' => __DIR__ . '/assets/css/style.css',
-    'views/layouts/main.php' => __DIR__ . '/views/layouts/main.php',
-    'index.php' => __DIR__ . '/index.php',
-    '.htaccess' => __DIR__ . '/.htaccess'
-];
+// Afficher la version PHP
+echo "\nVersion PHP: " . phpversion() . "\n";
+echo "Date du test: " . date('Y-m-d H:i:s') . "\n";
 
-echo "\n=== VÉRIFICATION DES FICHIERS CLÉS ===\n\n";
-
-foreach ($files as $name => $path) {
-    if (file_exists($path)) {
-        echo "✓ $name: Trouvé\n";
-    } else {
-        echo "✗ $name: MANQUANT\n";
-    }
-}
-
-echo "\n=== TESTS D'ACCÈS ===\n\n";
-
-// Test d'accès aux fichiers statiques
-$staticFiles = [
-    '/assets/css/style.css',
-    '/assets/js/main.js'
-];
-
-foreach ($staticFiles as $file) {
-    $url = 'http://' . $_SERVER['HTTP_HOST'] . $file;
-    $headers = get_headers($url);
-    
-    echo "Test d'accès à $url\n";
-    if ($headers && strpos($headers[0], '200') !== false) {
-        echo "✓ Accès OK (200)\n";
-    } else {
-        echo "✗ Échec d'accès: " . ($headers ? $headers[0] : "Impossible d'obtenir les en-têtes") . "\n";
-    }
-    echo "\n";
-}
-
-echo "=== FIN DE LA VÉRIFICATION ===\n";
-echo "Généré le " . date('Y-m-d H:i:s') . "\n";
+// Redirection vers le dossier public
+include_once __DIR__ . '/public/index.php';
 ?> 
