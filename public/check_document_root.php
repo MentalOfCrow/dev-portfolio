@@ -1,5 +1,20 @@
 <?php
-// Script de vérification du document root
+/**
+ * Fichier de compatibilité pour fonctions PHP 8.0+
+ */
+
+// Définition des constantes essentielles
+define('ACCESS_GRANTED', true);
+define('ACCESS', true);
+
+// Polyfill pour PHP < 8.0
+if (!function_exists('str_ends_with')) {
+    function str_ends_with($haystack, $needle) {
+        $length = strlen($needle);
+        if ($length == 0) return true;
+        return substr($haystack, -$length) === $needle;
+    }
+}
 
 // Entête pour forcer l'affichage en texte brut
 header('Content-Type: text/plain');
