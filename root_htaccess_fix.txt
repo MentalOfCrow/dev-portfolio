@@ -1,0 +1,37 @@
+# Redirection vers le dossier public
+RewriteEngine On
+
+# Ne pas rediriger les requêtes pour deploy.php
+RewriteCond %{REQUEST_URI} !^/deploy.php
+# Ne pas rediriger les requêtes pour le dossier public
+RewriteCond %{REQUEST_URI} !^/public/
+# Ne pas rediriger si c'est un fichier existant
+RewriteCond %{REQUEST_FILENAME} !-f
+# Ne pas rediriger si c'est un dossier existant
+RewriteCond %{REQUEST_FILENAME} !-d
+# Alors rediriger vers /public
+RewriteRule ^(.*)$ /public/$1 [L]
+
+# Protection contre listing des dossiers
+Options -Indexes
+
+# Définition du charset par défaut
+AddDefaultCharset UTF-8
+
+# Sécurité des fichiers sensibles
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Protection du fichier .env
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Exception pour deploy.php
+<Files deploy.php>
+    Order allow,deny
+    Allow from all
+</Files> 
