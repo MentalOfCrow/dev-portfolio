@@ -106,4 +106,8 @@ AddDefaultCharset UTF-8
 ErrorDocument 404 /404
 
 # Définition de la page d'erreur 500
-ErrorDocument 500 /500 
+ErrorDocument 500 /500
+
+# Redirection vers le dossier public
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/$1 [L] 
