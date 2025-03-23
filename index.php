@@ -1,9 +1,9 @@
 <?php
 // Initialisation du site
-require_once __DIR__ . '/../backend/init.php';
+require_once __DIR__ . '/backend/init.php';
 
 // Chargement de l'autoloader de Composer s'il existe
-$autoloadFile = __DIR__ . '/../vendor/autoload.php';
+$autoloadFile = __DIR__ . '/vendor/autoload.php';
 if (file_exists($autoloadFile)) {
     require_once $autoloadFile;
 }

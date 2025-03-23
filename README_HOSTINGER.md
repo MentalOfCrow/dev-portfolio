@@ -1,65 +1,49 @@
-# Portfolio Hugo Bisserier - Instructions pour Hostinger
+# 🚀 Déploiement automatique Hostinger avec GitHub
 
-Ce document explique comment configurer ce portfolio sur un hébergement Hostinger.
+## 📁 Structure du projet
 
-## Structure du projet
-
-Ce portfolio est un site web PHP structuré comme suit:
-
-- `public/`: Contient tous les fichiers accessibles au public (point d'entrée, assets, etc.)
-- `backend/`: Contient la logique et la configuration du site
-  - `includes/`: Fichiers de configuration et fonctions utilitaires
-  - `database/`: Structure SQL pour la base de données
-  - `app/`: Logique métier (contrôleurs, modèles)
-
-## Particularités importantes
-
-**Ce site est principalement statique:**
-- Les données (projets, compétences) sont directement intégrées dans les fichiers PHP
-- Le site ne dépend pas activement d'une base de données pour fonctionner
-- La base de données est incluse uniquement pour répondre aux exigences d'hébergement
-
-## Configuration sur Hostinger
-
-### 1. Configuration de la base de données
-
-Créez une base de données vide:
-1. Allez dans "Bases de données MySQL" dans votre panel Hostinger
-2. Créez une nouvelle base de données 
-3. Notez les informations (nom, utilisateur, mot de passe)
-4. Importez le fichier `backend/database/portfolio.sql` (optionnel mais recommandé)
-
-### 2. Configuration du fichier config.php
-
-Le fichier `backend/includes/config.php` est déjà configuré pour détecter automatiquement l'environnement Hostinger, mais vous devez y mettre vos informations:
-
-```php
-// Remplacez ces valeurs par celles fournies par Hostinger
-define('DB_HOST', 'localhost'); // généralement localhost chez Hostinger
-define('DB_NAME', 'u123456789_portfolio'); // à remplacer par votre nom de base
-define('DB_USER', 'u123456789_portfolio'); // à remplacer par votre utilisateur
-define('DB_PASS', 'MotDePasseSecurise123'); // à remplacer par votre mot de passe
+```
+dev-portfolio/
+├── api/               # Points d'accès API
+├── assets/            # Fichiers statiques (images, JS, CSS...)
+├── backend/           # Initialisation + logique serveur
+├── uploads/           # Fichiers envoyés par les utilisateurs
+├── views/             # Fichiers de présentation HTML/PHP
+├── index.php          # Point d'entrée principal
+├── .htaccess          # Routage et sécurité
+├── composer.json      # Dépendances PHP
+├── vite.config.js     # Config frontend (Vite)
+├── README_HOSTINGER.md (ce fichier)
 ```
 
-### 3. Installation des dépendances
+## 🔗 Étapes de déploiement avec Hostinger
 
-Si vous rencontrez des erreurs liées à Composer, exécutez:
-```
-composer install --no-dev --optimize-autoloader
-```
+1. **Créer un dépôt Git sur GitHub** (privé ou public)
+2. **Envoyer les fichiers** de ce projet vers ce dépôt
+3. Sur Hostinger :
+   - Aller dans `Sites > Gérer > Git`
+   - Ajouter le dépôt Git :
+     - Branche : `main`
+     - Répertoire : vide (laisser vide pour que le site soit servi depuis `public_html`)
+   - Cliquer sur **"Déploiement automatique"**
+   - Copier l’**URL Webhook**
+4. Sur GitHub :
+   - Aller dans `Settings > Webhooks > Add webhook`
+   - Coller l’URL Webhook de Hostinger
+   - Content type : `application/json`
+   - Cocher **"Just the push event"**
+   - Valider
 
-### 4. Configuration du point d'entrée
+✅ À chaque `git push`, le site sera automatiquement mis à jour sur Hostinger !
 
-Assurez-vous que le document root pointe vers le dossier `public/`.
+---
 
-## Fonctionnalités du site
+## 🛠️ En cas de problème
 
-- 🌓 Mode clair/sombre
-- 🌍 Support multilingue (Français/Anglais)
-- 📱 Design responsive
-- 📄 Téléchargement de CV
-- 📧 Formulaire de contact
+- Assure-toi que `index.php` est bien à la racine du projet
+- Vérifie que le `.htaccess` est bien présent
+- Ton domaine pointe vers `public_html` (racine du dépôt cloné)
 
-## Support
+---
 
-Pour toute assistance, contactez Hugo Bisserier: hugo.bisserier.pro@gmail.com 
+Bon déploiement 🎉

@@ -1,0 +1,27 @@
+# Redirection vers index.php pour toutes les requêtes propres (excepté fichiers existants)
+RewriteEngine On
+
+# Ne pas rediriger si fichier ou dossier physique existe
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rediriger tout vers index.php
+RewriteRule ^ index.php [QSA,L]
+
+# Sécurité : interdiction d'accès aux fichiers sensibles
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Protection du fichier .env
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Charset par défaut
+AddDefaultCharset UTF-8
+
+# Désactiver listing de répertoire
+Options -Indexes
