@@ -9,6 +9,9 @@
 /public/storage
 /storage/*.key
 
+# Pour le déploiement, on commente la ligne suivante pour inclure le dossier dist
+# /dist
+
 # Fichiers d'environnement
 .env
 .env.*
@@ -36,7 +39,7 @@ Thumbs.db
 *.sqlite3
 
 # Fichiers de build JavaScript
-/dist
+# /build désactivé pour le déploiement
 /build
 *.map
 
@@ -67,9 +70,10 @@ yarn-error.log*
 *.local.*
 
 # Fichiers de verrouillage
-package-lock.json
-yarn.lock
-composer.lock
+# Conservés pour faciliter le déploiement
+# package-lock.json
+# yarn.lock
+# composer.lock
 
 # Dossiers de cache
 .cache
