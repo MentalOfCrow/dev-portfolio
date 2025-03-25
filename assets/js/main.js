@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Page d'accueil
             'hero_subtitle': 'Développeur Web Full Stack',
-            'hero_description': 'Passionné par le développement web et la création d\'applications innovantes.',
+            'hero_description': 'En tant que développeur Full Stack, je maîtrise l\'art de créer des expériences web complètes, de l\'interface utilisateur élégante jusqu\'aux systèmes backend robustes. Ma passion pour les technologies web me pousse constamment à concevoir des solutions innovantes qui répondent parfaitement aux besoins des utilisateurs.',
             'hero_projects_btn': 'Voir mes projets',
             'hero_contact_btn': 'Me contacter',
             
@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Home page
             'hero_subtitle': 'Full Stack Web Developer',
-            'hero_description': 'Passionate about web development and creating innovative applications.',
+            'hero_description': 'As a Full Stack developer, I master the art of creating complete web experiences, from elegant user interfaces to robust backend systems. My passion for web technologies constantly drives me to design innovative solutions that perfectly meet users\' needs.',
             'hero_projects_btn': 'View my projects',
             'hero_contact_btn': 'Contact me',
             
