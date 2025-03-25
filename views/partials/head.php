@@ -11,8 +11,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
     
-    <!-- CSS Files - Un seul fichier CSS pour toutes les pages -->
+    <!-- CSS Files -->
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
