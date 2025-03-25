@@ -990,12 +990,12 @@ textarea.form-control {
 }
 
 .light-theme {
-    --bg-color: #f5f5f5;
-    --header-bg: #ffffff;
-    --card-bg: #ffffff;
-    --text-color: #333333;
-    --text-secondary: #666666;
-    --border-color: #e0e0e0;
+    --bg-color: #222;
+    --header-bg: #2a2a2a;
+    --card-bg: #2a2a2a;
+    --text-color: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --border-color: #333;
 }
 
 /* Animations */
@@ -1197,4 +1197,78 @@ textarea.form-control {
 .btn:active:after, button:active:after {
     width: 300px;
     height: 300px;
+}
+
+/* Section d'expertise */
+.expertise {
+    padding: 2rem 0 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.expertise::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.expertise-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    position: relative;
+    animation: fadeIn 1s ease;
+}
+
+.expertise-description {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    font-weight: 300;
+    font-style: italic;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.expertise-description::before,
+.expertise-description::after {
+    content: '"';
+    font-size: 4rem;
+    color: var(--primary-color);
+    opacity: 0.3;
+    position: absolute;
+    line-height: 1;
+}
+
+.expertise-description::before {
+    top: -1rem;
+    left: 0;
+}
+
+.expertise-description::after {
+    bottom: -2rem;
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .expertise-description {
+        font-size: 1.2rem;
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .expertise-description {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
 } 
