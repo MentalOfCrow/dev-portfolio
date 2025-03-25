@@ -19,7 +19,12 @@ $pageDescription = "Mentions légales du portfolio d'Hugo Bisserier, étudiant e
     
     <section class="legal-section">
         <h2 data-translate="legal_hosting_title"><i class="fas fa-server"></i>Hébergement</h2>
-        <p data-translate="legal_hosting_text">Ce site est hébergé par [Nom de l'hébergeur], [Adresse de l'hébergeur], [Coordonnées de l'hébergeur].</p>
+        <p data-translate="legal_hosting_text">Ce site est hébergé par Hostinger International Ltd., 61 Lordou Vironos Street, 6023 Larnaca, Chypre.</p>
+        
+        <div class="definition-box">
+            <h3><i class="fas fa-quote-right"></i> Qu'est-ce qu'un hébergeur web ?</h3>
+            <p>Un hébergeur web est une entreprise qui met à disposition des serveurs connectés à Internet pour héberger des sites web et les rendre accessibles aux internautes 24h/24 et 7j/7.</p>
+        </div>
     </section>
     
     <section class="legal-section">
@@ -32,6 +37,11 @@ $pageDescription = "Mentions légales du portfolio d'Hugo Bisserier, étudiant e
         <h2 data-translate="legal_cookies_title"><i class="fas fa-cookie-bite"></i>Utilisation des cookies</h2>
         <p data-translate="legal_cookies_text1">Ce site utilise des cookies pour améliorer l'expérience utilisateur. Les cookies sont de petits fichiers texte stockés sur votre ordinateur qui permettent d'analyser l'utilisation du site.</p>
         <p data-translate="legal_cookies_text2">Les cookies utilisés sur ce site servent uniquement à mémoriser vos préférences de thème (clair/sombre) et de langue. Aucune donnée personnelle n'est collectée via ces cookies.</p>
+        
+        <ul class="droits-rgpd">
+            <li>Cookies essentiels : nécessaires au fonctionnement du site</li>
+            <li>Cookies de préférences : mémorisent vos choix (thème, langue)</li>
+        </ul>
     </section>
     
     <section class="legal-section">
@@ -50,8 +60,12 @@ $pageDescription = "Mentions légales du portfolio d'Hugo Bisserier, étudiant e
         <p data-translate="legal_applicable_text">Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront compétents.</p>
     </section>
 
+    <div class="meta-info">
+        <p><span>Dernière mise à jour :</span> <?php echo date('d/m/Y'); ?></p>
+    </div>
+    
     <div class="back-link">
-        <a href="/" class="btn btn-primary">
+        <a href="/" class="btn">
             <i class="fas fa-arrow-left"></i> 
             <span data-translate="legal_back">Retour à l'accueil</span>
         </a>
