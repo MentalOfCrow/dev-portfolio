@@ -29,6 +29,7 @@ Site portfolio professionnel présentant mes projets, compétences et expérienc
 - **Frontend**:
   - HTML5 / CSS3
   - JavaScript (ES6+)
+  - Vite.js pour le bundling et le hot reload
   - Responsive design (mobile-first)
   - Animations fluides avec AOS
   - Système de thèmes personnalisables
@@ -36,8 +37,16 @@ Site portfolio professionnel présentant mes projets, compétences et expérienc
 - **Outils**:
   - FontAwesome pour les icônes
   - Google Fonts pour la typographie
-  - Vite.js pour le bundling des assets
   - ESLint et Prettier pour la qualité du code
+  - Composer pour la gestion des dépendances PHP
+  - npm pour la gestion des dépendances JavaScript
+
+- **Structure**:
+  - Architecture MVC simplifiée
+  - Système de routage personnalisé
+  - Gestion des assets optimisée avec Vite
+  - Support multilingue intégré
+  - Système de thèmes clair/sombre
 
 ## 📷 Aperçu du projet
 
@@ -53,83 +62,77 @@ Ce portfolio a été créé pour mettre en avant mon parcours dans le développe
 
 ```
 portfolio/
-├── .git/                   # Dossier Git (non détaillé)
-├── .vscode/                # Configuration VS Code
-│   └── settings.json       # Paramètres VS Code (port LiveServer: 5503)
-├── backend/                # Backend PHP
-│   ├── controllers/        # Contrôleurs MVC (vide, préparé pour évolution)
-│   ├── database/           # Structure SQL et documentation
-│   │   ├── Astuces.md      # Guide de configuration de la BDD
-│   │   ├── Db.md           # Documentation de la BDD (duplicate)
-│   │   └── portfolio.sql   # Script SQL de création de BDD
-│   ├── includes/           # Fichiers d'inclusion PHP
-│   │   ├── config.php      # Configuration globale
-│   │   ├── database.php    # Classe de connexion à la BDD
-│   │   ├── functions.php   # Fonctions utilitaires
-│   │   └── router.php      # Système de routage
-│   ├── models/             # Modèles de données (vide, préparé pour évolution)
-│   └── init.php            # Fichier d'initialisation
-├── frontend/               # Sources frontend (pré-build, structure implicite)
-├── node_modules/           # Dépendances JavaScript (non détaillé)
-├── public/                 # Fichiers publics accessibles
-│   ├── api/                # Points d'entrée API (vide, préparé pour évolution)
-│   ├── assets/             # Ressources statiques
-│   │   ├── css/            # Feuilles de style CSS
-│   │   │   ├── legal-pages.css  # Styles pour pages légales
-│   │   │   └── style.css        # Style principal
-│   │   ├── cv/             # Fichiers PDF de CV
-│   │   │   └── cv.pdf      # CV téléchargeable
-│   │   ├── images/         # Images du site
-│   │   │   ├── projects/   # Images des projets
-│   │   │   │   ├── 1.jpg   # Image projet 1
-│   │   │   │   ├── 2.jpg   # Image projet 2
-│   │   │   │   └── ...     # Autres images de projets
-│   │   │   └── profile.jpg # Photo de profil
-│   │   └── js/             # Scripts JavaScript
-│   │       └── main.js     # Script principal
-│   ├── uploads/            # Dossier pour uploads utilisateur
-│   │   ├── cv/             # Uploads de CV (vide)
-│   │   └── projects/       # Uploads de projets (vide)
-│   ├── uploadspublic/      # Copies publiques des uploads
-│   │   └── assets/         # Assets publics
-│   ├── views/              # Templates du site
-│   │   ├── admin/          # Pages admin (vide, préparé pour évolution)
-│   │   ├── auth/           # Pages d'authentification (vide)
-│   │   ├── layouts/        # Layouts de page
-│   │   │   └── main.php    # Layout principal
-│   │   ├── pages/          # Pages du site
-│   │   │   ├── 404.php     # Page d'erreur 404
-│   │   │   ├── about.php   # Page À propos
-│   │   │   ├── contact.php # Page Contact
-│   │   │   ├── cv.php      # Page CV
-│   │   │   ├── home.php    # Page d'accueil
-│   │   │   ├── mentions-legales.php      # Mentions légales
-│   │   │   ├── politique-confidentialite.php  # Politique de confidentialité
-│   │   │   ├── projects.php # Page Projets
-│   │   │   └── skills.php   # Page Compétences
-│   │   └── partials/       # Éléments partiels réutilisables
-│   │       ├── footer.php  # Pied de page
-│   │       ├── head.php    # En-tête HTML
-│   │       └── header.php  # En-tête de page
-│   ├── .htaccess           # Configuration Apache
-│   └── index.php           # Point d'entrée principal
-├── vendor/                 # Dépendances PHP (non détaillé)
-├── .env                    # Variables d'environnement (production)
-├── .env.example            # Exemple de variables d'environnement
-├── .eslintrc.json          # Configuration ESLint
-├── .gitattributes          # Configuration Git (attributs)
-├── .gitignore              # Fichiers ignorés par Git
-├── .prettierrc             # Configuration Prettier
-├── composer.json           # Configuration Composer
-├── composer.lock           # Verrouillage des versions Composer
-├── index.html              # Page d'accueil statique (fallback)
-├── instruction.txt         # Instructions de développement
-├── LICENSE                 # Licence MIT
-├── package.json            # Configuration npm
-├── package-lock.json       # Verrouillage des versions npm
-├── README.md               # Documentation principale (ce fichier)
-├── README_HOSTINGER.md     # Instructions spécifiques pour Hostinger
-└── vite.config.js          # Configuration de Vite.js
+├── assets/                     # Ressources statiques
+│   ├── css/                    # Styles CSS
+│   │   ├── legal-pages.css     # Styles pour pages légales
+│   │   └── style.css          # Style principal
+│   ├── js/                     # Scripts JavaScript
+│   │   └── main.js            # Script principal
+│   ├── images/                 # Images et médias
+│   │   ├── projects/          # Images des projets
+│   │   │   ├── 1.jpg         # Image projet 1
+│   │   │   ├── 2.jpg         # Image projet 2
+│   │   │   ├── 3.jpg         # Image projet 3
+│   │   │   ├── 4.jpg         # Image projet 4
+│   │   │   ├── 5.jpg         # Image projet 5
+│   │   │   ├── 6.jpg         # Image projet 6
+│   │   │   ├── 7.jpg         # Image projet 7
+│   │   │   ├── 8.jpg         # Image projet 8
+│   │   │   └── 9.jpg         # Image projet 9
+│   │   └── profile.jpg        # Photo de profil
+│   └── cv/                     # Fichiers CV
+│       └── cv.pdf             # CV téléchargeable
+│
+├── backend/                    # Backend PHP
+│   ├── database/              # Base de données
+│   │   └── Astuces.md         # Guide de configuration BDD
+│   ├── includes/              # Classes et fonctions
+│   │   ├── config.php         # Configuration globale
+│   │   ├── database.php       # Gestion BDD
+│   │   ├── functions.php      # Fonctions utilitaires
+│   │   └── router.php         # Système de routage
+│   └── init.php               # Initialisation backend
+│
+├── views/                      # Templates du site
+│   ├── layouts/               # Layouts principaux
+│   │   └── main.php          # Layout principal
+│   ├── pages/                 # Pages du site
+│   │   ├── 404.php           # Page d'erreur 404
+│   │   ├── about.php         # Page À propos
+│   │   ├── contact.php       # Page Contact
+│   │   ├── cv.php            # Page CV
+│   │   ├── home.php          # Page d'accueil
+│   │   ├── mentions-legales.php      # Mentions légales
+│   │   ├── politique-confidentialite.php  # Politique de confidentialité
+│   │   ├── projects.php      # Page Projets
+│   │   └── skills.php        # Page Compétences
+│   └── partials/              # Composants réutilisables
+│       ├── footer.php         # Pied de page
+│       ├── head.php           # En-tête HTML
+│       └── header.php         # En-tête de page
+│
+├── public/                     # Point d'entrée public
+│   └── index.php              # Point d'entrée principal
+│
+├── .env.example               # Exemple de variables d'environnement
+├── .eslintrc.json            # Configuration ESLint
+├── .gitattributes            # Configuration Git (attributs)
+├── .gitignore                # Fichiers ignorés par Git
+├── .htaccess                 # Configuration Apache
+├── .prettierrc               # Configuration Prettier
+├── composer.json             # Configuration Composer
+├── composer.lock             # Verrouillage des versions Composer
+├── DEPLOIEMENT.md            # Instructions de déploiement
+├── index.html                # Page d'accueil statique
+├── index.php                 # Point d'entrée principal
+├── instruction.txt           # Instructions de développement
+├── LICENSE                   # Licence MIT
+├── package.json              # Configuration npm
+├── package-lock.json         # Verrouillage des versions npm
+├── README.md                 # Documentation principale
+├── README_HOSTINGER.md       # Instructions spécifiques pour Hostinger
+├── verification_site.php     # Script de vérification du site
+└── vite.config.js            # Configuration de Vite.js
 ```
 
 ## 🔧 Installation locale
@@ -156,18 +159,18 @@ portfolio/
    npm run build
    ```
 
-3. **Configuration de la base de données**:
-   - Créez une base de données MySQL nommée `portfolio`
-   - Importez le fichier `backend/database/portfolio.sql`
-   - Copiez `.env.example` en `.env` et configurez vos identifiants
+3. **Configuration**:
+   - Copiez `.env.example` en `.env` et configurez vos variables d'environnement
+   - Assurez-vous que les permissions des dossiers sont correctes (755 pour les dossiers, 644 pour les fichiers)
 
 4. **Démarrage du serveur**:
    ```bash
-   # Serveur PHP
-   php -S localhost:8000 -t public
-
-   # Ou pour le développement frontend (hot reload)
+   # Pour le développement (avec hot reload)
    npm run dev
+
+   # Pour la production
+   npm run build
+   php -S localhost:8000 -t public
    ```
 
 5. **Accès**:
@@ -195,40 +198,41 @@ portfolio/
 - `public/assets/js/main.js` - Fonctionnalités JavaScript (mode sombre, multilingue)
 - `public/views/layouts/main.php` - Layout principal pour toutes les pages
 
-## 🚀 Déploiement sur Hostinger
+## 🚀 Déploiement
 
-### Configuration de la base de données
+### Préparation
+1. Compilez les assets pour la production :
+   ```bash
+   npm run build
+   ```
 
-1. Créez une nouvelle base de données dans votre panel Hostinger
-2. Notez le nom de la base, l'utilisateur et le mot de passe
-3. Importez le fichier `backend/database/portfolio.sql` via phpMyAdmin de Hostinger
+2. Configurez les variables d'environnement :
+   - Copiez `.env.example` en `.env`
+   - Ajustez les paramètres selon votre environnement
 
-### Mise à jour de la configuration
-
-Le fichier `backend/includes/config.php` est configuré pour détecter automatiquement l'environnement Hostinger ou le domaine hugobisserier.com.
-
-### Upload des fichiers
-
-1. Téléchargez tous les fichiers sur votre hébergement via FTP ou le gestionnaire de fichiers de Hostinger
+### Hébergement
+1. Uploadez tous les fichiers vers votre hébergement
 2. Assurez-vous que le document root pointe vers le dossier `public/`
-3. Vérifiez les permissions des dossiers (744 pour les fichiers, 755 pour les dossiers)
+3. Configurez les permissions :
+   - 755 pour les dossiers
+   - 644 pour les fichiers
+   - 755 pour les scripts PHP
 
-## 📝 Remarques importantes
+### Configuration du serveur
+- Activez le module `mod_rewrite` d'Apache
+- Assurez-vous que PHP 8.0+ est installé
+- Configurez les extensions PHP nécessaires
 
-- Ce portfolio fonctionne actuellement sans utiliser activement la base de données
-- Toutes les données (projets, compétences) sont codées en dur dans les fichiers PHP
-- La structure de base de données est incluse pour répondre aux exigences d'hébergement et pour des fonctionnalités futures
-- Les dossiers `controllers/` et `models/` sont vides mais préparés pour une évolution future
-- Le fichier `Db.md` est un duplicate d'`Astuces.md` et peut être supprimé
+Pour plus de détails sur le déploiement, consultez le fichier [DEPLOIEMENT.md](DEPLOIEMENT.md)
 
 ## 📞 Support et contact
 
-Si vous avez des questions ou souhaitez entrer en contact, n'hésitez pas à m'écrire:
+Si vous avez des questions ou souhaitez entrer en contact, n'hésitez pas à m'écrire :
 
-- Email principal: [hugo.bisserier.pro@gmail.com](mailto:hugo.bisserier.pro@gmail.com)
-- Email secondaire: [hugo.bisserier@ynov.com](mailto:hugo.bisserier@ynov.com)
-- GitHub: [github.com/MentalOfCrow](https://github.com/MentalOfCrow)
-- LinkedIn: [linkedin.com/in/hugo-bisserier-a67327324](https://www.linkedin.com/in/hugo-bisserier-a67327324/)
+- Email principal : [hugo.bisserier.pro@gmail.com](mailto:hugo.bisserier.pro@gmail.com)
+- Email secondaire : [hugo.bisserier@ynov.com](mailto:hugo.bisserier@ynov.com)
+- GitHub : [github.com/MentalOfCrow](https://github.com/MentalOfCrow)
+- LinkedIn : [linkedin.com/in/hugo-bisserier-a67327324](https://www.linkedin.com/in/hugo-bisserier-a67327324/)
 
 ## 📄 Licence
 
@@ -237,3 +241,26 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de
 ---
 
 Merci d'avoir pris le temps de consulter mon portfolio ! 🙌
+
+## 📂 Structure des dossiers principaux
+
+### `/assets`
+- `css/` : Styles CSS du site
+- `js/` : Scripts JavaScript
+- `images/` : Images et médias
+- `cv/` : Fichiers CV
+
+### `/views`
+- `layouts/` : Templates principaux
+- `pages/` : Pages du site
+- `partials/` : Composants réutilisables
+
+### `/backend`
+- `database/` : Scripts et configuration de la base de données
+- `includes/` : Classes et fonctions PHP
+- `init.php` : Initialisation du backend
+
+### `/public`
+- Point d'entrée public du site
+- Fichiers accessibles via le navigateur
+- Configuration Apache (.htaccess)
