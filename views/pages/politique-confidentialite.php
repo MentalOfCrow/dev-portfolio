@@ -15,6 +15,11 @@ $pageDescription = "Politique de confidentialité du portfolio d'Hugo Bisserier,
         <h2 data-translate="privacy_intro_title"><i class="fas fa-info-circle"></i>Introduction</h2>
         <p data-translate="privacy_intro_text1">Hugo Bisserier attache une grande importance à la protection de vos données personnelles et au respect de votre vie privée. La présente politique de confidentialité vous informe sur la manière dont vos données personnelles sont collectées et traitées lorsque vous visitez ce site web.</p>
         <p data-translate="privacy_intro_text2">Cette politique est conforme au Règlement Général sur la Protection des Données (RGPD) et à la loi "Informatique et Libertés" du 6 janvier 1978 modifiée.</p>
+        
+        <div class="definition-box">
+            <h3><i class="fas fa-quote-right"></i> Qu'est-ce qu'une donnée personnelle ?</h3>
+            <p>Une donnée personnelle est toute information se rapportant à une personne physique identifiée ou identifiable. Par exemple : un nom, une adresse email, une adresse IP ou encore des cookies de navigation.</p>
+        </div>
     </section>
     
     <section class="legal-section">
@@ -62,7 +67,7 @@ $pageDescription = "Politique de confidentialité du portfolio d'Hugo Bisserier,
     <section class="legal-section">
         <h2 data-translate="privacy_rights_title"><i class="fas fa-user-check"></i>Vos droits</h2>
         <p data-translate="privacy_rights_text1">Conformément à la réglementation en vigueur, vous disposez des droits suivants concernant vos données personnelles :</p>
-        <ul>
+        <ul class="droits-rgpd">
             <li data-translate="privacy_rights_item1">Droit d'accès à vos données</li>
             <li data-translate="privacy_rights_item2">Droit de rectification</li>
             <li data-translate="privacy_rights_item3">Droit à l'effacement (droit à l'oubli)</li>
@@ -95,7 +100,7 @@ $pageDescription = "Politique de confidentialité du portfolio d'Hugo Bisserier,
     </div>
 
     <div class="back-link">
-        <a href="/" class="btn btn-primary">
+        <a href="/" class="btn">
             <i class="fas fa-arrow-left"></i> 
             <span data-translate="privacy_back">Retour à l'accueil</span>
         </a>
