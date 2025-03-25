@@ -3,7 +3,8 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Hugo Bisserier</h3>
-                <p data-translate="footer_description">Développeur Web passionné par la création d'applications web modernes et performantes.</p>
+                <p class="footer-desc" data-translate="footer_description">Développeur Web Full Stack passionné par la création d'applications web modernes et performantes. Spécialisé en PHP, JavaScript et solutions cloud avec une approche centrée sur l'optimisation et la sécurité des projets numériques.</p>
+                <span class="footer-tagline">#CodeWithPassion</span>
             </div>
 
             <div class="footer-section">
@@ -12,6 +13,7 @@
                     <li><a href="/">Accueil</a></li>
                     <li><a href="/about">À propos</a></li>
                     <li><a href="/projects">Projets</a></li>
+                    <li><a href="/skills">Compétences</a></li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>
             </div>
@@ -36,12 +38,19 @@
 
             <div class="footer-section">
                 <h3 data-translate="footer_social">Réseaux sociaux</h3>
-                <div class="social-links">
-                    <a href="https://github.com/MentalOfCrow" target="_blank" title="GitHub">
+                <p class="social-description" data-translate="footer_social_text">Retrouvez-moi sur les plateformes professionnelles pour suivre mon parcours et mes contributions dans le domaine du développement web et de la cybersécurité.</p>
+                <div class="social-grid">
+                    <a href="https://github.com/MentalOfCrow" target="_blank" class="social-links" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/hugo-bisserier-a67327324/" target="_blank" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/hugo-bisserier-a67327324/" target="_blank" class="social-links" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="social-links" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://dev.to/" target="_blank" class="social-links" title="Dev.to">
+                        <i class="fab fa-dev"></i>
                     </a>
                 </div>
             </div>
