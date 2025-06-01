@@ -118,6 +118,21 @@ $current_page = "skills";
                         <li data-translate="skills_reactnative_3">Hooks</li>
                     </ul>
                 </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fab fa-flutter"></i>
+                        <h3>Flutter</h3>
+                    </div>
+                    <div class="skill-level" data-level="55">
+                        <div class="level-bar"></div>
+                    </div>
+                    <ul class="skill-details">
+                        <li data-translate="skills_flutter_1">Applications mobiles multiplateformes</li>
+                        <li data-translate="skills_flutter_2">Widgets personnalisés</li>
+                        <li data-translate="skills_flutter_3">Dart</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
