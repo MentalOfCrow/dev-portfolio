@@ -28,6 +28,9 @@ $current_page = "about";
     <section class="about-parcours">
         <div class="parcours-container">
             <h2 data-translate="about_path_title">Mon Parcours</h2>
+            <p class="parcours-intro">
+                Actuellement étudiant en B2 Informatique à Ynov (fin de 2<sup>ème</sup> année), je débuterai la 3<sup>ème</sup> année (B3) en septembre 2025.
+            </p>
             <div class="parcours-item">
                 <h3 data-translate="about_timeline_date">2023 - Présent</h3>
                 <h4 data-translate="about_timeline_title">B2 Informatique</h4>
@@ -62,6 +65,7 @@ $current_page = "about";
                         <li class="competence-item">Python</li>
                         <li class="competence-item">C#</li>
                         <li class="competence-item">Golang</li>
+                        <li class="competence-item">Flutter</li>
                     </ul>
                 </div>
 
@@ -87,18 +91,38 @@ $current_page = "about";
             <div class="interets-grid">
                 <div class="interet-item">
                     <i class="fas fa-code"></i>
-                    <h3 data-translate="about_interest1_title">Programmation</h3>
-                    <p data-translate="about_interest1_desc">Exploration de nouveaux langages et frameworks</p>
+                    <h3 style="font-weight:bold; font-size:1.5em; margin-bottom:10px;">Programmation, Technologies Web & Architecture</h3>
+                    <p style="margin-bottom:8px;"><strong>Exploration de nouveaux langages et frameworks</strong></p>
+                    <p style="margin-bottom:8px;"><strong>Veille technologique et expérimentation</strong></p>
+                    <p style="margin-bottom:0;"><strong>Conception de systèmes évolutifs</strong></p>
                 </div>
                 <div class="interet-item">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3 data-translate="about_interest2_title">Technologies Web</h3>
-                    <p data-translate="about_interest2_desc">Veille technologique et expérimentation</p>
+                    <i class="fas fa-shield-alt"></i>
+                    <h3 data-translate="about_interest4_title">Cybersécurité</h3>
+                    <p data-translate="about_interest4_desc">
+                        J'approfondis la cybersécurité à travers la création et la résolution de challenges CTF.<br>
+                        <strong>1ère année :</strong> Création de challenges pour <a href="https://hackin.fr" target="_blank" style="color:#ff4ecb;text-decoration:underline;font-weight:bold;">Hack'In</a> (ex-Hacky'nov).<br>
+                        <strong>2ème année :</strong> Participation à plusieurs CTF (Hack'In, Ynov Aix-en-Provence, etc.).<br>
+                        Apprentissage continu en sécurité offensive et sensibilisation à la protection des données.
+                    </p>
                 </div>
                 <div class="interet-item">
-                    <i class="fas fa-project-diagram"></i>
-                    <h3 data-translate="about_interest3_title">Architecture Logicielle</h3>
-                    <p data-translate="about_interest3_desc">Conception de systèmes évolutifs</p>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Développement Mobile</h3>
+                    <p>
+                        Je souhaite développer et publier à l'avenir des applications mobiles sur le Play Store, en utilisant Flutter ou React Native, pour explorer de nouvelles idées et technologies.<br><br>
+                        <strong>Vous avez un projet ou souhaitez collaborer ?</strong><br>
+                        Contactez-moi à l'adresse suivante&nbsp;:<br>
+                        <a href="mailto:hugo.bisserier.dev@gmail.com" style="color:#ff4ecb;text-decoration:underline;font-weight:bold;word-break:break-all;overflow-wrap:anywhere;font-size:0.97em;">hugo.bisserier.dev@gmail.com</a><br>
+                        pour échanger et travailler ensemble sur des applications innovantes.
+                    </p>
+                </div>
+                <div class="interet-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Veille & Innovation</h3>
+                    <p>
+                        Passionné par l'innovation, je teste régulièrement de nouveaux outils, technologies et concepts pour rester à la pointe et nourrir ma créativité. Cette curiosité me permet d'anticiper les évolutions du secteur et d'apporter des solutions modernes à mes projets.
+                    </p>
                 </div>
             </div>
         </div>
