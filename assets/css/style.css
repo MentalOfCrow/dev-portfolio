@@ -6,11 +6,13 @@
     --primary-color: #ff66cc;
     --primary-hover: #e055b3;
     --bg-color: #121212;
+    --bg-secondary: #1e1e1e;
     --header-bg: #1a1a1a;
     --card-bg: #2c2c2c;
     --text-color: #fff;
     --text-secondary: #bbb;
     --border-color: #333;
+    --footer-bg: #0a0a0a;
     --transition-speed: 0.3s;
     --transition-timing: ease;
     --spacing-sm: 0.5rem;
@@ -35,6 +37,8 @@ body {
     color: var(--text-color);
     padding-top: 80px; /* Ca Compense la hauteur du header fixe */
     line-height: 1.6;
+    transition: background-color var(--transition-speed) var(--transition-timing), 
+                color var(--transition-speed) var(--transition-timing);
 }
 
 header {
@@ -50,6 +54,7 @@ header {
     z-index: 1000;
     box-sizing: border-box;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color var(--transition-speed) var(--transition-timing);
 }
 
 /* Navigation principale */
@@ -792,6 +797,56 @@ textarea.form-control {
     font-size: 1.2rem;
 }
 
+/* Styles pour la section Formation */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.education-item {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    position: relative;
+    border: 1px solid rgba(255, 102, 204, 0.2);
+    transition: all 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 102, 204, 0.15);
+    border-color: rgba(255, 102, 204, 0.4);
+}
+
+.education-item::before {
+    content: '🎓';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.2rem;
+    opacity: 0.75;
+    transition: all 0.3s ease;
+}
+
+.education-item:hover::before {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.education-item h3 {
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.education-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
 .pdf-container {
     height: 0;
     overflow: hidden;
@@ -927,9 +982,19 @@ textarea.form-control {
 
 /* Pied de page */
 .main-footer {
-    background-color: var(--header-bg);
     padding: 50px 0 20px;
     color: var(--text-color);
+    transition: background-color var(--transition-speed) var(--transition-timing), 
+                color var(--transition-speed) var(--transition-timing);
+}
+
+/* Couleurs spécifiques pour le footer */
+.main-footer {
+    background-color: #0a0a0a; /* Noir par défaut */
+}
+
+.light-theme .main-footer {
+    background-color: #222222 !important; /* Gris foncé quand thème clair - assombri pour mieux s'harmoniser */
 }
 
 .footer-content {
@@ -987,6 +1052,7 @@ textarea.form-control {
     --text-color: #ffffff;
     --text-secondary: #b0b0b0;
     --border-color: #333333;
+    --footer-bg: #0a0a0a;
 }
 
 .light-theme {
@@ -996,6 +1062,7 @@ textarea.form-control {
     --text-color: #e0e0e0;
     --text-secondary: #b0b0b0;
     --border-color: #333;
+    --footer-bg: #222222;
 }
 
 /* Animations */
@@ -1271,4 +1338,4 @@ textarea.form-control {
         font-size: 1.1rem;
         padding: 0 1rem;
     }
-} 
+}
