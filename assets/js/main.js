@@ -212,6 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'footer_quick_nav': 'Navigation rapide',
             'footer_contact': 'Me contacter',
             'footer_social': 'Réseaux sociaux',
+            'footer_social_text': 'Retrouvez-moi sur les plateformes professionnelles pour suivre mon parcours et mes contributions dans le domaine du développement web et de la cybersécurité.',
             'footer_rights': 'Tous droits réservés.',
             'footer_legal': 'Mentions légales',
             'footer_privacy': 'Politique de confidentialité',
@@ -429,6 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'footer_quick_nav': 'Quick Navigation',
             'footer_contact': 'Contact Me',
             'footer_social': 'Social Networks',
+            'footer_social_text': 'Find me on professional platforms to follow my journey and my contributions in the field of web development and cybersecurity.',
             'footer_rights': 'All rights reserved.',
             'footer_legal': 'Legal Notice',
             'footer_privacy': 'Privacy Policy',
@@ -551,12 +553,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // 6. Fonction de traduction
     function applyTranslation(lang) {
         console.log('Traduction en cours vers:', lang);
-        
         // Traduire tous les éléments avec data-translate
         document.querySelectorAll('[data-translate]').forEach(function(element) {
             const key = element.getAttribute('data-translate');
             if (translations[lang] && translations[lang][key]) {
-                element.textContent = translations[lang][key];
+                // Utilise innerHTML pour supporter les retours à la ligne et balises HTML
+                element.innerHTML = translations[lang][key];
             }
         });
         
