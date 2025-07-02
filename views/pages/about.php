@@ -19,8 +19,22 @@ $current_page = "about";
         </div>
         <div class="about-bio">
             <h2 data-translate="about_who_title">Qui suis-je ?</h2>
-            <p data-translate="about_who_text1">Actuellement en B2 Informatique à Ynov, je suis passionné par le développement web et les nouvelles technologies. Mon parcours m'a permis de développer une expertise variée, allant du développement front-end au back-end, en passant par l'infrastructure et la gestion de bases de données.</p>
-            <p data-translate="about_who_text2">Je m'intéresse particulièrement à la création d'applications web innovantes et à l'optimisation des performances. Ma formation et mes projets personnels m'ont permis de développer une approche méthodique et créative de la résolution de problèmes.</p>
+            <p><strong>Actuellement en B3 Informatique à Ynov</strong>, je suis passionné par le développement web, les réseaux et la cybersécurité. Mon parcours académique et mes expériences personnelles m'ont permis d'acquérir une expertise polyvalente, couvrant l'ensemble des domaines du numérique : du développement front-end et back-end à l'administration système, en passant par l'architecture réseau et la sécurité informatique.</p>
+            <p>Au fil de ma formation, j'ai :
+                <ul style="margin-left:1em;">
+                    <li><strong>Développé des applications web</strong> modernes et performantes, en utilisant les dernières technologies (HTML, CSS, JavaScript, PHP, Node.js, Flutter…)</li>
+                    <li><strong>Mis en place et sécurisé des infrastructures réseau</strong>, avec une attention particulière à la gestion des accès, la virtualisation, la configuration de serveurs (Linux/Windows), et la surveillance du trafic</li>
+                    <li><strong>Approfondi la cybersécurité</strong>, à travers des projets de protection contre les attaques (XSS, CSRF…), la gestion des droits, la sécurisation des données et la sensibilisation aux bonnes pratiques</li>
+                </ul>
+            </p>
+            <p>Je m'intéresse particulièrement à :
+                <ul style="margin-left:1em;">
+                    <li>La <strong>création de solutions innovantes</strong> (applications web, mobiles, outils d'automatisation…)</li>
+                    <li>L'<strong>optimisation des performances</strong> et de la sécurité, aussi bien côté code que sur l'infrastructure</li>
+                    <li>La <strong>résolution de problèmes complexes</strong> grâce à une approche méthodique, créative et orientée résultats</li>
+                </ul>
+            </p>
+            <p><strong>Curieux, rigoureux et toujours en veille technologique</strong>, je cherche à relever de nouveaux défis dans le développement, le réseau et la cybersécurité, afin de contribuer à des projets ambitieux et à forte valeur ajoutée.</p>
         </div>
     </section>
 
@@ -29,7 +43,7 @@ $current_page = "about";
         <div class="parcours-container">
             <h2 data-translate="about_path_title">Mon Parcours</h2>
             <p class="parcours-intro">
-                Actuellement étudiant en B2 Informatique à Ynov (fin de 2<sup>ème</sup> année), je débuterai la 3<sup>ème</sup> année (B3) en septembre 2025.
+                Je serai en <strong>3<sup>ème</sup> année d'informatique</strong> à Ynov à partir de septembre 2025.
             </p>
             <div class="parcours-item">
                 <h3 data-translate="about_timeline_date">2023 - Présent</h3>
