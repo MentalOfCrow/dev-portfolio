@@ -102,6 +102,16 @@ $current_page = "projects";
                 'images' => ['/assets/images/projects/9.jpg'],
                 'full_description' => 'Le projet Fil Rouge consistait à développer un jeu de Dames en ligne utilisant des technologies web modernes. Le projet utilise PHP pour la logique du jeu, MySQL pour le stockage des données, Canvas API pour l\'affichage du plateau, et JavaScript pour l\'interactivité. Les fonctionnalités incluent la gestion des joueurs, un plateau interactif, la sauvegarde des parties et une interface responsive.',
                 'technologies' => ['PHP', 'MySQL', 'JavaScript', 'Canvas API', 'Tailwind CSS']
+            ],
+            [
+                'id' => 'fridgevision',
+                'title' => 'FridgeVision',
+                'description' => "Application mobile Flutter basée sur l'IA pour réduire le gaspillage alimentaire, détecter les aliments et générer des recettes personnalisées.",
+                'tags' => ['Flutter', 'IA', 'Open Food Facts', 'Node.js/Express', 'API REST', 'Notifications'],
+                'thumbnail' => '/assets/images/projects/10.png',
+                'images' => ['/assets/images/projects/10.png'],
+                'full_description' => "FridgeVision est une application mobile Flutter basée sur l'IA qui aide à réduire le gaspillage alimentaire en détectant les aliments présents dans votre réfrigérateur et en générant des recettes personnalisées en temps réel.\n\nFonctionnalités principales :\n- Détection des aliments par vision par ordinateur ou saisie manuelle\n- Recherche mondiale de produits via l'API Open Food Facts\n- Génération automatique de recettes adaptées aux ingrédients disponibles\n- Notifications intelligentes sur les dates de péremption et suggestions d'utilisation\n- Historique des aliments et des recettes\n- Interface intuitive et moderne\n\nStack technique :\nFlutter (Dart), API Open Food Facts, Backend Node.js/Express ou Firebase, IA (TensorFlow Lite, ML Kit), Notifications push.",
+                'technologies' => ['Flutter', 'Dart', 'Open Food Facts API', 'Node.js/Express', 'Firebase', 'TensorFlow Lite', 'ML Kit', 'Notifications push']
             ]
         ];
 
@@ -124,6 +134,14 @@ $current_page = "projects";
                 </div>
             </article>
         <?php endforeach; ?>
+        <!-- Projet à venir -->
+        <article class="project-card project-coming-soon" style="opacity:0.7; background:#f3f3f3; display:flex; align-items:center; justify-content:center; flex-direction:column; border:2px dashed #bbb; min-height:280px;">
+            <div style="font-size:3em; color:#bbb; margin-bottom:0.5em;">
+                <svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='none' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10' stroke='#bbb' stroke-width='2'/><path d='M12 7v5l3 3' stroke='#bbb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>
+            </div>
+            <h3 style="color:#888;">Bientôt disponible...</h3>
+            <p style="color:#aaa;">Un nouveau projet arrive prochainement !</p>
+        </article>
     </div>
 </main>
 
@@ -184,6 +202,10 @@ document.addEventListener('DOMContentLoaded', function() {
             'jeu-dames': {
                 'title': 'Checkers Game',
                 'full_description': 'The Red Thread project involved developing an online checkers game using modern web technologies. The project uses PHP for game logic, MySQL for data storage, Canvas API for board display, and JavaScript for interactivity. Features include player management, an interactive board, game saving, and a responsive interface.'
+            },
+            'fridgevision': {
+                'title': 'FridgeVision',
+                'full_description': "FridgeVision is a Flutter-based mobile application that helps reduce food waste by detecting the food items present in your refrigerator and generating personalized recipes in real-time.\n\nMain features:\n- Food detection via computer vision or manual input\n- Global product search via the Open Food Facts API\n- Automatic recipe generation based on available ingredients\n- Intelligent notifications on expiration dates and usage suggestions\n- Food and recipe history\n- Intuitive and modern interface\n\nTechnical stack:\nFlutter (Dart), API Open Food Facts, Backend Node.js/Express or Firebase, IA (TensorFlow Lite, ML Kit), Notifications push."
             }
         }
     };
