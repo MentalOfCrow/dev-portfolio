@@ -1,4 +1,5 @@
 <?php
+echo "<!-- DEBUG CV.PHP LOADED -->";
 $title = "Mon CV";
 $current_page = "cv";
 ?>
@@ -88,10 +89,11 @@ $current_page = "cv";
             <h2 data-translate="cv_education_title">Formation</h2>
             <div class="education-list">
                 <div class="education-item">
-                    <h3 data-translate="cv_education1_title">Formation en Développement Web</h3>
-                    <p data-translate="cv_education1_desc">Ynov - B2 Informatique</p>
+                    <h3 data-translate="cv_education1_title">Formation en Développement Web, Réseau et Cybersécurité</h3>
+                    <p data-translate="cv_education1_desc">Ynov – B2 Informatique (B3 Informatique en septembre 2025)<br>Objectif : Bac+5 (Master)</p>
                 </div>
             </div>
+            <!-- DEBUG: Cette section devrait maintenant être visible -->
         </section>
 
         <!-- Intégration du PDF -->
