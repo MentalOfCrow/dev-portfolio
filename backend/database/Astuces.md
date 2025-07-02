@@ -44,3 +44,8 @@ define('DB_NAME', 'portfolio'); // ou le nom que vous avez choisi
 define('DB_USER', 'portfolio_user'); // remplacez par votre utilisateur Hostinger
 define('DB_PASS', 'portfolio_password'); // remplacez par votre mot de passe Hostinger
 ``` 
+
+<hr class="future-projects-separator">
+<div class="future-projects-label" style="text-align:center; margin: 2em 0; font-weight: bold;">
+    Futurs projets
+</div> 
