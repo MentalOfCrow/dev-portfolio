@@ -15,28 +15,41 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // THÈME JOUR/NUIT
     const themeToggle = document.querySelector('.theme-toggle');
+    console.log('THEME TOGGLE FOUND:', themeToggle);
     
     if (themeToggle) {
         // Appliquer le thème sauvegardé
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-theme');
-        } else if (savedTheme === 'light') {
+        console.log('SAVED THEME:', savedTheme);
+        if (savedTheme === 'light') {
             document.body.classList.add('light-theme');
+            document.body.classList.remove('dark-theme');
+            console.log('APPLIED LIGHT THEME');
+        } else {
+            // Par défaut dark
+            document.body.classList.add('dark-theme');
+            document.body.classList.remove('light-theme');
+            console.log('APPLIED DARK THEME');
         }
         
         // Changer le thème au clic
         themeToggle.addEventListener('click', function() {
-            if (document.body.classList.contains('dark-theme')) {
-                document.body.classList.remove('dark-theme');
-                document.body.classList.add('light-theme');
-                localStorage.setItem('theme', 'light');
-            } else {
+            console.log('BUTTON CLICKED!');
+            if (document.body.classList.contains('light-theme')) {
                 document.body.classList.remove('light-theme');
                 document.body.classList.add('dark-theme');
                 localStorage.setItem('theme', 'dark');
+                console.log('SWITCHED TO DARK');
+            } else {
+                document.body.classList.remove('dark-theme');
+                document.body.classList.add('light-theme');
+                localStorage.setItem('theme', 'light');
+                console.log('SWITCHED TO LIGHT');
             }
+            console.log('BODY CLASSES:', document.body.classList);
         });
+    } else {
+        console.log('THEME TOGGLE NOT FOUND!');
     }
     
     // ANIMATION DES BARRES DE COMPÉTENCES
@@ -203,8 +216,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'cv_project3_title': 'Infrastructure Client-Serveur',
             'cv_project3_desc': 'Conception et implémentation d\'une architecture réseau complète pour une petite entreprise.',
             'cv_education_title': 'Formation',
-            'cv_education1_title': 'Formation en Développement Web',
-            'cv_education1_desc': 'Ynov - B2 Informatique',
+            'cv_education1_title': 'Formation en Développement Web, Réseau et Cybersécurité',
+            'cv_education1_desc': 'Ynov – B2 Informatique (B3 Informatique en septembre 2025)<br>Objectif : Bac+5 (Master)',
             'cv_pdf_title': 'Version PDF',
             
             // Footer
@@ -421,8 +434,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'cv_project3_title': 'Client-Server Infrastructure',
             'cv_project3_desc': 'Design and implementation of a complete network architecture for a small business.',
             'cv_education_title': 'Education',
-            'cv_education1_title': 'Web Development Training',
-            'cv_education1_desc': 'Ynov - B2 Computer Science',
+            'cv_education1_title': 'Web Development, Networking and Cybersecurity Training',
+            'cv_education1_desc': 'Ynov – B2 Computer Science (B3 in September 2025)<br>Goal: Master\'s degree (Bac+5)',
             'cv_pdf_title': 'PDF Version',
             
             // Footer
