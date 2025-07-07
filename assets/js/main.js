@@ -234,9 +234,9 @@ document.addEventListener('DOMContentLoaded', function() {
             'legal_title': 'Mentions Légales',
             'legal_subtitle': 'Informations légales concernant ce site web',
             'legal_editor_title': 'Éditeur du site',
-            'legal_editor_text': 'Ce site web est édité par Hugo Bisserier, étudiant en B2 Informatique à Ynov, résidant à Aix-en-Provence, France.',
+            'legal_editor_text': 'Ce site web est édité par Hugo Bisserier, étudiant en B3 Informatique à Ynov, résidant à Aix-en-Provence, France.',
             'legal_hosting_title': 'Hébergement',
-            'legal_hosting_text': 'Ce site est hébergé par [Nom de l\'hébergeur], [Adresse de l\'hébergeur], [Coordonnées de l\'hébergeur].',
+            'legal_hosting_text': 'Ce site est hébergé par Hugo Bisserier (B3 Informatique), 2 rue de la fougasse, Aix en Provence.',
             'legal_property_title': 'Propriété intellectuelle',
             'legal_property_text1': 'L\'ensemble du contenu de ce site (textes, images, vidéos, etc.) est la propriété exclusive de Hugo Bisserier, sauf mention contraire.',
             'legal_property_text2': 'Toute reproduction, représentation, modification, publication, adaptation totale ou partielle des éléments du site, par quelque procédé que ce soit, sans l\'autorisation expresse écrite de Hugo Bisserier, est strictement interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la Propriété Intellectuelle.',
@@ -452,9 +452,9 @@ document.addEventListener('DOMContentLoaded', function() {
             'legal_title': 'Legal Notice',
             'legal_subtitle': 'Legal information about this website',
             'legal_editor_title': 'Website Editor',
-            'legal_editor_text': 'This website is edited by Hugo Bisserier, B2 Computer Science student at Ynov, residing in Aix-en-Provence, France.',
+            'legal_editor_text': 'This website is edited by Hugo Bisserier, B3 Computer Science student at Ynov, residing in Aix-en-Provence, France.',
             'legal_hosting_title': 'Hosting',
-            'legal_hosting_text': 'This site is hosted by [Host name], [Host address], [Host contact information].',
+            'legal_hosting_text': 'This site is hosted by Hugo Bisserier (B3 Computer Science), 2 rue de la fougasse, Aix en Provence.',
             'legal_property_title': 'Intellectual Property',
             'legal_property_text1': 'All content on this site (texts, images, videos, etc.) is the exclusive property of Hugo Bisserier, unless otherwise stated.',
             'legal_property_text2': 'Any reproduction, representation, modification, publication, total or partial adaptation of the elements of the site, by any process whatsoever, without the express written authorization of Hugo Bisserier, is strictly prohibited and would constitute an infringement sanctioned by articles L.335-2 and following of the Intellectual Property Code.',
@@ -569,9 +569,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Traduire tous les éléments avec data-translate
         document.querySelectorAll('[data-translate]').forEach(function(element) {
             const key = element.getAttribute('data-translate');
+            console.log('Traduction de clé:', key, 'Élément:', element);
             if (translations[lang] && translations[lang][key]) {
+                console.log('Valeur trouvée:', translations[lang][key]);
                 // Utilise innerHTML pour supporter les retours à la ligne et balises HTML
                 element.innerHTML = translations[lang][key];
+            } else {
+                console.warn('Traduction non trouvée pour:', key, 'dans la langue:', lang);
             }
         });
         
