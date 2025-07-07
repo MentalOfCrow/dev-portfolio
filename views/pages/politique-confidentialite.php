@@ -27,7 +27,7 @@ $pageDescription = "Politique de confidentialité du portfolio d'Hugo Bisserier,
         <p data-translate="privacy_collector_text">Les données personnelles collectées sur ce site sont traitées par :</p>
         <ul>
             <li>Hugo Bisserier</li>
-            <li>Étudiant en B2 Informatique à Ynov</li>
+            <li>Étudiant en B3 Informatique à Ynov</li>
             <li>Aix-en-Provence, France</li>
             <li>Email : <a href="mailto:hugo.bisserier.pro@gmail.com">hugo.bisserier.pro@gmail.com</a></li>
         </ul>
