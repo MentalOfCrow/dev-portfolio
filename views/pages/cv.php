@@ -90,7 +90,7 @@ $current_page = "cv";
             <div class="education-list">
                 <div class="education-item">
                     <h3 data-translate="cv_education1_title">Formation en Développement Web, Réseau et Cybersécurité</h3>
-                    <p data-translate="cv_education1_desc">Ynov – B2 Informatique (B3 Informatique en septembre 2025)<br>Objectif : Bac+5 (Master)</p>
+                    <p data-translate="cv_education1_desc">Ynov – B3 Informatique<br>Objectif : Bac+5 (Master)</p>
                 </div>
             </div>
             <!-- DEBUG: Cette section devrait maintenant être visible -->
