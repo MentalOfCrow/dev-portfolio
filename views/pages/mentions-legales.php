@@ -13,13 +13,13 @@ $pageDescription = "Mentions légales du portfolio d'Hugo Bisserier, étudiant e
 
     <section class="legal-section">
         <h2 data-translate="legal_editor_title"><i class="fas fa-user-tie"></i>Éditeur du site</h2>
-        <p data-translate="legal_editor_text">Ce site web est édité par Hugo Bisserier, étudiant en B2 Informatique à Ynov, résidant à Aix-en-Provence, France.</p>
+        <p data-translate="legal_editor_text">Ce site web est édité par Hugo Bisserier, étudiant en B3 Informatique à Ynov, résidant à Aix-en-Provence, France.</p>
         <p><strong>Contact :</strong> <a href="mailto:hugo.bisserier.pro@gmail.com">hugo.bisserier.pro@gmail.com</a></p>
     </section>
     
     <section class="legal-section">
         <h2 data-translate="legal_hosting_title"><i class="fas fa-server"></i>Hébergement</h2>
-        <p data-translate="legal_hosting_text">Ce site est hébergé par Hostinger International Ltd., 61 Lordou Vironos Street, 6023 Larnaca, Chypre.</p>
+        <p data-translate="legal_hosting_text">Ce site est hébergé par Hugo Bisserier (B3 Informatique), 2 rue de la fougasse, Aix en Provence.</p>
         
         <div class="definition-box">
             <h3><i class="fas fa-quote-right"></i> Qu'est-ce qu'un hébergeur web ?</h3>
