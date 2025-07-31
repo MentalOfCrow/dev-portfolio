@@ -145,8 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'about_interest_innovation_desc': 'Passionné par l\'<strong>innovation</strong>, je teste régulièrement de <strong>nouveaux outils, technologies et concepts</strong> pour rester à la pointe et nourrir ma créativité. Cette <strong>curiosité</strong> me permet d\'<strong>anticiper les évolutions du secteur</strong> et d\'apporter des <strong>solutions modernes</strong> à mes projets.',
             'about_interest_chess_title': 'Jeux d\'Échecs',
             'about_interest_chess_desc': 'Passionné par les échecs, j\'apprécie ce jeu pour sa <strong>dimension stratégique et logique</strong>. La <strong>réflexion</strong>, l\'<strong>anticipation</strong> et l\'<strong>analyse des positions</strong> développent des compétences transversales utiles en <strong>programmation</strong> et <strong>résolution de problèmes complexes</strong>.',
-            'about_interest_music_title': 'Musique',
-            'about_interest_music_desc': 'Amateur de musique variée (rap, RnB, jazz, électronique), j\'aime découvrir de nouveaux artistes et styles musicaux. La musique m\'inspire dans mon travail créatif et me permet de maintenir un équilibre entre concentration et détente.',
             'about_interest_tech_news_title': 'Actualités Technologiques',
             'about_interest_tech_news_desc': '<strong>Suivi quotidien</strong> des actualités tech, des <strong>nouvelles versions de frameworks</strong>, des <strong>innovations en IA et cybersécurité</strong>. Cette <strong>veille constante</strong> me permet de rester informé des évolutions du secteur et d\'<strong>anticiper les technologies de demain</strong>.',
             
@@ -414,8 +412,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'about_interest_innovation_desc': 'Passionate about <strong>innovation</strong>, I regularly test <strong>new tools, technologies and concepts</strong> to stay at the forefront and nourish my creativity. This <strong>curiosity</strong> allows me to <strong>anticipate sector developments</strong> and bring <strong>modern solutions</strong> to my projects.',
             'about_interest_chess_title': 'Chess Games',
             'about_interest_chess_desc': 'Passionate about chess, I appreciate this game for its <strong>strategic and logical dimension</strong>. <strong>Reflection</strong>, <strong>anticipation</strong> and <strong>position analysis</strong> develop cross-functional skills useful in <strong>programming</strong> and <strong>complex problem solving</strong>.',
-            'about_interest_music_title': 'Music',
-            'about_interest_music_desc': 'Music lover of various genres (rap, RnB, jazz, electronic), I enjoy discovering new artists and musical styles. Music inspires me in my creative work and helps me maintain a balance between concentration and relaxation.',
             'about_interest_tech_news_title': 'Technology News',
             'about_interest_tech_news_desc': '<strong>Daily monitoring</strong> of tech news, <strong>new framework versions</strong>, <strong>AI and cybersecurity innovations</strong>. This <strong>constant watch</strong> allows me to stay informed about sector developments and <strong>anticipate tomorrow\'s technologies</strong>.',
             
