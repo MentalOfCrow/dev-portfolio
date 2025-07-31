@@ -172,6 +172,102 @@ $current_page = "skills";
             </div>
         </section>
 
+        <!-- Infrastructure & Cloud • Cybersécurité -->
+        <section class="skill-section">
+            <h2 data-translate="skills_infra_title"><i class="fas fa-shield-alt"></i> Infrastructure & Cloud • Cybersécurité</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Virtualisation</h3>
+                    </div>
+                    <div class="skill-level" data-level="80">
+                        <div class="level-bar"></div>
+                    </div>
+                    <ul class="skill-details">
+                        <li data-translate="skills_virt_1">Hyper-V</li>
+                        <li data-translate="skills_virt_2">VirtualBox</li>
+                        <li data-translate="skills_virt_3">VMware</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fab fa-windows"></i>
+                        <h3>Systèmes d'Exploitation</h3>
+                    </div>
+                    <div class="skill-level" data-level="85">
+                        <div class="level-bar"></div>
+                    </div>
+                    <ul class="skill-details">
+                        <li data-translate="skills_os_1">Windows Server</li>
+                        <li data-translate="skills_os_2">Linux (Ubuntu, CentOS)</li>
+                        <li data-translate="skills_os_3">Administration système</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Réseaux & Infrastructure</h3>
+                    </div>
+                    <div class="skill-level" data-level="75">
+                        <div class="level-bar"></div>
+                    </div>
+                    <ul class="skill-details">
+                        <li data-translate="skills_network_1">Configuration réseau</li>
+                        <li data-translate="skills_network_2">Routage et switching</li>
+                        <li data-translate="skills_network_3">Firewall et sécurité</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Cybersécurité</h3>
+                    </div>
+                    <div class="skill-level" data-level="70">
+                        <div class="level-bar"></div>
+                    </div>
+                    <ul class="skill-details">
+                        <li data-translate="skills_security_1">Analyse de vulnérabilités</li>
+                        <li data-translate="skills_security_2">Durcissement système</li>
+                        <li data-translate="skills_security_3">Monitoring et audit</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fab fa-docker"></i>
+                        <h3>Conteneurisation & DevOps</h3>
+                    </div>
+                    <div class="skill-level" data-level="65">
+                        <div class="level-bar"></div>
+                    </div>
+                    <ul class="skill-details">
+                        <li data-translate="skills_devops_1">Docker</li>
+                        <li data-translate="skills_devops_2">CI/CD Pipelines</li>
+                        <li data-translate="skills_devops_3">Automatisation</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud & Services</h3>
+                    </div>
+                    <div class="skill-level" data-level="60">
+                        <div class="level-bar"></div>
+                    </div>
+                    <ul class="skill-details">
+                        <li data-translate="skills_cloud_1">Architecture cloud</li>
+                        <li data-translate="skills_cloud_2">Services web</li>
+                        <li data-translate="skills_cloud_3">Haute disponibilité</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <!-- Outils et Environnements -->
         <section class="skill-section">
             <h2 data-translate="skills_tools_title"><i class="fas fa-tools"></i> Outils et Environnements</h2>
