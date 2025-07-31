@@ -1,6 +1,13 @@
 <?php
 $title = "À Propos";
 $current_page = "about";
+
+$cvLang = 'fr';
+if (isset($_COOKIE['language']) && $_COOKIE['language'] === 'en') {
+    $cvLang = 'en';
+}
+$cvFile = $cvLang === 'en' ? '/assets/cv/cv-en.pdf' : '/assets/cv/cv-fr.pdf';
+$cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV (PDF)';
 ?>
 
 <!-- Lien vers le CSS spécifique pour la page About -->
@@ -10,6 +17,10 @@ $current_page = "about";
     <section class="about-header">
         <h1 data-translate="about_title">À Propos de Moi</h1>
         <p class="subtitle" data-translate="about_subtitle">Développeur Web Passionné</p>
+        <div style="margin-top:2rem; text-align:center;">
+            <a href="/cv" class="btn btn-primary" style="font-size:1.1em;">Voir mon CV</a>
+            <span style="margin-left:1.5em; font-size:0.95em; color:#aaa;">(PDF bilingue disponible)</span>
+        </div>
     </section>
 
     <!-- Section Présentation -->
@@ -43,11 +54,13 @@ $current_page = "about";
         <div class="parcours-container">
             <h2 data-translate="about_path_title">Mon Parcours</h2>
             <p class="parcours-intro">
-                Je serai en <strong>3<sup>ème</sup> année d'informatique</strong> à Ynov à partir de septembre 2025.
+                Je serai en <strong>B3 Informatique</strong> à Ynov à partir de fin septembre 2025.<br>
+                <strong>N'hésitez pas à me contacter</strong> si vous avez besoin d'aide ou de conseils en développement web, cybersécurité, infrastructure, ou tout autre domaine informatique.<br>
+                Je suis actuellement <strong>en recherche d'une alternance</strong> dans les Bouches-du-Rhône, le Var, ou autour d'Aix, Marseille, Vitrolles, et environs.
             </p>
             <div class="parcours-item">
                 <h3 data-translate="about_timeline_date">2023 - Présent</h3>
-                <h4 data-translate="about_timeline_title">B2 Informatique</h4>
+                <h4 data-translate="about_timeline_title">B3 Informatique</h4>
                 <p data-translate="about_timeline_school">Ynov Campus</p>
                 <ul class="competence-list">
                     <li class="competence-item" data-translate="about_timeline_item1">Développement web avancé</li>
@@ -141,4 +154,4 @@ $current_page = "about";
             </div>
         </div>
     </section>
-</main> 
+</main>
