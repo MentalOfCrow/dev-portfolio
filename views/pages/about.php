@@ -72,83 +72,225 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
         </div>
     </section>
 
-    <!-- Section Compétences -->
-    <section class="about-competences">
-        <div class="competences-container">
-            <h2 data-translate="about_skills_title">Mes Compétences</h2>
-            <div class="competences-grid">
-                <div class="competence-category">
-                    <h3 data-translate="about_webdev_title">Développement Web</h3>
-                    <ul class="competence-list">
-                        <li class="competence-item">HTML/CSS</li>
-                        <li class="competence-item">JavaScript</li>
-                        <li class="competence-item">PHP</li>
-                    </ul>
+    <!-- Section Soft Skills -->
+    <section class="about-soft-skills">
+        <div class="soft-skills-container">
+            <h2 data-translate="about_soft_skills_title">Mes Qualités Humaines</h2>
+            <p class="soft-skills-intro" data-translate="about_soft_skills_intro">
+                Au-delà de mes compétences techniques, je cultive des qualités humaines essentielles pour réussir en équipe et mener à bien des projets complexes.
+            </p>
+            <div class="soft-skills-grid">
+                <div class="soft-skill-item">
+                    <div class="soft-skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-translate="about_soft_teamwork">Travail d'équipe</h3>
+                    <p data-translate="about_soft_teamwork_desc">Collaboration efficace et communication constructive</p>
                 </div>
-
-                <div class="competence-category">
-                    <h3 data-translate="about_tech_title">Autres Technologies</h3>
-                    <ul class="competence-list">
-                        <li class="competence-item">Python</li>
-                        <li class="competence-item">C#</li>
-                        <li class="competence-item">Golang</li>
-                        <li class="competence-item">Flutter</li>
-                    </ul>
+                
+                <div class="soft-skill-item">
+                    <div class="soft-skill-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 data-translate="about_soft_problem">Résolution de problèmes</h3>
+                    <p data-translate="about_soft_problem_desc">Approche analytique et créative face aux défis</p>
                 </div>
-
-                <div class="competence-category">
-                    <h3 data-translate="about_soft_title">Soft Skills</h3>
-                    <ul class="competence-list">
-                        <li class="competence-item" data-translate="about_soft_teamwork">Travail d'équipe</li>
-                        <li class="competence-item" data-translate="about_soft_problem">Résolution de problèmes</li>
-                        <li class="competence-item" data-translate="about_soft_comm">Communication</li>
-                        <li class="competence-item" data-translate="about_soft_auto">Autonomie</li>
-                        <li class="competence-item" data-translate="about_soft_adapt">Adaptabilité</li>
-                        <li class="competence-item" data-translate="about_soft_org">Organisation</li>
-                    </ul>
+                
+                <div class="soft-skill-item">
+                    <div class="soft-skill-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 data-translate="about_soft_comm">Communication</h3>
+                    <p data-translate="about_soft_comm_desc">Expression claire et écoute active</p>
+                </div>
+                
+                <div class="soft-skill-item">
+                    <div class="soft-skill-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3 data-translate="about_soft_auto">Autonomie</h3>
+                    <p data-translate="about_soft_auto_desc">Initiative et prise de décision responsable</p>
+                </div>
+                
+                <div class="soft-skill-item">
+                    <div class="soft-skill-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 data-translate="about_soft_adapt">Adaptabilité</h3>
+                    <p data-translate="about_soft_adapt_desc">Flexibilité face aux changements et nouveaux défis</p>
+                </div>
+                
+                <div class="soft-skill-item">
+                    <div class="soft-skill-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 data-translate="about_soft_org">Organisation</h3>
+                    <p data-translate="about_soft_org_desc">Gestion efficace du temps et des priorités</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Centres d'intérêt -->
-    <section class="about-interets">
-        <div class="interets-container">
-            <h2 data-translate="about_interests_title">Centres d'Intérêt</h2>
-            <div class="interets-grid">
-                <div class="interet-item">
-                    <i class="fas fa-code"></i>
-                    <h3 style="font-weight:bold; font-size:1.5em; margin-bottom:10px;">Programmation, Technologies Web & Architecture</h3>
-                    <p style="margin-bottom:8px;"><strong>Exploration de nouveaux langages et frameworks</strong></p>
-                    <p style="margin-bottom:8px;"><strong>Veille technologique et expérimentation</strong></p>
-                    <p style="margin-bottom:0;"><strong>Conception de systèmes évolutifs</strong></p>
+    <!-- Section Unifiée : Centres d'Intérêt & Infrastructure -->
+    <section class="about-unified-section">
+        <div class="unified-container">
+            <!-- Centres d'Intérêt -->
+            <div class="section-block">
+                <h2 data-translate="about_interests_title">Centres d'Intérêt</h2>
+                <div class="interests-grid">
+                    <div class="interest-item">
+                        <div class="interest-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Programmation, Technologies Web & Architecture</h3>
+                        <div class="interest-content">
+                            <p><strong>Exploration de nouveaux langages et frameworks</strong></p>
+                            <p><strong>Veille technologique et expérimentation</strong></p>
+                            <p><strong>Conception de systèmes évolutifs</strong></p>
+                        </div>
+                    </div>
+                    
+                    <div class="interest-item">
+                        <div class="interest-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 data-translate="about_interest4_title">Cybersécurité</h3>
+                        <div class="interest-content">
+                            <p data-translate="about_interest4_desc">
+                                J'approfondis la cybersécurité à travers la création et la résolution de challenges CTF.<br>
+                                <strong>1ère année :</strong> Création de challenges pour <a href="https://hackin.fr" target="_blank" style="color:#ff4ecb;text-decoration:underline;font-weight:bold;">Hack'In</a> (ex-Hacky'nov).<br>
+                                <strong>2ème année :</strong> Participation à plusieurs CTF (Hack'In, Ynov Aix-en-Provence, etc.).<br>
+                                Apprentissage continu en sécurité offensive et sensibilisation à la protection des données.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="interest-item">
+                        <div class="interest-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Développement Mobile</h3>
+                        <div class="interest-content">
+                            <p>
+                                Je souhaite développer et publier à l'avenir des applications mobiles sur le Play Store, en utilisant Flutter ou React Native, pour explorer de nouvelles idées et technologies.<br><br>
+                                <strong>Vous avez un projet ou souhaitez collaborer ?</strong><br>
+                                Contactez-moi à l'adresse suivante :<br>
+                                <a href="mailto:hugo.bisserier.dev@gmail.com" style="color:#ff4ecb;text-decoration:underline;font-weight:bold;word-break:break-all;overflow-wrap:anywhere;">hugo.bisserier.dev@gmail.com</a><br>
+                                pour échanger et travailler ensemble sur des applications innovantes.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="interest-item">
+                        <div class="interest-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 data-translate="about_interest_innovation_title">Veille & Innovation</h3>
+                        <div class="interest-content">
+                            <p data-translate="about_interest_innovation_desc">
+                                Passionné par l'<strong>innovation</strong>, je teste régulièrement de <strong>nouveaux outils, technologies et concepts</strong> pour rester à la pointe et nourrir ma créativité. Cette <strong>curiosité</strong> me permet d'<strong>anticiper les évolutions du secteur</strong> et d'apporter des <strong>solutions modernes</strong> à mes projets.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="interest-item">
+                        <div class="interest-icon">
+                            <i class="fas fa-chess"></i>
+                        </div>
+                        <h3 data-translate="about_interest_chess_title">Jeux d'Échecs</h3>
+                        <div class="interest-content">
+                            <p data-translate="about_interest_chess_desc">
+                                Passionné par les échecs, j'apprécie ce jeu pour sa <strong>dimension stratégique et logique</strong>. 
+                                La <strong>réflexion</strong>, l'<strong>anticipation</strong> et l'<strong>analyse des positions</strong> développent des compétences 
+                                transversales utiles en <strong>programmation</strong> et <strong>résolution de problèmes complexes</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="interest-item">
+                        <div class="interest-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3 data-translate="about_interest_tech_news_title">Actualités Technologiques</h3>
+                        <div class="interest-content">
+                            <p data-translate="about_interest_tech_news_desc">
+                                <strong>Suivi quotidien</strong> des actualités tech, des <strong>nouvelles versions de frameworks</strong>, 
+                                des <strong>innovations en IA et cybersécurité</strong>. Cette <strong>veille constante</strong> me permet de rester 
+                                informé des évolutions du secteur et d'<strong>anticiper les technologies de demain</strong>.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="interet-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3 data-translate="about_interest4_title">Cybersécurité</h3>
-                    <p data-translate="about_interest4_desc">
-                        J'approfondis la cybersécurité à travers la création et la résolution de challenges CTF.<br>
-                        <strong>1ère année :</strong> Création de challenges pour <a href="https://hackin.fr" target="_blank" style="color:#ff4ecb;text-decoration:underline;font-weight:bold;">Hack'In</a> (ex-Hacky'nov).<br>
-                        <strong>2ème année :</strong> Participation à plusieurs CTF (Hack'In, Ynov Aix-en-Provence, etc.).<br>
-                        Apprentissage continu en sécurité offensive et sensibilisation à la protection des données.
+            </div>
+
+            <!-- Séparateur visuel -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <div class="divider-line"></div>
+            </div>
+
+            <!-- Infrastructure & Cloud -->
+            <div class="section-block">
+                <h2 data-translate="about_infrastructure_title">Infrastructure & Cloud</h2>
+                <div class="infrastructure-intro">
+                    <p data-translate="about_infrastructure_intro">
+                        Ma vision transversale me permet d'assurer la cohérence entre développement, infrastructure et sécurité. 
+                        Je conçois des solutions complètes qui répondent aux besoins métier tout en garantissant performance, sécurité et maintenabilité.
                     </p>
                 </div>
-                <div class="interet-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Développement Mobile</h3>
-                    <p>
-                        Je souhaite développer et publier à l'avenir des applications mobiles sur le Play Store, en utilisant Flutter ou React Native, pour explorer de nouvelles idées et technologies.<br><br>
-                        <strong>Vous avez un projet ou souhaitez collaborer ?</strong><br>
-                        Contactez-moi à l'adresse suivante&nbsp;:<br>
-                        <a href="mailto:hugo.bisserier.dev@gmail.com" style="color:#ff4ecb;text-decoration:underline;font-weight:bold;word-break:break-all;overflow-wrap:anywhere;font-size:0.97em;">hugo.bisserier.dev@gmail.com</a><br>
-                        pour échanger et travailler ensemble sur des applications innovantes.
-                    </p>
+                
+                <div class="infrastructure-skills">
+                    <div class="skill-category">
+                        <div class="category-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 data-translate="about_infra_systems_title">Systèmes & Virtualisation</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Hyper-V</span>
+                            <span class="skill-tag">VMware</span>
+                            <span class="skill-tag">VirtualBox</span>
+                            <span class="skill-tag">Windows Server</span>
+                            <span class="skill-tag">Linux</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="category-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 data-translate="about_infra_cloud_title">Cloud & DevOps</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">Google Cloud</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">CI/CD</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 data-translate="about_infra_security_title">Réseaux & Cybersécurité</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">TCP/IP</span>
+                            <span class="skill-tag">VPN</span>
+                            <span class="skill-tag">Pare-feu</span>
+                            <span class="skill-tag">Pentest</span>
+                            <span class="skill-tag">Audit</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="interet-item">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Veille & Innovation</h3>
-                    <p>
-                        Passionné par l'innovation, je teste régulièrement de nouveaux outils, technologies et concepts pour rester à la pointe et nourrir ma créativité. Cette curiosité me permet d'anticiper les évolutions du secteur et d'apporter des solutions modernes à mes projets.
+                
+                <div class="infrastructure-highlight">
+                    <i class="fas fa-rocket"></i>
+                    <p data-translate="about_infra_highlight">
+                        <strong>De l'infrastructure au code :</strong> Je maîtrise l'ensemble de la stack technique, 
+                        du déploiement serveur à l'application finale, en passant par la sécurisation et l'optimisation des performances.
                     </p>
                 </div>
             </div>
