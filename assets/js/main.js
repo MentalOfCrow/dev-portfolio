@@ -166,6 +166,9 @@ document.addEventListener('DOMContentLoaded', function() {
             'projects_subtitle': 'Découvrez mes réalisations et projets personnels',
             'projects_view_btn': 'Voir le projet',
             'projects_technologies': 'Technologies',
+            'projects_key_features': 'Fonctionnalités clés',
+            'projects_view_demo': 'Voir la démo',
+            'projects_view_code': 'Voir le code',
             'project1_title': 'Projet Red',
             'project1_desc': 'Un projet ambitieux explorant de nouvelles approches en développement web avec des fonctionnalités avancées.',
             'project2_title': 'Boutique en Ligne',
@@ -184,6 +187,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'project8_desc': 'Application de gestion des commandes d\'impressions 3D pour un FabLab.',
             'project9_title': 'Jeu de Dames',
             'project9_desc': 'Développement d\'un jeu de dames en ligne avec gestion des parties et des joueurs.',
+            'project10_title': 'FridgeVision',
+            'project10_desc': 'Application mobile Flutter basée sur l\'IA pour réduire le gaspillage alimentaire, détecter les aliments et générer des recettes personnalisées.',
             
             // Page Contact
             'contact_title': 'Contactez-moi',
@@ -384,6 +389,9 @@ document.addEventListener('DOMContentLoaded', function() {
             'projects_subtitle': 'Discover my works and personal projects',
             'projects_view_btn': 'View project',
             'projects_technologies': 'Technologies',
+            'projects_key_features': 'Key Features',
+            'projects_view_demo': 'View Demo',
+            'projects_view_code': 'View Code',
             'project1_title': 'Project Red',
             'project1_desc': 'An ambitious project exploring new approaches in web development with advanced features.',
             'project2_title': 'Online Shop',
@@ -402,6 +410,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'project8_desc': '3D printing order management application for a FabLab.',
             'project9_title': 'Checkers Game',
             'project9_desc': 'Development of an online checkers game with game and player management.',
+            'project10_title': 'FridgeVision',
+            'project10_desc': 'Flutter mobile application based on AI to reduce food waste, detect food items and generate personalized recipes.',
             
             // Contact page
             'contact_title': 'Contact Me',
