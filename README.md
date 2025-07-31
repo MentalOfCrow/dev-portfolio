@@ -22,31 +22,20 @@ Site portfolio professionnel présentant mes projets, compétences et expérienc
 
 - **Backend**:
   - PHP 8.0+ (structure MVC simplifiée)
-  - MySQL (base de données minimale)
   - Architecture orientée objet
-  - Sécurité renforcée (protection CSRF, XSS, etc.)
+  - Système de routage personnalisé
 
 - **Frontend**:
   - HTML5 / CSS3
   - JavaScript (ES6+)
-  - Vite.js pour le bundling et le hot reload
   - Responsive design (mobile-first)
-  - Animations fluides avec AOS
+  - Animations CSS fluides
   - Système de thèmes personnalisables
 
 - **Outils**:
   - FontAwesome pour les icônes
   - Google Fonts pour la typographie
-  - ESLint et Prettier pour la qualité du code
-  - Composer pour la gestion des dépendances PHP
-  - npm pour la gestion des dépendances JavaScript
-
-- **Structure**:
-  - Architecture MVC simplifiée
-  - Système de routage personnalisé
-  - Gestion des assets optimisée avec Vite
-  - Support multilingue intégré
-  - Système de thèmes clair/sombre
+  - Système multilingue intégré
 
 ## 📷 Aperçu du projet
 
@@ -55,7 +44,7 @@ Ce portfolio a été créé pour mettre en avant mon parcours dans le développe
 - **À propos de moi** : Une brève introduction à mon parcours, mes intérêts et mes objectifs professionnels.
 - **Projets** : Un aperçu détaillé de mes projets avec les technologies utilisées et les défis rencontrés.
 - **Compétences** : Un résumé des compétences techniques classées par catégories (front-end, back-end, infrastructure).
-- **Blog** : Des articles documentant mon processus d'apprentissage et mes découvertes techniques.
+- **CV** : Consultation et téléchargement de mon CV au format PDF.
 - **Contact** : Un formulaire pour me contacter directement et mes coordonnées professionnelles.
 
 ## 📂 Structure détaillée du projet
@@ -78,10 +67,11 @@ portfolio/
 │   │   │   ├── 6.jpg         # Image projet 6
 │   │   │   ├── 7.jpg         # Image projet 7
 │   │   │   ├── 8.jpg         # Image projet 8
-│   │   │   └── 9.jpg         # Image projet 9
+│   │   │   ├── 10.png        # Image projet 10
 │   │   └── profile.jpg        # Photo de profil
 │   └── cv/                     # Fichiers CV
-│       └── cv.pdf             # CV téléchargeable
+│       ├── cv-fr.pdf          # CV français
+│       └── cv-en.pdf          # CV anglais
 │
 ├── backend/                    # Backend PHP
 │   ├── database/              # Base de données
@@ -111,117 +101,93 @@ portfolio/
 │       ├── head.php           # En-tête HTML
 │       └── header.php         # En-tête de page
 │
-├── public/                     # Point d'entrée public
-│   └── index.php              # Point d'entrée principal
+├── public/                     # Point d'entrée public (optionnel)
+│   └── index.php              # Point d'entrée alternatif
 │
-├── .env.example               # Exemple de variables d'environnement
-├── .eslintrc.json            # Configuration ESLint
 ├── .gitattributes            # Configuration Git (attributs)
 ├── .gitignore                # Fichiers ignorés par Git
-├── .htaccess                 # Configuration Apache
-├── .prettierrc               # Configuration Prettier
-├── composer.json             # Configuration Composer
+├── composer.json             # Configuration Composer (optionnel)
 ├── composer.lock             # Verrouillage des versions Composer
 ├── DEPLOIEMENT.md            # Instructions de déploiement
-├── index.html                # Page d'accueil statique
+├── index.html                # Page d'accueil statique (fallback)
 ├── index.php                 # Point d'entrée principal
 ├── instruction.txt           # Instructions de développement
 ├── LICENSE                   # Licence MIT
-├── package.json              # Configuration npm
+├── package.json              # Configuration npm (optionnel)
 ├── package-lock.json         # Verrouillage des versions npm
 ├── README.md                 # Documentation principale
 ├── README_HOSTINGER.md       # Instructions spécifiques pour Hostinger
-├── verification_site.php     # Script de vérification du site
-└── vite.config.js            # Configuration de Vite.js
+└── vite.config.js            # Configuration de Vite.js (optionnel)
 ```
 
 ## 🔧 Installation locale
 
 1. **Prérequis**:
    - PHP 8.0 ou supérieur
-   - MySQL 5.7 ou supérieur
-   - Composer
-   - Node.js 16+ et npm
+   - Serveur web (Apache recommandé) ou serveur PHP intégré
 
 2. **Installation**:
    ```bash
    # Cloner le dépôt
-   git clone https://github.com/MentalOfCrow/portfolio.git
-   cd portfolio
+   git clone https://github.com/MentalOfCrow/dev-portfolio.git
+   cd dev-portfolio
 
-   # Installer les dépendances PHP
+   # Installer les dépendances PHP (si nécessaire)
    composer install
 
-   # Installer les dépendances JavaScript
+   # Installer les dépendances JavaScript (si nécessaire)
    npm install
-
-   # Compiler les assets
-   npm run build
    ```
 
-3. **Configuration**:
-   - Copiez `.env.example` en `.env` et configurez vos variables d'environnement
-   - Assurez-vous que les permissions des dossiers sont correctes (755 pour les dossiers, 644 pour les fichiers)
-
-4. **Démarrage du serveur**:
+3. **Démarrage du serveur**:
    ```bash
-   # Pour le développement (avec hot reload)
-   npm run dev
+   # Démarrage simple du serveur PHP (recommandé)
+   php -S localhost:8000
 
-   # Pour la production
-   npm run build
-   php -S localhost:8000 -t public
+   # Ou démarrage depuis le dossier racine du projet
+   cd dev-portfolio
+   php -S localhost:8000
    ```
 
-5. **Accès**:
-   - Frontend: http://localhost:8000
-   - Panel admin: http://localhost:8000/admin (identifiants: admin/admin123)
+4. **Accès**:
+   - Site web: http://localhost:8000
+   - Toutes les pages sont accessibles via la navigation
 
 ## 🔍 Description des fichiers clés
 
 ### Configuration principale
-- `.env` - Variables d'environnement pour l'exécution locale
-- `backend/includes/config.php` - Configuration globale et détection automatique d'environnement
-- `.htaccess` - Configuration Apache pour les redirections et la sécurité
+- `backend/includes/config.php` - Configuration globale du site
+- `index.php` - Point d'entrée principal du portfolio
 
 ### Points d'entrée
-- `public/index.php` - Point d'entrée principal du site
+- `index.php` - Page d'accueil et routage principal
 - `backend/init.php` - Initialisation du backend (définition des constantes)
 
 ### Logique métier
 - `backend/includes/functions.php` - Fonctions utilitaires PHP
-- `backend/includes/database.php` - Classe de connexion et interaction avec la BDD
 - `backend/includes/router.php` - Système de routage simplifié 
 
 ### Frontend
-- `public/assets/css/style.css` - Style principal du site
-- `public/assets/js/main.js` - Fonctionnalités JavaScript (mode sombre, multilingue)
-- `public/views/layouts/main.php` - Layout principal pour toutes les pages
+- `assets/css/style.css` - Style principal du site
+- `assets/js/main.js` - Fonctionnalités JavaScript (mode sombre, multilingue)
+- `views/layouts/main.php` - Layout principal pour toutes les pages
 
 ## 🚀 Déploiement
 
 ### Préparation
-1. Compilez les assets pour la production :
-   ```bash
-   npm run build
-   ```
-
-2. Configurez les variables d'environnement :
-   - Copiez `.env.example` en `.env`
-   - Ajustez les paramètres selon votre environnement
+1. Téléchargez ou clonez tous les fichiers du projet
+2. Assurez-vous que PHP 8.0+ est installé sur votre serveur
 
 ### Hébergement
-1. Uploadez tous les fichiers vers votre hébergement
-2. Assurez-vous que le document root pointe vers le dossier `public/`
-3. Configurez les permissions :
+1. Uploadez tous les fichiers vers votre hébergement web
+2. Pointez votre domaine vers le dossier contenant `index.php`
+3. Configurez les permissions si nécessaire :
    - 755 pour les dossiers
    - 644 pour les fichiers
-   - 755 pour les scripts PHP
 
 ### Configuration du serveur
-- Activez le module `mod_rewrite` d'Apache
 - Assurez-vous que PHP 8.0+ est installé
-- Configurez les extensions PHP nécessaires
+- Activez les extensions PHP de base (déjà disponibles sur la plupart des hébergeurs)
 
 Pour plus de détails sur le déploiement, consultez le fichier [DEPLOIEMENT.md](DEPLOIEMENT.md)
 
@@ -261,6 +227,5 @@ Merci d'avoir pris le temps de consulter mon portfolio ! 🙌
 - `init.php` : Initialisation du backend
 
 ### `/public`
-- Point d'entrée public du site
+- Point d'entrée public alternatif du site
 - Fichiers accessibles via le navigateur
-- Configuration Apache (.htaccess)
