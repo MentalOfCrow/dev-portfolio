@@ -161,7 +161,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('projectModal');
     const modalContent = document.getElementById('modalContent');
     const closeBtn = document.querySelector('.modal-close');
-    const currentLang = localStorage.getItem('language') || 'fr';
     const translations = {
         'fr': {
             // Les traductions françaises sont déjà dans le tableau $projects
@@ -205,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             'fridgevision': {
                 'title': 'FridgeVision',
-                'full_description': "FridgeVision is a Flutter-based mobile application that helps reduce food waste by detecting the food items present in your refrigerator and generating personalized recipes in real-time.\n\nMain features:\n- Food detection via computer vision or manual input\n- Global product search via the Open Food Facts API\n- Automatic recipe generation based on available ingredients\n- Intelligent notifications on expiration dates and usage suggestions\n- Food and recipe history\n- Intuitive and modern interface\n\nTechnical stack:\nFlutter (Dart), API Open Food Facts, Backend Node.js/Express or Firebase, IA (TensorFlow Lite, ML Kit), Notifications push."
+                'full_description': "FridgeVision is a Flutter-based mobile application that helps reduce food waste by detecting the food items present in your refrigerator and generating personalized recipes in real-time.\n\nMain features:\n- Food detection via computer vision or manual input\n- Global product search via the Open Food Facts API\n- Automatic recipe generation based on available ingredients\n- Intelligent notifications on expiration dates and usage suggestions\n- Food and recipe history\n- Intuitive and modern interface\n\nTechnical stack:\nFlutter (Dart), Open Food Facts API, Backend Node.js/Express or Firebase, AI (TensorFlow Lite, ML Kit), Push notifications."
             }
         }
     };
@@ -217,6 +216,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const project = projects.find(p => p.id === projectId);
             
             if (project) {
+                // Récupérer la langue actuelle au moment de l'ouverture
+                const currentLang = localStorage.getItem('language') || 'fr';
+                
                 // Détermine le titre et la description en fonction de la langue
                 let title = project.title;
                 let description = project.full_description;
@@ -227,37 +229,51 @@ document.addEventListener('DOMContentLoaded', function() {
                     description = translations.en[projectId].full_description || description;
                 }
                 
-                // Génère le contenu HTML avec des attributs data-translate
+                // Génère le contenu HTML avec la nouvelle structure
                 let content = `
-                    <div class="project-content">
+                    <div class="modal-header">
                         <h2>${title}</h2>
+                        <div class="modal-tech-tags">
+                            ${Array.isArray(project.technologies) ? project.technologies.map(tech => 
+                                `<span class="modal-tech-tag">${tech}</span>`
+                            ).join('') : ''}
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="modal-image-container">
+                            <img src="${project.thumbnail}" alt="${title}">
+                        </div>
                         
-                        <div class="project-gallery">
-                            <div class="gallery-main">
-                                <img src="${project.thumbnail}" alt="${title}">
-                            </div>
+                        <div class="modal-description">
+                            ${description.replace(/\n/g, '<br>')}
                         </div>
-
-                        <div class="project-meta">
-                            <div class="meta-item">
-                                <h4 data-translate="projects_technologies">Technologies</h4>
-                                <p>${Array.isArray(project.technologies) ? project.technologies.join(', ') : ''}</p>
-                            </div>
+                        
+                        <div class="modal-features">
+                            <h3 data-translate="projects_key_features">${currentLang === 'en' ? 'Key Features' : 'Fonctionnalités clés'}</h3>
+                            <ul>
+                                <li>${currentLang === 'en' ? 'Modern and responsive user interface' : 'Interface utilisateur moderne et responsive'}</li>
+                                <li>${currentLang === 'en' ? 'Performance optimization' : 'Optimisation des performances'}</li>
+                                <li>${currentLang === 'en' ? 'Scalable and maintainable architecture' : 'Architecture scalable et maintenable'}</li>
+                                <li>${currentLang === 'en' ? 'Testing and quality validation' : 'Tests et validation qualité'}</li>
+                            </ul>
                         </div>
-
-                        <div class="project-description">
-                            ${description}
+                        
+                        <div class="modal-actions">
+                            <a href="#" class="modal-btn" onclick="alert('${currentLang === 'en' ? 'Demo not available for this project' : 'Demo non disponible pour ce projet'}')">
+                                <i class="fas fa-eye"></i>
+                                <span data-translate="projects_view_demo">${currentLang === 'en' ? 'View Demo' : 'Voir la démo'}</span>
+                            </a>
+                            <a href="#" class="modal-btn" onclick="alert('${currentLang === 'en' ? 'Source code not publicly available' : 'Code source non disponible publiquement'}')">
+                                <i class="fab fa-github"></i>
+                                <span data-translate="projects_view_code">${currentLang === 'en' ? 'View Code' : 'Voir le code'}</span>
+                            </a>
                         </div>
                     </div>
                 `;
                 
                 modalContent.innerHTML = content;
                 modal.classList.add('active');
-                
-                // Réappliquer les traductions aux nouveaux éléments DOM
-                if (window.applyTranslation) {
-                    window.applyTranslation(currentLang);
-                }
             }
         });
     });
