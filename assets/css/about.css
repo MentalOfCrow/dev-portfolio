@@ -328,6 +328,8 @@
 [data-theme="dark"] .about-bio,
 [data-theme="dark"] .parcours-container,
 [data-theme="dark"] .competences-container,
+[data-theme="dark"] .unified-container,
+[data-theme="dark"] .infrastructure-container,
 [data-theme="dark"] .interets-container,
 [data-theme="dark"] .interet-item {
     background: rgba(30, 30, 30, 0.7);
@@ -337,7 +339,446 @@
 [data-theme="light"] .about-bio,
 [data-theme="light"] .parcours-container,
 [data-theme="light"] .competences-container, 
+[data-theme="light"] .unified-container,
+[data-theme="light"] .infrastructure-container,
 [data-theme="light"] .interets-container,
 [data-theme="light"] .interet-item {
     background: rgba(240, 240, 240, 0.7);
+}
+
+/* Section Soft Skills */
+.about-soft-skills {
+    animation: fadeInUp 1.5s ease-out 0.7s forwards;
+    opacity: 0;
+    margin: 4rem 0;
+}
+
+.soft-skills-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.soft-skills-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, #ff69b4, #9370db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.soft-skills-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.soft-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.soft-skill-item {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 1.8rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.soft-skill-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.15);
+}
+
+.soft-skill-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff69b4, #9370db);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    transition: transform 0.3s ease;
+}
+
+.soft-skill-item:hover .soft-skill-icon {
+    transform: scale(1.1);
+}
+
+.soft-skill-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.soft-skill-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #ff69b4;
+    font-weight: 600;
+}
+
+.soft-skill-item p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+/* Section Unifiée : Centres d'Intérêt & Infrastructure */
+.about-unified-section {
+    animation: fadeInUp 1.6s ease-out 0.8s forwards;
+    opacity: 0;
+    margin: 4rem 0;
+}
+
+.unified-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 105, 180, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.unified-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff69b4, #9370db, #ff69b4);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+}
+
+.section-block {
+    margin-bottom: 3rem;
+}
+
+.section-block:last-child {
+    margin-bottom: 0;
+}
+
+.section-block h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: linear-gradient(to right, #ff69b4, #9370db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Centres d'Intérêt Styles */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.interest-item {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 105, 180, 0.1);
+    text-align: center;
+}
+
+.interest-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(255, 105, 180, 0.15);
+    border-color: rgba(255, 105, 180, 0.3);
+}
+
+.interest-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    background: linear-gradient(135deg, #ff69b4, #9370db);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+}
+
+.interest-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.interest-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.interest-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-bottom: 0.5rem;
+}
+
+.interest-content p:last-child {
+    margin-bottom: 0;
+}
+
+.interest-content strong {
+    color: #ff69b4;
+    font-weight: 600;
+}
+
+.interest-content a {
+    color: #ff4ecb;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Séparateur visuel */
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+    gap: 1rem;
+}
+
+.divider-line {
+    height: 2px;
+    flex: 1;
+    background: linear-gradient(90deg, transparent, #ff69b4, transparent);
+    border-radius: 1px;
+}
+
+.divider-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #ff69b4, #9370db);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+}
+
+.divider-icon i {
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Infrastructure Styles dans le bloc unifié */
+.infrastructure-intro {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 105, 180, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 105, 180, 0.15);
+    margin-bottom: 2rem;
+}
+
+.infrastructure-intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+    margin: 0;
+    font-style: italic;
+}
+
+.infrastructure-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.skill-category {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 105, 180, 0.1);
+}
+
+.skill-category:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(255, 105, 180, 0.15);
+    border-color: rgba(255, 105, 180, 0.3);
+}
+
+.category-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    background: linear-gradient(135deg, #ff69b4, #9370db);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+}
+
+.category-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.skill-category h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.2), rgba(147, 112, 219, 0.2));
+    color: #ff69b4;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 105, 180, 0.3);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.3), rgba(147, 112, 219, 0.3));
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+}
+
+.infrastructure-highlight {
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.1), rgba(147, 112, 219, 0.1));
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(255, 105, 180, 0.2);
+}
+
+.infrastructure-highlight i {
+    font-size: 2rem;
+    color: #ff69b4;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.infrastructure-highlight p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.infrastructure-highlight strong {
+    color: #ff69b4;
+    font-weight: 600;
+}
+
+/* Responsive pour Section Unifiée */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1rem;
+    }
+    
+    .about-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .soft-skills-container {
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .soft-skills-container h2 {
+        font-size: 1.8rem;
+    }
+    
+    .soft-skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .soft-skill-item {
+        padding: 1.5rem;
+    }
+    
+    .soft-skill-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .soft-skill-icon i {
+        font-size: 1.3rem;
+    }
+    
+    .soft-skill-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .unified-container {
+        padding: 2rem;
+    }
+    
+    .interests-grid,
+    .infrastructure-skills {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .section-block h2 {
+        font-size: 1.8rem;
+    }
+    
+    .interest-icon,
+    .category-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .interest-icon i,
+    .category-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .skill-tags {
+        gap: 0.3rem;
+    }
+    
+    .skill-tag {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .section-divider {
+        margin: 2rem 0;
+    }
+    
+    .divider-icon {
+        width: 35px;
+        height: 35px;
+    }
 } 
