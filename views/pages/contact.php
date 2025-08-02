@@ -28,7 +28,7 @@ $current_page = "contact";
 
         <div class="contact-form">
             <h2 data-translate="contact_form_title">Envoyez-moi un message</h2>
-            <form action="mailto:hugo.bisserier.pro@gmail.com" method="post" enctype="text/plain">
+            <form id="contactForm">
                 <div class="form-group">
                     <label for="name" data-translate="contact_form_name">Nom complet</label>
                     <input type="text" id="name" name="name" required class="form-control">
