@@ -18,8 +18,8 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
         <h1 data-translate="about_title">À Propos de Moi</h1>
         <p class="subtitle" data-translate="about_subtitle">Développeur Web Passionné</p>
         <div style="margin-top:2rem; text-align:center;">
-            <a href="/cv" class="btn btn-primary" style="font-size:1.1em;">Voir mon CV</a>
-            <span style="margin-left:1.5em; font-size:0.95em; color:#aaa;">(PDF bilingue disponible)</span>
+            <a href="/cv" class="btn btn-primary" style="font-size:1.1em;" data-translate="about_cv_button">Voir mon CV</a>
+            <span style="margin-left:1.5em; font-size:0.95em; color:#aaa;" data-translate="about_cv_note">(PDF bilingue disponible)</span>
         </div>
     </section>
 
@@ -30,22 +30,22 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
         </div>
         <div class="about-bio">
             <h2 data-translate="about_who_title">Qui suis-je ?</h2>
-            <p><strong>Actuellement en B3 Informatique à Ynov</strong>, je suis passionné par le développement web, les réseaux et la cybersécurité. Mon parcours académique et mes expériences personnelles m'ont permis d'acquérir une expertise polyvalente, couvrant l'ensemble des domaines du numérique : du développement front-end et back-end à l'administration système, en passant par l'architecture réseau et la sécurité informatique.</p>
-            <p>Au fil de ma formation, j'ai :
+            <p data-translate="about_who_text1"><strong>Admis en B3 Informatique à Ynov (rentrée fin septembre 2025)</strong>, je suis passionné par le développement web, les réseaux et la cybersécurité. Mon parcours académique et mes expériences personnelles m'ont permis d'acquérir une expertise polyvalente, couvrant l'ensemble du numérique : du front-end et back-end à l'administration système, en passant par l'architecture réseau et la sécurité informatique.</p>
+            <p data-translate="about_who_text2">Au fil de ma formation, j'ai :
                 <ul style="margin-left:1em;">
-                    <li><strong>Développé des applications web</strong> modernes et performantes, en utilisant les dernières technologies (HTML, CSS, JavaScript, PHP, Node.js, Flutter…)</li>
-                    <li><strong>Mis en place et sécurisé des infrastructures réseau</strong>, avec une attention particulière à la gestion des accès, la virtualisation, la configuration de serveurs (Linux/Windows), et la surveillance du trafic</li>
-                    <li><strong>Approfondi la cybersécurité</strong>, à travers des projets de protection contre les attaques (XSS, CSRF…), la gestion des droits, la sécurisation des données et la sensibilisation aux bonnes pratiques</li>
+                    <li data-translate="about_who_list1"><strong>Développé des applications web</strong> modernes et performantes (HTML, CSS, JavaScript, PHP, Node.js, Flutter…).</li>
+                    <li data-translate="about_who_list2"><strong>Mis en place et sécurisé des infrastructures réseau</strong> (gestion des accès, virtualisation, serveurs Linux/Windows, supervision du trafic).</li>
+                    <li data-translate="about_who_list3"><strong>Approfondi la cybersécurité</strong> (mitigation XSS/CSRF, gestion des droits, sécurisation des données, sensibilisation).</li>
                 </ul>
             </p>
-            <p>Je m'intéresse particulièrement à :
+            <p data-translate="about_who_text3">Je m'intéresse particulièrement à :
                 <ul style="margin-left:1em;">
-                    <li>La <strong>création de solutions innovantes</strong> (applications web, mobiles, outils d'automatisation…)</li>
-                    <li>L'<strong>optimisation des performances</strong> et de la sécurité, aussi bien côté code que sur l'infrastructure</li>
-                    <li>La <strong>résolution de problèmes complexes</strong> grâce à une approche méthodique, créative et orientée résultats</li>
+                    <li data-translate="about_who_interest1">La <strong>création de solutions innovantes</strong> (applications web, mobiles, outils d'automatisation).</li>
+                    <li data-translate="about_who_interest2">L'<strong>optimisation des performances et de la sécurité</strong>, du code à l'infrastructure.</li>
+                    <li data-translate="about_who_interest3">La <strong>résolution de problèmes complexes</strong> avec une approche méthodique, créative et orientée résultats.</li>
                 </ul>
             </p>
-            <p><strong>Curieux, rigoureux et toujours en veille technologique</strong>, je cherche à relever de nouveaux défis dans le développement, le réseau et la cybersécurité, afin de contribuer à des projets ambitieux et à forte valeur ajoutée.</p>
+            <p data-translate="about_who_text4"><strong>Curieux, rigoureux et toujours en veille</strong>, je souhaite contribuer à des projets à forte valeur ajoutée en développement, réseau et cybersécurité.</p>
         </div>
     </section>
 
@@ -53,22 +53,37 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
     <section class="about-parcours">
         <div class="parcours-container">
             <h2 data-translate="about_path_title">Mon Parcours</h2>
-            <p class="parcours-intro">
-                Je serai en <strong>B3 Informatique</strong> à Ynov à partir de fin septembre 2025.<br>
-                <strong>N'hésitez pas à me contacter</strong> si vous avez besoin d'aide ou de conseils en développement web, cybersécurité, infrastructure, ou tout autre domaine informatique.<br>
-                Je suis actuellement <strong>en recherche d'une alternance</strong> dans les Bouches-du-Rhône, le Var, ou autour d'Aix, Marseille, Vitrolles, et environs.
+            <p class="parcours-intro" data-translate="about_path_intro">
+                <strong>Ynov Campus — Cycle Bachelor Informatique (admis en B3, rentrée fin sept. 2025)</strong><br>
+                2023 – Présent<br><br>
+                <strong>Modules :</strong> Développeur Full Stack • Architecture logicielle • Gestion de projets • Infrastructure • Cybersécurité
             </p>
-            <div class="parcours-item">
-                <h3 data-translate="about_timeline_date">2023 - Présent</h3>
-                <h4 data-translate="about_timeline_title">B3 Informatique</h4>
-                <p data-translate="about_timeline_school">Ynov Campus</p>
-                <ul class="competence-list">
-                    <li class="competence-item" data-translate="about_timeline_item1">Développement web avancé</li>
-                    <li class="competence-item" data-translate="about_timeline_item2">Architecture logicielle</li>
-                    <li class="competence-item" data-translate="about_timeline_item3">Gestion de projets</li>
-                </ul>
+            <div class="parcours-objectives">
+                <h3 data-translate="about_path_objectives_title">Objectifs de parcours :</h3>
+                <div class="objective-item">
+                    <h4 data-translate="about_path_obj1_title">2025–2026 :</h4>
+                    <p data-translate="about_path_obj1_desc">valider le Bac+3 en alternance, développer mes compétences en conditions réelles et créer de la valeur mesurable pour l'entreprise d'accueil (qualité, performance, sécurité, fiabilité), avec une volonté de continuité au sein de la même structure.</p>
+                </div>
+                <div class="objective-item">
+                    <h4 data-translate="about_path_obj2_title">À partir de 2026 :</h4>
+                    <p data-translate="about_path_obj2_desc">poursuivre un Bac+5 (Mastère), idéalement en alternance, dans une voie généraliste en informatique, avec consolidation selon les besoins de l'entreprise (développement, infrastructure/Cloud, cybersécurité/SecOps), en privilégiant la poursuite au sein de la même entreprise lorsque possible.</p>
+                </div>
             </div>
-            <!-- Vous pouvez ajouter d'autres éléments de parcours ici -->
+        </div>
+    </section>
+
+    <!-- Section Contact & Disponibilité -->
+    <section class="about-contact-availability">
+        <div class="contact-container">
+            <h2 data-translate="about_contact_title">Contact & Disponibilité</h2>
+            <div class="contact-content">
+                <p data-translate="about_contact_intro">Ouvert aux échanges et à l'étude de vos besoins (développement web, cybersécurité, infrastructure).</p>
+                <p data-translate="about_contact_availability">Recherche une alternance à partir de fin septembre 2025, dans les Bouches-du-Rhône ou le Var (toute ville de ces départements).</p>
+                <div class="contact-highlight">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:hugo.bisserier.pro@gmail.com" style="color:#ff4ecb;text-decoration:underline;font-weight:bold;" data-translate="about_contact_email">hugo.bisserier.pro@gmail.com</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -142,11 +157,11 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
                         <div class="interest-icon">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h3>Programmation, Technologies Web & Architecture</h3>
+                        <h3 data-translate="about_programming_title">Programmation, Technologies Web & Architecture</h3>
                         <div class="interest-content">
-                            <p><strong>Exploration de nouveaux langages et frameworks</strong></p>
-                            <p><strong>Veille technologique et expérimentation</strong></p>
-                            <p><strong>Conception de systèmes évolutifs</strong></p>
+                            <p data-translate="about_programming_desc1"><strong>Exploration de nouveaux langages et frameworks</strong></p>
+                            <p data-translate="about_programming_desc2"><strong>Veille technologique et expérimentation</strong></p>
+                            <p data-translate="about_programming_desc3"><strong>Conception de systèmes évolutifs</strong></p>
                         </div>
                     </div>
                     
@@ -169,13 +184,13 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
                         <div class="interest-icon">
                             <i class="fas fa-mobile-alt"></i>
                         </div>
-                        <h3>Développement Mobile</h3>
+                        <h3 data-translate="about_mobile_dev_title">Développement Mobile</h3>
                         <div class="interest-content">
-                            <p>
+                            <p data-translate="about_mobile_dev_desc">
                                 Je souhaite développer et publier à l'avenir des applications mobiles sur le Play Store, en utilisant Flutter ou React Native, pour explorer de nouvelles idées et technologies.<br><br>
                                 <strong>Vous avez un projet ou souhaitez collaborer ?</strong><br>
                                 Contactez-moi à l'adresse suivante :<br>
-                                <a href="mailto:hugo.bisserier.dev@gmail.com" style="color:#ff4ecb;text-decoration:underline;font-weight:bold;word-break:break-all;overflow-wrap:anywhere;">hugo.bisserier.dev@gmail.com</a><br>
+                                <a href="mailto:hugo.bisserier.pro@gmail.com" style="color:#ff4ecb;text-decoration:underline;font-weight:bold;word-break:break-all;overflow-wrap:anywhere;">hugo.bisserier.pro@gmail.com</a><br>
                                 pour échanger et travailler ensemble sur des applications innovantes.
                             </p>
                         </div>
