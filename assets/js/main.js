@@ -789,4 +789,36 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 7. Appliquer la traduction au chargement
     applyTranslation(currentLang);
+    
+    // 8. Gestion du formulaire de contact
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupérer les valeurs du formulaire
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Construire le corps du message
+            const body = `Bonjour Hugo,
+
+Mon nom : ${name}
+Mon email : ${email}
+
+Message :
+${message}
+
+Cordialement,
+${name}`;
+            
+            // Construire l'URL mailto avec les bons paramètres
+            const mailtoUrl = `mailto:hugo.bisserier.pro@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Ouvrir le client email
+            window.location.href = mailtoUrl;
+        });
+    }
 }); 
