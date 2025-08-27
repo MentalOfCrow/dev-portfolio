@@ -47,6 +47,51 @@ Ce portfolio a été créé pour mettre en avant mon parcours dans le développe
 - **CV** : Consultation et téléchargement de mon CV au format PDF.
 - **Contact** : Un formulaire pour me contacter directement et mes coordonnées professionnelles.
 
+## 🎯 Objectifs du portfolio
+
+1. Page d’accueil (Home)
+   - Introduction : Je me présente brièvement avec une photo professionnelle.
+   - Points forts : Je mets en avant mes compétences principales et mes domaines d’expertise.
+   - Appel à l’action : J’invite les visiteurs à explorer mon travail ou à me contacter.
+
+2. À propos (About)
+   - Biographie : Je résume mon parcours professionnel et mes expériences.
+   - Compétences : Je liste mes compétences techniques (React, PHP, etc.) et mes soft skills.
+   - Éducation : Je présente mes diplômes et formations pertinentes.
+
+3. Projets (Projects)
+   - Galerie de projets : Je présente les projets sur lesquels j’ai travaillé, avec images, descriptions et technologies utilisées.
+   - Détails du projet : Pour chaque projet, j’explique les défis, les solutions apportées et les résultats obtenus.
+
+4. Compétences (Skills)
+   - Techniques : Je détaille les langages, frameworks et outils que je maîtrise.
+   - Outils : Je mentionne les logiciels ou plateformes que j’utilise régulièrement.
+
+5. Blog (optionnel)
+   - Articles : Je publie des articles sur des sujets liés à mon domaine d’expertise.
+   - Tutoriels : Je partage des guides ou tutoriels pour aider d’autres développeurs.
+
+6. Contact
+   - Formulaire de contact : Je permets aux visiteurs de m’envoyer des messages directement.
+   - Réseaux sociaux : J’inclus des liens vers mes profils LinkedIn, GitHub, et autres.
+
+7. Témoignages (Testimonials)
+   - Retours d’expérience : J’affiche des témoignages de clients ou collègues pour renforcer ma crédibilité.
+
+8. Portfolio (si séparé des projets)
+   - Travaux visuels : Je présente mes créations (design, développement web, autres domaines créatifs).
+
+9. CV (Resume)
+   - Téléchargement : Je propose le téléchargement de mon CV.
+   - Résumé en ligne : Je présente une version en ligne pour faciliter la lecture.
+
+### 🔧 Mes bonnes pratiques
+
+- Je maintiens une cohérence visuelle (palette de couleurs, typographies lisibles).
+- Je m’assure que la navigation est simple et fluide.
+- J’optimise l’affichage mobile pour un site responsive.
+- Je protège les données sensibles, notamment sur le formulaire de contact.
+
 ## 📂 Structure détaillée du projet
 
 ```
@@ -207,25 +252,3 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de
 ---
 
 Merci d'avoir pris le temps de consulter mon portfolio ! 🙌
-
-## 📂 Structure des dossiers principaux
-
-### `/assets`
-- `css/` : Styles CSS du site
-- `js/` : Scripts JavaScript
-- `images/` : Images et médias
-- `cv/` : Fichiers CV
-
-### `/views`
-- `layouts/` : Templates principaux
-- `pages/` : Pages du site
-- `partials/` : Composants réutilisables
-
-### `/backend`
-- `database/` : Scripts et configuration de la base de données
-- `includes/` : Classes et fonctions PHP
-- `init.php` : Initialisation du backend
-
-### `/public`
-- Point d'entrée public alternatif du site
-- Fichiers accessibles via le navigateur
