@@ -30,6 +30,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', Arial, sans-serif;
@@ -1848,4 +1852,125 @@ textarea.form-control {
         height: 50px;
         font-size: 1.4rem;
     }
+}
+
+/* =============================
+   Page Expériences (styles)
+   ============================= */
+.experiences {
+    padding: 3rem 0 4rem;
+}
+
+/* En-tête de section avec mise en page en colonnes comme le reste du site */
+.experiences .section-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    background-color: var(--header-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.75rem 2rem;
+    margin: 1rem auto 2rem; /* espace sous le header fixe */
+    max-width: 1200px;
+    box-shadow: var(--shadow);
+}
+
+.experiences .section-header h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    background: linear-gradient(90deg, var(--text-color), var(--text-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    grid-column: 1;
+}
+
+.experiences .section-header h2 {
+    font-size: 1.8rem;
+    margin: 0 0 .5rem 0;
+    color: var(--text-color);
+    grid-column: 2;
+}
+
+.experiences .section-header p {
+    color: var(--text-secondary);
+    margin: 0;
+    grid-column: 2;
+}
+
+/* Cartes d'expérience */
+.experience-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 102, 204, 0.15);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin: 0 auto 1.25rem;
+    max-width: 1200px;
+    box-shadow: var(--shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+    scroll-margin-top: 100px; /* Compense le header fixe pour l'ancre */
+}
+
+.experience-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.experience-card h3 {
+    color: var(--text-color);
+    margin-bottom: .5rem;
+    font-size: 1.35rem;
+}
+
+.experience-card p {
+    margin: .35rem 0;
+}
+
+.experience-card .exp-summary {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.experience-card .exp-tags {
+    color: var(--primary-color);
+    opacity: .95;
+    font-weight: 600;
+}
+
+.experience-card .btn.pdf {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.experience-card .badge {
+    display: inline-block;
+    background: rgba(255, 102, 204, 0.15);
+    color: var(--primary-color);
+    border: 1px solid rgba(255, 102, 204, 0.25);
+    padding: .35rem .75rem;
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.experience-card.soon {
+    opacity: .95;
+}
+
+/* Compense le header fixe quand on arrive sur l’ancre #experiences */
+#experiences {
+    scroll-margin-top: 100px; /* header ~80px + marge de confort */
+}
+
+@media (max-width: 900px) {
+    .experiences .section-header {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: left;
+    }
+    .experiences .section-header h1,
+    .experiences .section-header h2,
+    .experiences .section-header p { grid-column: 1; }
 }
