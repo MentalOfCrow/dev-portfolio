@@ -15,6 +15,7 @@
                 <li><a href="/" <?= isset($current_page) && $current_page === 'home' ? 'class="active"' : '' ?> data-translate="nav_home">Accueil</a></li>
                 <li><a href="/about" <?= isset($current_page) && $current_page === 'about' ? 'class="active"' : '' ?> data-translate="nav_about">À propos</a></li>
                 <li><a href="/skills" <?= isset($current_page) && $current_page === 'skills' ? 'class="active"' : '' ?> data-translate="nav_skills">Compétences</a></li>
+                <li><a href="/experiences#experiences" <?= isset($current_page) && $current_page === 'experiences' ? 'class="active"' : '' ?> data-translate="nav_experiences">Expériences</a></li>
                 <li><a href="/projects" <?= isset($current_page) && $current_page === 'projects' ? 'class="active"' : '' ?> data-translate="nav_projects">Projets</a></li>
                 <li><a href="/contact" <?= isset($current_page) && $current_page === 'contact' ? 'class="active"' : '' ?> data-translate="nav_contact">Contact</a></li>
                 <li><a href="/cv" <?= isset($current_page) && $current_page === 'cv' ? 'class="active"' : '' ?> data-translate="nav_cv">CV</a></li>
