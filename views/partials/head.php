@@ -13,6 +13,9 @@
     
     <!-- CSS Files -->
     <link rel="stylesheet" href="/assets/css/style.css">
+
+        <!-- Ajout du style de la page À propos pour l'image animée -->
+        <link rel="stylesheet" href="/assets/css/about.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
     
     <!-- Font Awesome -->
