@@ -14,7 +14,9 @@ Site portfolio professionnel présentant mes projets, compétences et expérienc
 - 🎨 Interface utilisateur moderne et élégante
 - 📁 Présentation détaillée des projets avec galerie d'images
 - 💼 Affichage des compétences et expériences professionnelles
-- 📧 Formulaire de contact sécurisé
+- � Expériences listées par année (B1, B2, B3…), chaque stage résumé avec un lien vers son rapport
+- 🇫🇷 Rapports de stage au format PDF — disponibles uniquement en français (indiqué sur le site)
+- �📧 Formulaire de contact sécurisé
 - 📄 Téléchargement de CV au format PDF
 - ⚡ Performance optimisée pour un chargement rapide
 
@@ -44,6 +46,7 @@ Ce portfolio a été créé pour mettre en avant mon parcours dans le développe
 - **À propos de moi** : Une brève introduction à mon parcours, mes intérêts et mes objectifs professionnels.
 - **Projets** : Un aperçu détaillé de mes projets avec les technologies utilisées et les défis rencontrés.
 - **Compétences** : Un résumé des compétences techniques classées par catégories (front-end, back-end, infrastructure).
+- **Expériences** : Une page dédiée qui recense mes stages et expériences par année (B1, B2, B3…), avec un résumé clair et un bouton de téléchargement du rapport PDF (FR uniquement).
 - **CV** : Consultation et téléchargement de mon CV au format PDF.
 - **Contact** : Un formulaire pour me contacter directement et mes coordonnées professionnelles.
 
@@ -229,6 +232,8 @@ portfolio/
 3. Configurez les permissions si nécessaire :
    - 755 pour les dossiers
    - 644 pour les fichiers
+
+> Compatibilité Hostinger : le projet est 100% compatible avec Hostinger. Il suffit d’utiliser PHP 8.0+ et de déployer l’intégralité du dossier (y compris `assets/docs/` pour les rapports PDF). Aucune configuration spéciale n’est requise en dehors du point d’entrée `index.php`.
 
 ### Configuration du serveur
 - Assurez-vous que PHP 8.0+ est installé
