@@ -10,11 +10,11 @@
             <div class="footer-section">
                 <h3 data-translate="footer_quick_nav">Navigation rapide</h3>
                 <ul>
-                    <li><a href="/">Accueil</a></li>
-                    <li><a href="/about">À propos</a></li>
-                    <li><a href="/projects">Projets</a></li>
-                    <li><a href="/skills">Compétences</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/" data-translate="nav_home">Accueil</a></li>
+                    <li><a href="/about" data-translate="nav_about">À propos</a></li>
+                    <li><a href="/projects" data-translate="nav_projects">Projets</a></li>
+                    <li><a href="/skills" data-translate="nav_skills">Compétences</a></li>
+                    <li><a href="/contact" data-translate="nav_contact">Contact</a></li>
                 </ul>
             </div>
 
@@ -38,36 +38,9 @@
 
             <div class="footer-section">
                 <h3 data-translate="footer_social">Réseaux sociaux</h3>
-                <p class="social-description" id="footer-social-text">
+                <p class="social-description" id="footer-social-text" data-translate="footer_social_text">
                     Retrouvez-moi sur les plateformes professionnelles pour suivre mon parcours et mes contributions dans le domaine du développement web et de la cybersécurité.
                 </p>
-                <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    // Détection de la langue (par défaut fr)
-                    var lang = localStorage.getItem('language') || 'fr';
-                    var el = document.getElementById('footer-social-text');
-                    if (el) {
-                        if (lang === 'en') {
-                            el.innerHTML = "Find me on professional platforms to follow my journey and my contributions in the field of web development and cybersecurity.";
-                        } else {
-                            el.innerHTML = "Retrouvez-moi sur les plateformes professionnelles pour suivre mon parcours et mes contributions dans le domaine du développement web et de la cybersécurité.";
-                        }
-                    }
-                    // Mise à jour dynamique si on change la langue
-                    document.querySelectorAll('.current-lang, #lang-fr, #lang-en').forEach(btn => {
-                        btn.addEventListener('click', function() {
-                            var lang = (this.id === 'lang-en') ? 'en' : 'fr';
-                            if (el) {
-                                if (lang === 'en') {
-                                    el.innerHTML = "Find me on professional platforms to follow my journey and my contributions in the field of web development and cybersecurity.";
-                                } else {
-                                    el.innerHTML = "Retrouvez-moi sur les plateformes professionnelles pour suivre mon parcours et mes contributions dans le domaine du développement web et de la cybersécurité.";
-                                }
-                            }
-                        });
-                    });
-                });
-                </script>
                 <div class="social-grid">
                     <a href="https://github.com/MentalOfCrow" target="_blank" class="social-links" title="GitHub">
                         <i class="fab fa-github"></i>
