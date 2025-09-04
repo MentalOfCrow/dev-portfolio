@@ -15,23 +15,6 @@ $current_page = "experiences";
 
     <section id="experiences" class="experiences">
 
-    <!-- MEB (2023–2024) -->
-    <article class="experience-card" aria-labelledby="exp-meb">
-        <h3 id="exp-meb" data-translate="meb_title">MEB — Stage 2023–2024</h3>
-        <p data-translate="meb_company_line"><strong>Entreprise :</strong> MEB (Mobilité Énergie Bâtiment) — Bègles</p>
-        <p class="exp-summary" data-translate="meb_summary">
-            Immersion en économie de la construction : suivi de projets, coordination des intervenants,
-            participation aux réceptions de travaux et mise à jour des tableaux de bord.
-            Découverte des outils métier (MS Project, AutoCAD/Revit) et des processus DO.
-        </p>
-        <p class="exp-tags" data-translate="meb_tags">Gestion de projet · Suivi chantier · Bureautique pro</p>
-        <p>
-            <a class="btn pdf" href="/assets/docs/Rapport_Stage_MEB_2023-2024.pdf" target="_blank" rel="noopener" download data-translate="pdf_download_fr_only">
-                📄 Télécharger le rapport (PDF — uniquement en français)
-            </a>
-        </p>
-    </article>
-
     <!-- SHF (2024–2025) -->
     <article class="experience-card" aria-labelledby="exp-shf">
         <h3 id="exp-shf" data-translate="shf_title">S.H.F. Informatique — Stage 2024–2025</h3>
@@ -44,6 +27,23 @@ $current_page = "experiences";
         <p class="exp-tags" data-translate="shf_tags">Windows Server · Hyper-V · GPO · Fortinet · Suricata/SELKS</p>
         <p>
             <a class="btn pdf" href="/assets/docs/Rapport_Stage_SHF_2024-2025.pdf" target="_blank" rel="noopener" download data-translate="pdf_download_fr_only">
+                📄 Télécharger le rapport (PDF — uniquement en français)
+            </a>
+        </p>
+    </article>
+
+    <!-- MEB (2023–2024) -->
+    <article class="experience-card" aria-labelledby="exp-meb">
+        <h3 id="exp-meb" data-translate="meb_title">MEB — Stage 2023–2024</h3>
+        <p data-translate="meb_company_line"><strong>Entreprise :</strong> MEB (Mobilité Énergie Bâtiment) — Bègles</p>
+        <p class="exp-summary" data-translate="meb_summary">
+            Immersion en économie de la construction : suivi de projets, coordination des intervenants,
+            participation aux réceptions de travaux et mise à jour des tableaux de bord.
+            Découverte des outils métier (MS Project, AutoCAD/Revit) et des processus DO.
+        </p>
+        <p class="exp-tags" data-translate="meb_tags">Gestion de projet · Suivi chantier · Bureautique pro</p>
+        <p>
+            <a class="btn pdf" href="/assets/docs/Rapport_Stage_MEB_2023-2024.pdf" target="_blank" rel="noopener" download data-translate="pdf_download_fr_only">
                 📄 Télécharger le rapport (PDF — uniquement en français)
             </a>
         </p>
