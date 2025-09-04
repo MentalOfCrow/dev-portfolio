@@ -16,9 +16,9 @@ $current_page = "home";
                         <a href="/contact" class="btn btn-outline" data-translate="hero_contact_btn">Me contacter</a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="/assets/images/profile.jpg" alt="Hugo Bisserier">
-                </div>
+                    <div class="profile-image-container">
+                        <img src="/assets/images/profile.jpg" alt="Photo de profil" class="profile-image">
+                    </div>
             </div>
         </div>
     </section>
