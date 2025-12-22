@@ -17,7 +17,7 @@ $current_page = "home";
                     </div>
                 </div>
                     <div class="profile-image-container">
-                        <img src="/assets/images/profile.jpg" alt="Photo de profil" class="profile-image">
+                        <img src="/assets/images/profile.png" alt="Photo de profil" class="profile-image">
                     </div>
             </div>
         </div>

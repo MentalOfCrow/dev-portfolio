@@ -26,7 +26,7 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
     <!-- Section Présentation -->
     <section class="about-presentation">
         <div class="profile-image-container">
-            <img src="/assets/images/profile.jpg" alt="Photo de profil" class="profile-image">
+            <img src="/assets/images/profile.png" alt="Photo de profil" class="profile-image">
         </div>
         <div class="about-bio">
             <h2 data-translate="about_who_title">Qui suis-je ?</h2>
@@ -81,7 +81,7 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
                 <p data-translate="about_contact_availability">Recherche une alternance à partir de fin septembre 2025, dans les Bouches-du-Rhône ou le Var (toute ville de ces départements).</p>
                 <div class="contact-highlight">
                     <i class="fas fa-envelope"></i>
-                    <a href="mailto:hugo.bisserier.pro@gmail.com" style="color:#ff4ecb;text-decoration:underline;font-weight:bold;" data-translate="about_contact_email">hugo.bisserier.pro@gmail.com</a>
+                    <a href="mailto:hugo.bisserier.pro@gmail.com" style="color:#10b981;text-decoration:underline;font-weight:bold;" data-translate="about_contact_email">hugo.bisserier.pro@gmail.com</a>
                 </div>
             </div>
         </div>
@@ -173,7 +173,7 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
                         <div class="interest-content">
                             <p data-translate="about_interest4_desc">
                                 J'approfondis la cybersécurité à travers la création et la résolution de challenges CTF.<br>
-                                <strong>1ère année :</strong> Création de challenges pour <a href="https://hackin.fr" target="_blank" style="color:#ff4ecb;text-decoration:underline;font-weight:bold;">Hack'In</a> (ex-Hacky'nov).<br>
+                                <strong>1ère année :</strong> Création de challenges pour <a href="https://hackin.fr" target="_blank" style="color:#10b981;text-decoration:underline;font-weight:bold;">Hack'In</a> (ex-Hacky'nov).<br>
                                 <strong>2ème année :</strong> Participation à plusieurs CTF (Hack'In, Ynov Aix-en-Provence, etc.).<br>
                                 Apprentissage continu en sécurité offensive et sensibilisation à la protection des données.
                             </p>
@@ -190,7 +190,7 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
                                 Je souhaite développer et publier à l'avenir des applications mobiles sur le Play Store, en utilisant Flutter ou React Native, pour explorer de nouvelles idées et technologies.<br><br>
                                 <strong>Vous avez un projet ou souhaitez collaborer ?</strong><br>
                                 Contactez-moi à l'adresse suivante :<br>
-                                <a href="mailto:hugo.bisserier.pro@gmail.com" style="color:#ff4ecb;text-decoration:underline;font-weight:bold;word-break:break-all;overflow-wrap:anywhere;">hugo.bisserier.pro@gmail.com</a><br>
+                                <a href="mailto:hugo.bisserier.pro@gmail.com" style="color:#10b981;text-decoration:underline;font-weight:bold;word-break:break-all;overflow-wrap:anywhere;">hugo.bisserier.pro@gmail.com</a><br>
                                 pour échanger et travailler ensemble sur des applications innovantes.
                             </p>
                         </div>

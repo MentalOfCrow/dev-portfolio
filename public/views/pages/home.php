@@ -17,7 +17,7 @@ $current_page = "home";
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="/assets/images/profile.jpg" alt="Hugo Bisserier">
+                    <img src="/assets/images/profile.png" alt="Hugo Bisserier">
                 </div>
             </div>
         </div>

@@ -1,11 +1,11 @@
-/* Bonjour si vous checker mes commentaires  */
+﻿/* Bonjour si vous checker mes commentaires  */
 /* j'en ais besoins pour mes futures projets car je suis pas tres doué en css  */
 /* Donc beaucoup de commentaire mais ca m'aide à développer mes compétences  */
 
 :root {
-    --primary-color: #ff66cc;
-    --primary-hover: #e055b3;
-    --bg-color: #121212;
+    --primary-color: #10b981;
+    --primary-hover: #059669;
+    --bg-color: #0a0f0d;
     --bg-secondary: #1e1e1e;
     --header-bg: #1a1a1a;
     --card-bg: #2c2c2c;
@@ -274,7 +274,7 @@ nav ul li a.active::after {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, var(--primary-color), #9966ff);
+    background: linear-gradient(90deg, var(--primary-color), #06b6d4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -314,7 +314,7 @@ nav ul li a.active::after {
 
 .hero-image img:hover, .intro-image img:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(255, 102, 204, 0.3);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
 }
 
 .whoami {
@@ -522,7 +522,7 @@ nav ul li a.active::after {
 }
 
 .level-bar {
-    background: linear-gradient(90deg, var(--primary-color), #9966ff);
+    background: linear-gradient(90deg, var(--primary-color), #06b6d4);
     height: 100%;
     width: 0;
     transition: width 1.5s ease-in-out;
@@ -580,7 +580,7 @@ nav ul li a.active::after {
 /* Page Contact */
 .contact-page {
     padding: 4rem 0;
-    background: linear-gradient(135deg, var(--bg-color) 0%, rgba(255, 102, 204, 0.03) 100%);
+    background: linear-gradient(135deg, var(--bg-color) 0%, rgba(16, 185, 129, 0.03) 100%);
     min-height: calc(100vh - 80px);
 }
 
@@ -590,7 +590,7 @@ nav ul li a.active::after {
     margin-bottom: 2rem;
     font-size: 2.5rem;
     animation: fadeInUp 0.8s ease-out;
-    background: linear-gradient(135deg, rgba(255, 102, 204, 0.9), rgba(255, 107, 157, 0.8));
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.9), rgba(6, 182, 212, 0.8));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -618,13 +618,13 @@ nav ul li a.active::after {
 .info-item {
     text-align: center;
     padding: 2.5rem 2rem;
-    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(255, 102, 204, 0.05) 100%);
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(16, 185, 129, 0.05) 100%);
     border-radius: 15px;
     box-shadow: 
         0 8px 25px rgba(0, 0, 0, 0.1),
-        0 4px 10px rgba(255, 102, 204, 0.1);
+        0 4px 10px rgba(16, 185, 129, 0.1);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(255, 102, 204, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.1);
     position: relative;
     overflow: hidden;
 }
@@ -636,7 +636,7 @@ nav ul li a.active::after {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 102, 204, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
     transition: left 0.5s ease;
 }
 
@@ -644,7 +644,7 @@ nav ul li a.active::after {
     transform: translateY(-5px) scale(1.01);
     box-shadow: 
         0 15px 30px rgba(0, 0, 0, 0.12),
-        0 6px 15px rgba(255, 102, 204, 0.15);
+        0 6px 15px rgba(16, 185, 129, 0.15);
 }
 
 .info-item:hover::before {
@@ -714,12 +714,12 @@ nav ul li a.active::after {
     max-width: 800px;
     margin: 0 auto 4rem;
     padding: 3rem;
-    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(255, 102, 204, 0.05) 100%);
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(16, 185, 129, 0.05) 100%);
     border-radius: 20px;
     box-shadow: 
         0 15px 35px rgba(0, 0, 0, 0.1),
-        0 5px 15px rgba(255, 102, 204, 0.1);
-    border: 1px solid rgba(255, 102, 204, 0.1);
+        0 5px 15px rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.1);
     animation: fadeInUp 0.8s ease-out 0.6s both;
     position: relative;
     overflow: hidden;
@@ -779,7 +779,7 @@ nav ul li a.active::after {
 .form-control {
     width: 100%;
     padding: 1rem 1.2rem;
-    border: 2px solid rgba(255, 102, 204, 0.2);
+    border: 2px solid rgba(16, 185, 129, 0.2);
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.08);
     color: var(--text-color);
@@ -791,11 +791,11 @@ nav ul li a.active::after {
 
 .form-control:focus {
     outline: none;
-    border-color: rgba(255, 102, 204, 0.8);
+    border-color: rgba(16, 185, 129, 0.8);
     background: rgba(255, 255, 255, 0.12);
     box-shadow: 
-        0 0 0 3px rgba(255, 102, 204, 0.08),
-        0 4px 15px rgba(255, 102, 204, 0.1);
+        0 0 0 3px rgba(16, 185, 129, 0.08),
+        0 4px 15px rgba(16, 185, 129, 0.1);
     transform: translateY(-1px);
 }
 
@@ -816,7 +816,7 @@ textarea.form-control {
     padding: 1.2rem 2rem;
     font-size: 1.1rem;
     font-weight: 600;
-    background: linear-gradient(135deg, rgba(255, 102, 204, 0.7), rgba(255, 107, 157, 0.7));
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.7), rgba(6, 182, 212, 0.7));
     border: none;
     border-radius: 12px;
     color: white;
@@ -826,7 +826,7 @@ textarea.form-control {
     overflow: hidden;
     margin-top: 1rem;
     animation: fadeInUp 0.6s ease-out 1.3s both;
-    box-shadow: 0 4px 12px rgba(255, 102, 204, 0.15);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
 }
 
 .contact-form .btn::before {
@@ -842,8 +842,8 @@ textarea.form-control {
 
 .contact-form .btn:hover {
     transform: translateY(-2px);
-    background: linear-gradient(135deg, rgba(255, 102, 204, 0.85), rgba(255, 107, 157, 0.85));
-    box-shadow: 0 8px 20px rgba(255, 102, 204, 0.2);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.85), rgba(6, 182, 212, 0.85));
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
 }
 
 .contact-form .btn:hover::before {
@@ -892,13 +892,13 @@ textarea.form-control {
     justify-content: center;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(255, 102, 204, 0.05) 100%);
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(16, 185, 129, 0.05) 100%);
     border-radius: 50%;
     color: var(--text-color);
     font-size: 1.8rem;
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 2px solid rgba(255, 102, 204, 0.1);
+    border: 2px solid rgba(16, 185, 129, 0.1);
     position: relative;
     overflow: hidden;
 }
@@ -925,9 +925,9 @@ textarea.form-control {
 
 .social-icons a:hover {
     transform: translateY(-3px) scale(1.03);
-    border-color: rgba(255, 102, 204, 0.6);
+    border-color: rgba(16, 185, 129, 0.6);
     box-shadow: 
-        0 10px 20px rgba(255, 102, 204, 0.2),
+        0 10px 20px rgba(16, 185, 129, 0.2),
         0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -1022,14 +1022,14 @@ textarea.form-control {
     border-radius: var(--border-radius);
     padding: 1.5rem;
     position: relative;
-    border: 1px solid rgba(255, 102, 204, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.2);
     transition: all 0.3s ease;
 }
 
 .education-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 102, 204, 0.15);
-    border-color: rgba(255, 102, 204, 0.4);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.4);
 }
 
 .education-item::before {
@@ -1132,7 +1132,7 @@ textarea.form-control {
 }
 
 .project-tag {
-    background-color: rgba(255, 102, 204, 0.1);
+    background-color: rgba(16, 185, 129, 0.1);
     color: var(--primary-color);
     padding: 0.25rem 0.75rem;
     border-radius: 30px;
@@ -1177,14 +1177,14 @@ textarea.form-control {
     position: relative;
     padding: 0;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 102, 204, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .modal-close {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: rgba(255, 102, 204, 0.2);
+    background: rgba(16, 185, 129, 0.2);
     border: none;
     color: var(--text-color);
     font-size: 2rem;
@@ -1210,15 +1210,15 @@ textarea.form-control {
 .modal-header {
     position: relative;
     padding: 3rem 3rem 1rem;
-    background: linear-gradient(135deg, rgba(255, 102, 204, 0.1), rgba(153, 102, 255, 0.1));
-    border-bottom: 1px solid rgba(255, 102, 204, 0.2);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(6, 182, 212, 0.1));
+    border-bottom: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .modal-header h2 {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, var(--primary-color), #9966ff);
+    background: linear-gradient(90deg, var(--primary-color), #06b6d4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1232,13 +1232,13 @@ textarea.form-control {
 }
 
 .modal-tech-tag {
-    background: linear-gradient(135deg, var(--primary-color), #9966ff);
+    background: linear-gradient(135deg, var(--primary-color), #06b6d4);
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-size: 0.9rem;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(255, 102, 204, 0.3);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
 }
 
 .modal-body {
@@ -1281,7 +1281,7 @@ textarea.form-control {
 }
 
 .modal-features {
-    background: rgba(255, 102, 204, 0.05);
+    background: rgba(16, 185, 129, 0.05);
     border-radius: 15px;
     padding: 1.5rem;
     margin-bottom: 2rem;
@@ -1319,11 +1319,11 @@ textarea.form-control {
     gap: 1rem;
     justify-content: center;
     padding-top: 1rem;
-    border-top: 1px solid rgba(255, 102, 204, 0.2);
+    border-top: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .modal-btn {
-    background: linear-gradient(135deg, var(--primary-color), #9966ff);
+    background: linear-gradient(135deg, var(--primary-color), #06b6d4);
     color: #fff;
     border: none;
     padding: 0.8rem 2rem;
@@ -1339,7 +1339,7 @@ textarea.form-control {
 
 .modal-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 102, 204, 0.4);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
 }
 
 /* Pied de page */
@@ -1902,7 +1902,7 @@ textarea.form-control {
 /* Cartes d'expérience */
 .experience-card {
     background-color: var(--card-bg);
-    border: 1px solid rgba(255, 102, 204, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.15);
     border-radius: var(--border-radius);
     padding: 1.5rem;
     margin: 0 auto 1.25rem;
@@ -1946,9 +1946,9 @@ textarea.form-control {
 
 .experience-card .badge {
     display: inline-block;
-    background: rgba(255, 102, 204, 0.15);
+    background: rgba(16, 185, 129, 0.15);
     color: var(--primary-color);
-    border: 1px solid rgba(255, 102, 204, 0.25);
+    border: 1px solid rgba(16, 185, 129, 0.25);
     padding: .35rem .75rem;
     border-radius: 999px;
     font-size: .9rem;
