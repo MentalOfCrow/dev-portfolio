@@ -7,7 +7,7 @@ $cvLang = 'fr';
 if (isset($_COOKIE['language']) && $_COOKIE['language'] === 'en') {
     $cvLang = 'en';
 }
-$cvFile = $cvLang === 'en' ? '/assets/cv/cv-en.pdf' : '/assets/cv/cv-fr.pdf';
+$cvFile = $cvLang === 'en' ? '/assets/cv/cv2026-en.pdf' : '/assets/cv/cv2026-fr.pdf';
 $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV (PDF)';
 ?>
 
@@ -121,12 +121,12 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
             const frame = document.getElementById('cv-pdf-frame');
             const btn = document.getElementById('cv-download-btn');
             if (lang === 'en') {
-                frame.src = '/assets/cv/cv-en.pdf';
-                btn.href = '/assets/cv/cv-en.pdf';
+                frame.src = '/assets/cv/cv2026-en.pdf';
+                btn.href = '/assets/cv/cv2026-en.pdf';
                 btn.innerHTML = '<i class="fas fa-download"></i> Download CV (PDF)';
             } else {
-                frame.src = '/assets/cv/cv-fr.pdf';
-                btn.href = '/assets/cv/cv-fr.pdf';
+                frame.src = '/assets/cv/cv2026-fr.pdf';
+                btn.href = '/assets/cv/cv2026-fr.pdf';
                 btn.innerHTML = '<i class="fas fa-download"></i> Télécharger le CV (PDF)';
             }
         }
