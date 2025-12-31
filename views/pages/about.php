@@ -6,7 +6,7 @@ $cvLang = 'fr';
 if (isset($_COOKIE['language']) && $_COOKIE['language'] === 'en') {
     $cvLang = 'en';
 }
-$cvFile = $cvLang === 'en' ? '/assets/cv/cv-en.pdf' : '/assets/cv/cv-fr.pdf';
+$cvFile = $cvLang === 'en' ? '/assets/cv/cv2026-en.pdf' : '/assets/cv/cv2026-fr.pdf';
 $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV (PDF)';
 ?>
 
