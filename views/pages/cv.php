@@ -115,9 +115,12 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
     <script>
     // Changement dynamique du PDF selon la langue
     document.addEventListener('DOMContentLoaded', function() {
-        function updateCvPdf() {
-            let lang = localStorage.getItem('language') || 'fr';
-            console.log('[CV] Langue détectée pour le PDF :', lang);
+        function updateCvPdf(lang) {
+            // Si lang n'est pas passé, le récupérer du localStorage
+            if (!lang) {
+                lang = localStorage.getItem('language') || 'fr';
+            }
+            console.log('[CV] Mise à jour du PDF vers langue :', lang);
             const frame = document.getElementById('cv-pdf-frame');
             const btn = document.getElementById('cv-download-btn');
             if (lang === 'en') {
@@ -130,48 +133,34 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
                 btn.innerHTML = '<i class="fas fa-download"></i> Télécharger le CV (PDF)';
             }
         }
+        
         // Appliquer au chargement
         updateCvPdf();
-        // Sur changement de langue via applyTranslation
-        if (window.applyTranslation) {
-            window.applyTranslation = (function(orig) {
-                return function(lang) {
-                    orig(lang);
-                    updateCvPdf();
-                };
-            })(window.applyTranslation);
+        
+        // Écouter les clics sur les boutons de langue FR et EN
+        const frBtn = document.getElementById('lang-fr');
+        const enBtn = document.getElementById('lang-en');
+        
+        if (frBtn) {
+            frBtn.addEventListener('click', function() {
+                console.log('[CV] Clic sur FR');
+                updateCvPdf('fr');
+            });
         }
-        // Sur changement de langue via storage (autre onglet ou menu)
+        
+        if (enBtn) {
+            enBtn.addEventListener('click', function() {
+                console.log('[CV] Clic sur EN');
+                updateCvPdf('en');
+            });
+        }
+        
+        // Sur changement de langue via storage (autre onglet)
         window.addEventListener('storage', function(e) {
             if (e.key === 'language') {
-                updateCvPdf();
+                updateCvPdf(e.newValue);
             }
         });
-        // Sur retour de focus (si la langue a changé ailleurs)
-        window.addEventListener('focus', function() {
-            updateCvPdf();
-        });
-        // Sur clic sur tous les boutons de langue globaux (ajustez le sélecteur si besoin)
-        var langBtns = document.querySelectorAll('.lang-switch, #lang-switch, [data-lang]');
-        langBtns.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                setTimeout(function() {
-                    console.log('[CV] Après clic bouton langue, localStorage.language =', localStorage.getItem('language'));
-                    updateCvPdf();
-                }, 200);
-            });
-        });
-
-        // Secours : surveille le changement de langue toutes les 500ms
-        var lastLang = localStorage.getItem('language') || 'fr';
-        setInterval(function() {
-            var currentLang = localStorage.getItem('language') || 'fr';
-            if (currentLang !== lastLang) {
-                console.log('[CV] Changement détecté par interval :', lastLang, '->', currentLang);
-                lastLang = currentLang;
-                updateCvPdf();
-            }
-        }, 500);
     });
     </script>
 </main>
