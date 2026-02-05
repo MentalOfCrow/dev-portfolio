@@ -318,18 +318,44 @@ $current_page = "skills";
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Animation des barres de niveau
+    // Animation des barres de niveau avec chargement progressif optimisé
     const skillLevels = document.querySelectorAll('.skill-level');
+    const skillCards = document.querySelectorAll('.skill-card, .tool-card');
     
-    const observer = new IntersectionObserver((entries) => {
+    // Observer pour les barres de niveau
+    const levelObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const level = entry.target.dataset.level;
-                entry.target.querySelector('.level-bar').style.width = `${level}%`;
+                requestAnimationFrame(() => {
+                    entry.target.querySelector('.level-bar').style.width = `${level}%`;
+                });
+                levelObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.2, rootMargin: '50px' });
 
-    skillLevels.forEach(level => observer.observe(level));
+    // Observer pour l'apparition progressive des cartes
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                requestAnimationFrame(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                });
+                cardObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '20px' });
+
+    // Initialiser les cartes avec un état invisible
+    skillCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = `opacity 0.4s ease ${index % 6 * 0.05}s, transform 0.4s ease ${index % 6 * 0.05}s`;
+        cardObserver.observe(card);
+    });
+
+    skillLevels.forEach(level => levelObserver.observe(level));
 });
 </script> 

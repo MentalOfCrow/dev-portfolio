@@ -77,8 +77,8 @@ $cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV
         <div class="contact-container">
             <h2 data-translate="about_contact_title">Contact & Disponibilité</h2>
             <div class="contact-content">
-                <p data-translate="about_contact_intro">Ouvert aux échanges et à l'étude de vos besoins (développement web, cybersécurité, infrastructure).</p>
-                <p data-translate="about_contact_availability">Recherche une alternance à partir de fin septembre 2025, dans les Bouches-du-Rhône ou le Var (toute ville de ces départements).</p>
+                <p data-translate="about_contact_intro">Ouvert aux échanges et à l'étude de vos besoins (cybersécurité, infrastructure, développement web).</p>
+                <p data-translate="about_contact_availability">Disponible <strong>dès maintenant</strong> et jusqu'à <strong>septembre 2026</strong> pour une alternance — je recherche <strong>le plus tôt possible</strong>, dans <strong>tous les domaines de l'informatique</strong>.</p>
                 <div class="contact-highlight">
                     <i class="fas fa-envelope"></i>
                     <a href="mailto:hugo.bisserier.pro@gmail.com" style="color:#10b981;text-decoration:underline;font-weight:bold;" data-translate="about_contact_email">hugo.bisserier.pro@gmail.com</a>

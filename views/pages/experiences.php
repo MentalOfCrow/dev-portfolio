@@ -49,16 +49,31 @@ $current_page = "experiences";
         </p>
     </article>
 
-    <!-- À venir (2025–2026) -->
-    <article class="experience-card soon" aria-labelledby="exp-soon">
-        <h3 id="exp-soon" data-translate="experiences_soon_title">À venir — 2025–2026</h3>
-        <p class="exp-summary" data-translate="soon_summary">
-            Expérience en préparation dans le domaine des systèmes, réseaux et cybersécurité.
-            Périmètre encore en cours de définition ; plus d’informations seront ajoutées prochainement.
+    <!-- Sicomin (2025–2026) -->
+    <article class="experience-card" aria-labelledby="exp-sicomin">
+        <h3 id="exp-sicomin" data-translate="sicomin_title">Sicomin — Stage 2025–2026</h3>
+        <p data-translate="sicomin_company_line"><strong>Entreprise :</strong> Sicomin — Châteauneuf-les-Martigues</p>
+        <p class="exp-summary" data-translate="sicomin_summary">
+            Stage de 4 mois (octobre 2025 – janvier 2026) en informatique.
+            Missions en Data et Business Intelligence, cybersécurité et administration système.
+            Travail sur site au sein d'une entreprise spécialisée dans les résines époxy et matériaux composites.
         </p>
-        <p class="exp-tags" data-translate="soon_tags">Systèmes & Réseaux · Cybersécurité · Observabilité</p>
+        <p class="exp-tags" data-translate="sicomin_tags">Data & BI · Cybersécurité · Administration système</p>
         <p>
-            <span class="badge" data-translate="soon_badge">En préparation</span>
+            <span class="badge" data-translate="sicomin_badge">Stage terminé</span>
+        </p>
+    </article>
+
+    <!-- Recherche alternance 2026 -->
+    <article class="experience-card soon" aria-labelledby="exp-recherche">
+        <h3 id="exp-recherche" data-translate="recherche_title">2026 — Recherche d'alternance</h3>
+        <p class="exp-summary" data-translate="recherche_summary">
+            Recherche active d'une alternance dans tous les domaines de l'informatique : systèmes, réseaux, cybersécurité, développement, infrastructure cloud.
+            Disponible dès maintenant et jusqu'à septembre 2026. Ouvert à toutes les opportunités.
+        </p>
+        <p class="exp-tags" data-translate="recherche_tags">Tous domaines IT · Cybersécurité · Infrastructure · Développement</p>
+        <p>
+            <span class="badge" data-translate="recherche_badge">En recherche</span>
         </p>
     </article>
     </section>
