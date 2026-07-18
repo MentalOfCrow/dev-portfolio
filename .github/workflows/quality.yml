@@ -1,0 +1,50 @@
+name: Portfolio quality
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Configure Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Configure PHP
+        uses: shivammathur/setup-php@b604ade2a87db23f8871b7182e69ec5e75effb45 # v2
+        with:
+          php-version: '8.2'
+          coverage: none
+
+      - name: Install validation tooling
+        run: npm ci --ignore-scripts
+
+      - name: Validate source
+        run: npm test
+
+      - name: Smoke-test routes
+        run: |
+          php -S 127.0.0.1:8000 > /tmp/portfolio-php.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for route in / /about /skills /experiences /projects /contact /cv /mentions-legales /politique-confidentialite; do
+            curl --fail --silent --show-error "http://127.0.0.1:8000${route}" > /dev/null
+          done
+          test "$(curl --silent --output /dev/null --write-out '%{http_code}' http://127.0.0.1:8000/not-found)" = "404"
