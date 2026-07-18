@@ -57,7 +57,6 @@ AddDefaultCharset UTF-8
 
 <IfModule mod_expires.c>
     ExpiresActive On
-    ExpiresDefault "access plus 1 hour"
     ExpiresByType text/css "access plus 1 year"
     ExpiresByType application/javascript "access plus 1 year"
     ExpiresByType image/webp "access plus 1 year"
