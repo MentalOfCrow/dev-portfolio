@@ -1,80 +1,59 @@
-<footer class="main-footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Hugo Bisserier</h3>
-                <p class="footer-desc" data-translate="footer_description">Développeur Web Full Stack passionné par la création d'applications web modernes et performantes. Spécialisé en PHP, JavaScript et solutions cloud avec une approche centrée sur l'optimisation et la sécurité des projets numériques.</p>
-                <span class="footer-tagline">#CodeWithPassion</span>
+<footer class="site-footer">
+    <div class="shell">
+        <div class="footer-lead">
+            <div>
+                <span class="eyebrow"><span lang="fr">Une idée solide mérite une exécution propre</span><span lang="en">A strong idea deserves clean execution</span></span>
+                <h2><span lang="fr">Construisons quelque chose d’utile.</span><span lang="en">Let’s build something useful.</span></h2>
             </div>
+            <a class="button button-primary" href="/contact"><span lang="fr">Proposer une collaboration</span><span lang="en">Propose a collaboration</span></a>
+        </div>
 
-            <div class="footer-section">
-                <h3 data-translate="footer_quick_nav">Navigation rapide</h3>
-                <ul>
-                    <li><a href="/" data-translate="nav_home">Accueil</a></li>
-                    <li><a href="/about" data-translate="nav_about">À propos</a></li>
-                    <li><a href="/projects" data-translate="nav_projects">Projets</a></li>
-                    <li><a href="/skills" data-translate="nav_skills">Compétences</a></li>
-                    <li><a href="/contact" data-translate="nav_contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h3 data-translate="footer_contact">Me contacter</h3>
-                <ul class="contact-info">
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:hugo.bisserier.pro@gmail.com">hugo.bisserier.pro@gmail.com</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+33682861309">06 82 86 13 09</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Aix-en-Provence, France</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h3 data-translate="footer_social">Réseaux sociaux</h3>
-                <p class="social-description" id="footer-social-text" data-translate="footer_social_text">
-                    Retrouvez-moi sur les plateformes professionnelles pour suivre mon parcours et mes contributions dans le domaine du développement web et de la cybersécurité.
-                </p>
-                <div class="social-grid">
-                    <a href="https://github.com/MentalOfCrow" target="_blank" class="social-links" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/hugo-bisserier-a67327324/" target="_blank" class="social-links" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://twitter.com/" target="_blank" class="social-links" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://dev.to/" target="_blank" class="social-links" title="Dev.to">
-                        <i class="fab fa-dev"></i>
-                    </a>
+        <div class="footer-grid">
+            <section class="footer-intro" aria-labelledby="footer-name">
+                <div class="brand footer-brand">
+                    <span class="brand-mark" aria-hidden="true">HB</span>
+                    <span class="brand-copy"><strong id="footer-name">Hugo Bisserier</strong><small>France · Aix / Marseille</small></span>
                 </div>
-            </div>
+                <p lang="fr">Cybersécurité, infrastructure et réseau, développement web, logiciel et mobile. Je relie la sécurité, l’exploitation et le code pour construire des projets cohérents de bout en bout.</p>
+                <p lang="en">Cybersecurity, infrastructure and networking, web, software and mobile development. I connect security, operations and code to build coherent end-to-end projects.</p>
+            </section>
+
+            <nav class="footer-column" aria-label="Navigation du pied de page">
+                <h3><span lang="fr">Navigation</span><span lang="en">Navigation</span></h3>
+                <a href="/about"><span lang="fr">Profil</span><span lang="en">Profile</span></a>
+                <a href="/skills"><span lang="fr">Compétences</span><span lang="en">Skills</span></a>
+                <a href="/experiences"><span lang="fr">Expériences</span><span lang="en">Experience</span></a>
+                <a href="/projects"><span lang="fr">Projets</span><span lang="en">Projects</span></a>
+                <a href="/cv">CV</a>
+            </nav>
+
+            <section class="footer-column" aria-labelledby="footer-contact">
+                <h3 id="footer-contact"><span lang="fr">Me contacter</span><span lang="en">Contact</span></h3>
+                <button class="footer-link footer-copy" type="button" data-copy="ramenmakidaki" data-copy-label="Discord copié">Discord · ramenmakidaki</button>
+                <a class="footer-link" href="mailto:hugo.bisserier.pro@gmail.com">hugo.bisserier.pro@gmail.com</a>
+                <span class="footer-link">Aix-en-Provence, France</span>
+            </section>
+
+            <section class="footer-column" aria-labelledby="footer-social">
+                <h3 id="footer-social"><span lang="fr">Réseaux</span><span lang="en">Networks</span></h3>
+                <a href="https://github.com/MentalOfCrow" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                <a href="https://www.linkedin.com/in/hugo-bisserier-a67327324/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                <p class="footer-note" lang="fr">Le profil DEV sera ajouté dès qu’une URL personnelle pourra être vérifiée.</p>
+                <p class="footer-note" lang="en">The DEV profile will be added once a personal URL can be verified.</p>
+            </section>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; <?php echo date('Y'); ?> Hugo Bisserier. <span data-translate="footer_rights">Tous droits réservés.</span></p>
-            <ul class="legal-links">
-                <li><a href="/mentions-legales" data-translate="footer_legal">Mentions légales</a></li>
-                <li><a href="/politique-confidentialite" data-translate="footer_privacy">Politique de confidentialité</a></li>
-            </ul>
+            <p>© <?= date('Y') ?> Hugo Bisserier</p>
+            <div>
+                <a href="/mentions-legales"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a>
+                <a href="/politique-confidentialite"><span lang="fr">Confidentialité</span><span lang="en">Privacy</span></a>
+            </div>
         </div>
     </div>
 </footer>
 
-<!-- Scripts -->
-<script src="/assets/js/main.js"></script>
-<?php if (isset($additional_scripts)): ?>
-    <?php foreach ($additional_scripts as $script): ?>
-        <script src="<?= $script ?>"></script>
-    <?php endforeach; ?>
-<?php endif; ?>
-
+<div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast></div>
+<script src="/assets/js/main.js" defer></script>
 </body>
-</html> 
+</html>

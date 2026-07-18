@@ -1,27 +1,69 @@
-# Redirection vers index.php pour toutes les requêtes propres (excepté fichiers existants)
-RewriteEngine On
-
-# Ne pas rediriger si fichier ou dossier physique existe
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-# Rediriger tout vers index.php
-RewriteRule ^ index.php [QSA,L]
-
-# Sécurité : interdiction d'accès aux fichiers sensibles
-<FilesMatch "^\.">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
-
-# Protection du fichier .env
-<Files .env>
-    Order allow,deny
-    Deny from all
-</Files>
-
-# Charset par défaut
+Options -Indexes
+DirectoryIndex index.php
+ServerSignature Off
 AddDefaultCharset UTF-8
 
-# Désactiver listing de répertoire
-Options -Indexes
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # HTTPS en production. Les hôtes locaux restent utilisables pour les tests.
+    RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:[0-9]+)?$ [NC]
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE]
+
+    # Les composants internes ne doivent jamais être servis directement.
+    RewriteRule ^(?:backend|views|docs|scripts|node_modules|vendor|graphify-out|\.private-archive|\.audit-artifacts)(?:/|$) - [F,L,NC]
+
+    # Routage des URLs propres vers le contrôleur frontal.
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+# Refuser les secrets, configurations, sauvegardes et documents internes.
+<FilesMatch "(?:^\.|\.(?:env|ini|log|lock|md|sql|sqlite|ya?ml|toml|bak|backup|old|orig|dist|config|sh|ps1|map)$)">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "^(?:composer\.(?:json|lock)|package(?:-lock)?\.json|vite\.config\.js|\.eslintrc\.json|\.prettierrc)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'none'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set Permissions-Policy "accelerometer=(), autoplay=(), camera=(), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()"
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    Header always set Cross-Origin-Resource-Policy "same-origin"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always unset X-Powered-By
+
+    <FilesMatch "\.(?:css|js|svg|webp|png|jpe?g)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    <FilesMatch "\.pdf$">
+        Header set Cache-Control "public, max-age=86400"
+        Header set X-Robots-Tag "noindex, noarchive"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 hour"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType application/pdf "access plus 1 day"
+</IfModule>
+
+FileETag None

@@ -1,166 +1,53 @@
-<?php
-echo "<!-- DEBUG CV.PHP LOADED -->";
-$title = "Mon CV";
-$current_page = "cv";
-
-$cvLang = 'fr';
-if (isset($_COOKIE['language']) && $_COOKIE['language'] === 'en') {
-    $cvLang = 'en';
-}
-$cvFile = $cvLang === 'en' ? '/assets/cv/cv2026-en.pdf' : '/assets/cv/cv2026-fr.pdf';
-$cvDownloadLabel = $cvLang === 'en' ? 'Download CV (PDF)' : 'Télécharger le CV (PDF)';
-?>
-
-<main class="container">
-    <section class="page-header">
-        <h1 data-translate="cv_title">Mon CV</h1>
-        <div class="cv-actions">
-            <a id="cv-download-btn" href="<?= $cvFile ?>" class="btn btn-primary" download data-translate="cv_download">
-                <i class="fas fa-download"></i>
-                <?= $cvDownloadLabel ?>
-            </a>
+<main id="main-content">
+    <section class="page-hero section">
+        <div class="shell page-hero-grid">
+            <div data-reveal>
+                <span class="eyebrow">Curriculum vitae · 2026</span>
+                <h1><span lang="fr">Le parcours en version courte.</span><span lang="en">The short version of my journey.</span></h1>
+            </div>
+            <div class="page-intro" data-reveal>
+                <p lang="fr">Profil cybersécurité, systèmes, réseau et infrastructure, complété par le développement full stack et mobile. Les deux versions PDF restent téléchargeables.</p>
+                <p lang="en">Cybersecurity, systems, network and infrastructure profile, complemented by full-stack and mobile development. Both PDF versions remain downloadable.</p>
+            </div>
         </div>
-        <!-- Suppression du sélecteur de langue CV -->
-        <!-- <div class="cv-lang-switch">
-            <button id="btn-cv-fr" class="btn btn-secondary" type="button">CV Français</button>
-            <button id="btn-cv-en" class="btn btn-secondary" type="button">CV Anglais</button>
-        </div> -->
     </section>
 
-    <div class="cv-container">
-        <!-- Section Profil -->
-        <section class="cv-section">
-            <h2 data-translate="cv_profile_title">Profil</h2>
-            <div class="profile-content">
-                <div class="profile-text">
-                    <p data-translate="cv_profile_text">Développeur web passionné par la création d'applications innovantes et performantes. 
-                    Spécialisé dans le développement full-stack avec une expertise particulière en PHP, JavaScript et Python.</p>
+    <section class="section section-contrast">
+        <div class="shell cv-layout">
+            <aside class="cv-sidebar" data-reveal>
+                <img src="/assets/images/profile-640.webp" srcset="/assets/images/profile-320.webp 320w, /assets/images/profile-640.webp 640w" sizes="(max-width: 900px) 440px, 340px" width="640" height="824" alt="Portrait de Hugo Bisserier" loading="lazy">
+                <div class="cv-downloads">
+                    <a class="button button-primary" href="/assets/cv/cv2026-fr.pdf" download>CV français <span aria-hidden="true">↓</span></a>
+                    <a class="button button-secondary" href="/assets/cv/cv2026-en.pdf" download>English résumé <span aria-hidden="true">↓</span></a>
                 </div>
-            </div>
-        </section>
+                <p class="cv-file-note"><span lang="fr">Fichiers PDF · aucune donnée demandée</span><span lang="en">PDF files · no personal data requested</span></p>
+            </aside>
 
-        <!-- Section Compétences -->
-        <section class="cv-section">
-            <h2 data-translate="cv_skills_title">Compétences Techniques</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 data-translate="cv_languages_title">Langages de Programmation</h3>
-                    <ul>
-                        <li>PHP</li>
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>C#</li>
-                        <li>Golang</li>
-                        <li>HTML/CSS</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3 data-translate="cv_frameworks_title">Frameworks & Outils</h3>
-                    <ul>
-                        <li>MySQL</li>
-                        <li>Blazor</li>
-                        <li>Canvas API</li>
-                        <li>Tailwind CSS</li>
-                        <li>Git</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3 data-translate="cv_infrastructure_title">Infrastructure</h3>
-                    <ul>
-                        <li>Virtualisation (VirtualBox)</li>
-                        <li>GNS3</li>
-                        <li>Apache/Nginx</li>
-                        <li>Windows Server</li>
-                        <li>Linux</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            <div class="cv-content" data-reveal>
+                <section>
+                    <span class="eyebrow">01 · Profil</span>
+                    <h2><span lang="fr">Cybersécurité, infrastructure & développement.</span><span lang="en">Cybersecurity, infrastructure & development.</span></h2>
+                    <p lang="fr">Étudiant en informatique entrant en quatrième année en septembre 2026, avec une trajectoire orientée cybersécurité, administration systèmes et réseaux, infrastructure et SecOps. Mon expérience du développement me permet de comprendre les applications que je déploie ou sécurise, du front-end jusqu’aux données.</p>
+                    <p lang="en">IT student entering my fourth year in September 2026, with a path focused on cybersecurity, systems and network administration, infrastructure and SecOps. My development background helps me understand the applications I deploy or secure, from front end to data.</p>
+                </section>
 
-        <!-- Section Projets Clés -->
-        <section class="cv-section">
-            <h2 data-translate="cv_projects_title">Projets Clés</h2>
-            <div class="projects-list">
-                <div class="cv-project">
-                    <h3 data-translate="cv_project1_title">FabLab - Digitalisation des Commandes</h3>
-                    <p data-translate="cv_project1_desc">Application web de gestion des commandes d'impressions 3D, développée en PHP et MySQL.</p>
-                </div>
-                <div class="cv-project">
-                    <h3 data-translate="cv_project2_title">Jeu de Dames en Ligne</h3>
-                    <p data-translate="cv_project2_desc">Application web interactive utilisant Canvas API et WebSocket pour un jeu multijoueur en temps réel.</p>
-                </div>
-                <div class="cv-project">
-                    <h3 data-translate="cv_project3_title">Infrastructure Client-Serveur</h3>
-                    <p data-translate="cv_project3_desc">Conception et implémentation d'une architecture réseau complète pour une petite entreprise.</p>
-                </div>
-            </div>
-        </section>
+                <section>
+                    <span class="eyebrow">02 · <span lang="fr">Points forts</span><span lang="en">Strengths</span></span>
+                    <div class="cv-points">
+                        <article><h3><span lang="fr">Sécurité</span><span lang="en">Security</span></h3><p>OWASP · Bug bounty · Hardening · Risk analysis · Burp Suite</p></article>
+                        <article><h3><span lang="fr">Systèmes & réseau</span><span lang="en">Systems & network</span></h3><p>Windows Server · Active Directory · DNS/DHCP · Docker · VMware</p></article>
+                        <article><h3><span lang="fr">Développement</span><span lang="en">Development</span></h3><p>PHP · JavaScript · Python · Go · Flutter · Dart</p></article>
+                        <article><h3><span lang="fr">Méthode</span><span lang="en">Method</span></h3><p>Documentation · Tests · CI/CD · Support · Project coordination</p></article>
+                    </div>
+                </section>
 
-        <!-- Section Formation -->
-        <section class="cv-section">
-            <h2 data-translate="cv_education_title">Formation</h2>
-            <div class="education-list">
-                <div class="education-item">
-                    <h3 data-translate="cv_education1_title">Formation en Développement Web, Réseau et Cybersécurité</h3>
-        </section>
-
-        <!-- Intégration du PDF -->
-        <section class="cv-section pdf-preview">
-            <h2 data-translate="cv_pdf_title">Version PDF</h2>
-            <div class="pdf-container">
-                <iframe id="cv-pdf-frame" src="<?= $cvFile ?>" width="100%" height="800px"></iframe>
+                <section>
+                    <span class="eyebrow">03 · <span lang="fr">Étape suivante</span><span lang="en">Next step</span></span>
+                    <h2>Aéroport Marseille Provence · 2026—2028</h2>
+                    <p lang="fr">Début du parcours le 1er septembre 2026, en parallèle de ma quatrième année et de la poursuite de ma spécialisation.</p>
+                    <p lang="en">The program begins on September 1, 2026 alongside my fourth year and continued specialization.</p>
+                </section>
             </div>
-        </section>
-    </div>
-    <script>
-    // Changement dynamique du PDF selon la langue
-    document.addEventListener('DOMContentLoaded', function() {
-        function updateCvPdf(lang) {
-            // Si lang n'est pas passé, le récupérer du localStorage
-            if (!lang) {
-                lang = localStorage.getItem('language') || 'fr';
-            }
-            console.log('[CV] Mise à jour du PDF vers langue :', lang);
-            const frame = document.getElementById('cv-pdf-frame');
-            const btn = document.getElementById('cv-download-btn');
-            if (lang === 'en') {
-                frame.src = '/assets/cv/cv2026-en.pdf';
-                btn.href = '/assets/cv/cv2026-en.pdf';
-                btn.innerHTML = '<i class="fas fa-download"></i> Download CV (PDF)';
-            } else {
-                frame.src = '/assets/cv/cv2026-fr.pdf';
-                btn.href = '/assets/cv/cv2026-fr.pdf';
-                btn.innerHTML = '<i class="fas fa-download"></i> Télécharger le CV (PDF)';
-            }
-        }
-        
-        // Appliquer au chargement
-        updateCvPdf();
-        
-        // Écouter les clics sur les boutons de langue FR et EN
-        const frBtn = document.getElementById('lang-fr');
-        const enBtn = document.getElementById('lang-en');
-        
-        if (frBtn) {
-            frBtn.addEventListener('click', function() {
-                console.log('[CV] Clic sur FR');
-                updateCvPdf('fr');
-            });
-        }
-        
-        if (enBtn) {
-            enBtn.addEventListener('click', function() {
-                console.log('[CV] Clic sur EN');
-                updateCvPdf('en');
-            });
-        }
-        
-        // Sur changement de langue via storage (autre onglet)
-        window.addEventListener('storage', function(e) {
-            if (e.key === 'language') {
-                updateCvPdf(e.newValue);
-            }
-        });
-    });
-    </script>
+        </div>
+    </section>
 </main>

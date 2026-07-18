@@ -1,39 +1,33 @@
-<header class="main-header">
-    <div class="container">
-        <nav class="main-nav">
-            <a href="/" class="logo">
-                <span class="logo-text">Hugo Bisserier</span>
-            </a>
+<header class="site-header" data-header>
+    <div class="shell header-inner">
+        <a class="brand" href="/">
+            <span class="brand-mark" aria-hidden="true">HB</span>
+            <span class="brand-copy">
+                <strong>Hugo Bisserier</strong>
+                <small>Cyber · Infra · Dev</small>
+            </span>
+        </a>
 
-            <button class="mobile-menu-toggle" aria-label="Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+        <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="primary-navigation" aria-expanded="false" data-nav-toggle>
+            <span></span><span></span><span></span>
+        </button>
 
-            <ul class="nav-links">
-                <li><a href="/" <?= isset($current_page) && $current_page === 'home' ? 'class="active"' : '' ?> data-translate="nav_home">Accueil</a></li>
-                <li><a href="/about" <?= isset($current_page) && $current_page === 'about' ? 'class="active"' : '' ?> data-translate="nav_about">À propos</a></li>
-                <li><a href="/skills" <?= isset($current_page) && $current_page === 'skills' ? 'class="active"' : '' ?> data-translate="nav_skills">Compétences</a></li>
-                <li><a href="/experiences#experiences" <?= isset($current_page) && $current_page === 'experiences' ? 'class="active"' : '' ?> data-translate="nav_experiences">Expériences</a></li>
-                <li><a href="/projects" <?= isset($current_page) && $current_page === 'projects' ? 'class="active"' : '' ?> data-translate="nav_projects">Projets</a></li>
-                <li><a href="/contact" <?= isset($current_page) && $current_page === 'contact' ? 'class="active"' : '' ?> data-translate="nav_contact">Contact</a></li>
-                <li><a href="/cv" <?= isset($current_page) && $current_page === 'cv' ? 'class="active"' : '' ?> data-translate="nav_cv">CV</a></li>
-            </ul>
-
-            <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Changer de thème">
-                    <i class="fas fa-sun light-icon"></i>
-                    <i class="fas fa-moon dark-icon"></i>
-                </button>
-                <div class="language-selector">
-                    <button class="current-lang">FR</button>
-                    <ul class="lang-dropdown">
-                        <li><a href="#" data-lang="fr" id="lang-fr">Français</a></li>
-                        <li><a href="#" data-lang="en" id="lang-en">English</a></li>
-                    </ul>
-                </div>
-            </div>
+        <nav class="primary-nav" id="primary-navigation" aria-label="Navigation principale" data-nav>
+            <a href="/"<?= isCurrentPage('home') ? ' aria-current="page"' : '' ?>><span lang="fr">Accueil</span><span lang="en">Home</span></a>
+            <a href="/about"<?= isCurrentPage('about') ? ' aria-current="page"' : '' ?>><span lang="fr">Profil</span><span lang="en">Profile</span></a>
+            <a href="/skills"<?= isCurrentPage('skills') ? ' aria-current="page"' : '' ?>><span lang="fr">Compétences</span><span lang="en">Skills</span></a>
+            <a href="/experiences"<?= isCurrentPage('experiences') ? ' aria-current="page"' : '' ?>><span lang="fr">Expériences</span><span lang="en">Experience</span></a>
+            <a href="/projects"<?= isCurrentPage('projects') ? ' aria-current="page"' : '' ?>><span lang="fr">Projets</span><span lang="en">Projects</span></a>
+            <a href="/contact"<?= isCurrentPage('contact') ? ' aria-current="page"' : '' ?>><span lang="fr">Contact</span><span lang="en">Contact</span></a>
         </nav>
+
+        <div class="header-actions">
+            <a class="header-cv" href="/cv"<?= isCurrentPage('cv') ? ' aria-current="page"' : '' ?>>CV</a>
+            <button class="icon-button" type="button" aria-label="Changer le thème" title="Changer le thème" data-theme-toggle>
+                <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"></path></svg>
+                <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.3A8.5 8.5 0 0 1 8.7 3.8 8.5 8.5 0 1 0 20.2 15.3Z"></path></svg>
+            </button>
+            <button class="language-button" type="button" aria-label="FR — Display the website in English" data-language-toggle><span data-language-label>FR</span></button>
+        </div>
     </div>
-</header> 
+</header>

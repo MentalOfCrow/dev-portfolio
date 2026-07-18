@@ -1,108 +1,19 @@
-<?php
-$pageTitle = "Politique de Confidentialité - Portfolio Hugo Bisserier";
-$pageDescription = "Politique de confidentialité du portfolio d'Hugo Bisserier, étudiant en informatique.";
-?>
-
-<link rel="stylesheet" href="/assets/css/legal-pages.css">
-
-<main class="legal-page">
-    <section class="page-header">
-        <h1 data-translate="privacy_title">Politique de Confidentialité</h1>
-        <p class="subtitle" data-translate="privacy_subtitle">Protection de vos données personnelles</p>
+<main id="main-content">
+    <section class="page-hero section legal-hero">
+        <div class="shell page-hero-grid"><div data-reveal><span class="eyebrow"><span lang="fr">Vie privée</span><span lang="en">Privacy</span></span><h1><span lang="fr">Une politique simple pour un site simple.</span><span lang="en">A simple policy for a simple website.</span></h1></div><div class="page-intro" data-reveal><p><span lang="fr">Dernière mise à jour : 18 juillet 2026.</span><span lang="en">Last updated: July 18, 2026.</span></p></div></div>
     </section>
 
-    <section class="legal-section">
-        <h2 data-translate="privacy_intro_title"><i class="fas fa-info-circle"></i>Introduction</h2>
-        <p data-translate="privacy_intro_text1">Hugo Bisserier attache une grande importance à la protection de vos données personnelles et au respect de votre vie privée. La présente politique de confidentialité vous informe sur la manière dont vos données personnelles sont collectées et traitées lorsque vous visitez ce site web.</p>
-        <p data-translate="privacy_intro_text2">Cette politique est conforme au Règlement Général sur la Protection des Données (RGPD) et à la loi "Informatique et Libertés" du 6 janvier 1978 modifiée.</p>
-        
-        <div class="definition-box">
-            <h3><i class="fas fa-quote-right"></i> Qu'est-ce qu'une donnée personnelle ?</h3>
-            <p>Une donnée personnelle est toute information se rapportant à une personne physique identifiée ou identifiable. Par exemple : un nom, une adresse email, une adresse IP ou encore des cookies de navigation.</p>
+    <section class="section section-contrast">
+        <div class="shell privacy-layout">
+            <aside class="privacy-summary" data-reveal><span class="eyebrow"><span lang="fr">En bref</span><span lang="en">In short</span></span><h2><span lang="fr">Pas de compte. Pas de formulaire. Pas de publicité.</span><span lang="en">No account. No form. No advertising.</span></h2><p lang="fr">Le portfolio ne demande aucune donnée personnelle et n’utilise aucun outil d’analyse d’audience tiers.</p><p lang="en">This portfolio requests no personal data and uses no third-party audience analytics.</p></aside>
+            <div class="privacy-content">
+                <article data-reveal><span>01</span><div><h2><span lang="fr">Données collectées</span><span lang="en">Data collected</span></h2><p lang="fr">Aucune donnée n’est collectée directement par le site. Il n’existe ni formulaire, ni inscription, ni espace utilisateur, ni base de données applicative.</p><p lang="en">No data is collected directly by this website. There is no form, registration, user area or application database.</p></div></article>
+                <article data-reveal><span>02</span><div><h2><span lang="fr">Préférences locales</span><span lang="en">Local preferences</span></h2><p lang="fr">La langue et le thème sont enregistrés dans le stockage local du navigateur. Ces préférences restent sur votre appareil et ne sont pas envoyées au serveur.</p><p lang="en">Language and theme are stored in your browser’s local storage. These preferences remain on your device and are not sent to the server.</p></div></article>
+                <article data-reveal><span>03</span><div><h2><span lang="fr">Journaux techniques</span><span lang="en">Technical logs</span></h2><p lang="fr">Comme tout hébergeur, Hostinger peut conserver des journaux techniques nécessaires à la sécurité et au fonctionnement du service, notamment l’adresse IP, la date et la ressource demandée. Leur traitement relève de la politique de Hostinger.</p><p lang="en">Like any hosting provider, Hostinger may retain technical logs required for security and service operation, including IP address, date and requested resource. Their processing is governed by Hostinger’s policy.</p></div></article>
+                <article data-reveal><span>04</span><div><h2><span lang="fr">Liens externes</span><span lang="en">External links</span></h2><p lang="fr">GitHub, LinkedIn, Discord et les sites de documentation appliquent leurs propres politiques. Leur ouverture résulte d’une action volontaire de votre part.</p><p lang="en">GitHub, LinkedIn, Discord and documentation websites apply their own policies. Opening them results from your voluntary action.</p></div></article>
+                <article data-reveal><span>05</span><div><h2><span lang="fr">Contact</span><span lang="en">Contact</span></h2><p lang="fr">Si vous contactez Hugo Bisserier par e-mail ou via une plateforme externe, les informations transmises servent uniquement à répondre à votre demande. Vous pouvez demander leur suppression à tout moment.</p><p lang="en">If you contact Hugo Bisserier by email or through an external platform, submitted information is used only to answer your request. You may request its deletion at any time.</p></div></article>
+                <article data-reveal><span>06</span><div><h2><span lang="fr">Vos droits</span><span lang="en">Your rights</span></h2><p lang="fr">Pour toute question relative à l’accès, la rectification ou la suppression d’un échange, écrivez à <a href="mailto:hugo.bisserier.pro@gmail.com">hugo.bisserier.pro@gmail.com</a>.</p><p lang="en">For any question about access, correction or deletion of an exchange, write to <a href="mailto:hugo.bisserier.pro@gmail.com">hugo.bisserier.pro@gmail.com</a>.</p></div></article>
+            </div>
         </div>
     </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="privacy_collector_title"><i class="fas fa-user-shield"></i>Responsable de traitement</h2>
-        <p data-translate="privacy_collector_text">Les données personnelles collectées sur ce site sont traitées par :</p>
-        <ul>
-            <li>Hugo Bisserier</li>
-            <li>Étudiant en B3 Informatique à Ynov</li>
-            <li>Aix-en-Provence, France</li>
-            <li>Email : <a href="mailto:hugo.bisserier.pro@gmail.com">hugo.bisserier.pro@gmail.com</a></li>
-        </ul>
-    </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="privacy_data_title"><i class="fas fa-database"></i>Données collectées</h2>
-        <p data-translate="privacy_data_text1">Ce site web collecte les données personnelles suivantes :</p>
-        <ul>
-            <li data-translate="privacy_data_item1">Lorsque vous utilisez le formulaire de contact : votre nom, adresse email, et le contenu de votre message.</li>
-            <li data-translate="privacy_data_item2">Lorsque vous naviguez sur le site : préférences de thème et de langue via des cookies.</li>
-        </ul>
-        <p data-translate="privacy_data_text2">Aucune autre donnée personnelle n'est collectée lorsque vous visitez ce site web.</p>
-    </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="privacy_purpose_title"><i class="fas fa-tasks"></i>Finalités du traitement</h2>
-        <p data-translate="privacy_purpose_text">Les données personnelles collectées sont utilisées aux fins suivantes :</p>
-        <ul>
-            <li data-translate="privacy_purpose_item1">Répondre à vos demandes de contact</li>
-            <li data-translate="privacy_purpose_item2">Améliorer votre expérience utilisateur en mémorisant vos préférences</li>
-            <li data-translate="privacy_purpose_item3">Analyser l'utilisation du site à des fins d'amélioration (statistiques anonymes)</li>
-        </ul>
-    </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="privacy_recipients_title"><i class="fas fa-share-alt"></i>Destinataires des données</h2>
-        <p data-translate="privacy_recipients_text1">Les données personnelles collectées sont destinées uniquement à Hugo Bisserier et ne sont en aucun cas transmises à des tiers sans votre consentement préalable, sauf obligation légale.</p>
-        <p data-translate="privacy_recipients_text2">Certains outils techniques utilisés par ce site peuvent avoir accès à certaines données (service d'hébergement, outils d'analyse). Ces prestataires sont soumis à des obligations de confidentialité.</p>
-    </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="privacy_duration_title"><i class="fas fa-clock"></i>Durée de conservation</h2>
-        <p data-translate="privacy_duration_text">Les données personnelles collectées via le formulaire de contact sont conservées pendant une durée de 3 ans à compter de notre dernier contact. Les cookies de préférence sont conservés pendant 12 mois.</p>
-    </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="privacy_rights_title"><i class="fas fa-user-check"></i>Vos droits</h2>
-        <p data-translate="privacy_rights_text1">Conformément à la réglementation en vigueur, vous disposez des droits suivants concernant vos données personnelles :</p>
-        <ul class="droits-rgpd">
-            <li data-translate="privacy_rights_item1">Droit d'accès à vos données</li>
-            <li data-translate="privacy_rights_item2">Droit de rectification</li>
-            <li data-translate="privacy_rights_item3">Droit à l'effacement (droit à l'oubli)</li>
-            <li data-translate="privacy_rights_item4">Droit à la limitation du traitement</li>
-            <li data-translate="privacy_rights_item5">Droit à la portabilité de vos données</li>
-            <li data-translate="privacy_rights_item6">Droit d'opposition</li>
-        </ul>
-        <p data-translate="privacy_rights_text2">Pour exercer ces droits ou pour toute question relative au traitement de vos données, vous pouvez contacter Hugo Bisserier à l'adresse email suivante : <a href="mailto:hugo.bisserier.pro@gmail.com">hugo.bisserier.pro@gmail.com</a>.</p>
-        <p data-translate="privacy_rights_text3">Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL.</p>
-    </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="privacy_cookies_title"><i class="fas fa-cookie"></i>Gestion des cookies</h2>
-        <p data-translate="privacy_cookies_text1">Ce site utilise uniquement des cookies techniques essentiels à son fonctionnement et des cookies de préférence pour mémoriser vos choix (thème, langue).</p>
-        <p data-translate="privacy_cookies_text2">Vous pouvez à tout moment désactiver ces cookies en modifiant les paramètres de votre navigateur. Cependant, cela pourrait affecter certaines fonctionnalités du site.</p>
-    </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="privacy_security_title"><i class="fas fa-lock"></i>Sécurité des données</h2>
-        <p data-translate="privacy_security_text">Hugo Bisserier met en œuvre toutes les mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre la destruction, la perte, l'altération, la divulgation non autorisée ou l'accès non autorisé à ces données.</p>
-    </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="privacy_modification_title"><i class="fas fa-edit"></i>Modification de la politique de confidentialité</h2>
-        <p data-translate="privacy_modification_text">Cette politique de confidentialité peut être mise à jour à tout moment. La date de la dernière mise à jour est indiquée en bas de cette page. Nous vous invitons à consulter régulièrement cette politique afin de vous tenir informé des éventuelles modifications.</p>
-    </section>
-
-    <div class="meta-info">
-        <p><span data-translate="privacy_update">Dernière mise à jour :</span> <?php echo date('d/m/Y'); ?></p>
-    </div>
-
-    <div class="back-link">
-        <a href="/" class="btn">
-            <i class="fas fa-arrow-left"></i> 
-            <span data-translate="privacy_back">Retour à l'accueil</span>
-        </a>
-    </div>
-</main> 
+</main>

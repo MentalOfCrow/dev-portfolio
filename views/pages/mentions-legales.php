@@ -1,73 +1,16 @@
-<?php
-$pageTitle = "Mentions Légales - Portfolio Hugo Bisserier";
-$pageDescription = "Mentions légales du portfolio d'Hugo Bisserier, étudiant en informatique.";
-?>
-
-<link rel="stylesheet" href="/assets/css/legal-pages.css">
-
-<main class="legal-page">
-    <section class="page-header">
-        <h1 data-translate="legal_title">Mentions Légales</h1>
-        <p class="subtitle" data-translate="legal_subtitle">Informations légales concernant ce site web</p>
+<main id="main-content">
+    <section class="page-hero section legal-hero">
+        <div class="shell page-hero-grid"><div data-reveal><span class="eyebrow"><span lang="fr">Informations légales</span><span lang="en">Legal information</span></span><h1><span lang="fr">Mentions légales.</span><span lang="en">Legal notice.</span></h1></div><div class="page-intro" data-reveal><p><span lang="fr">Dernière mise à jour : 18 juillet 2026.</span><span lang="en">Last updated: July 18, 2026.</span></p></div></div>
     </section>
 
-    <section class="legal-section">
-        <h2 data-translate="legal_editor_title"><i class="fas fa-user-tie"></i>Éditeur du site</h2>
-        <p data-translate="legal_editor_text">Ce site web est édité par Hugo Bisserier, étudiant en B3 Informatique à Ynov, résidant à Aix-en-Provence, France.</p>
-        <p><strong>Contact :</strong> <a href="mailto:hugo.bisserier.pro@gmail.com">hugo.bisserier.pro@gmail.com</a></p>
-    </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="legal_hosting_title"><i class="fas fa-server"></i>Hébergement</h2>
-        <p data-translate="legal_hosting_text">Ce site est hébergé par Hugo Bisserier (B3 Informatique), 2 rue de la fougasse, Aix en Provence.</p>
-        
-        <div class="definition-box">
-            <h3><i class="fas fa-quote-right"></i> Qu'est-ce qu'un hébergeur web ?</h3>
-            <p>Un hébergeur web est une entreprise qui met à disposition des serveurs connectés à Internet pour héberger des sites web et les rendre accessibles aux internautes 24h/24 et 7j/7.</p>
+    <section class="section section-contrast">
+        <div class="shell legal-grid">
+            <article class="legal-card" data-reveal><span>01</span><h2><span lang="fr">Éditeur</span><span lang="en">Publisher</span></h2><p>Hugo Bisserier<br>2 rue de la Fougasse<br>13100 Aix-en-Provence · France</p><p><a href="mailto:hugo.bisserier.pro@gmail.com">hugo.bisserier.pro@gmail.com</a></p></article>
+            <article class="legal-card" data-reveal><span>02</span><h2><span lang="fr">Hébergement</span><span lang="en">Hosting</span></h2><p>Hostinger International Ltd.<br>61 Lordou Vironos Street<br>6023 Larnaca · Cyprus</p><p><a href="https://www.hostinger.com/" target="_blank" rel="noopener noreferrer">hostinger.com ↗</a></p></article>
+            <article class="legal-card" data-reveal><span>03</span><h2><span lang="fr">Propriété intellectuelle</span><span lang="en">Intellectual property</span></h2><p lang="fr">Les textes, la structure du site, les visuels de projet et les éléments graphiques sont protégés. Les marques et noms de technologies cités restent la propriété de leurs titulaires respectifs.</p><p lang="en">The text, website structure, project visuals and graphic elements are protected. Mentioned technology names and trademarks remain the property of their respective owners.</p></article>
+            <article class="legal-card" data-reveal><span>04</span><h2><span lang="fr">Responsabilité</span><span lang="en">Liability</span></h2><p lang="fr">Les informations sont présentées à titre professionnel et peuvent évoluer. Les liens externes sont fournis à titre pratique ; leur contenu relève de leurs éditeurs.</p><p lang="en">Information is provided for professional presentation and may evolve. External links are offered for convenience; their content remains the responsibility of their publishers.</p></article>
+            <article class="legal-card" data-reveal><span>05</span><h2><span lang="fr">Sécurité & signalement</span><span lang="en">Security & reporting</span></h2><p lang="fr">Pour signaler de manière responsable un problème de sécurité concernant ce site, utilisez l’adresse e-mail ci-dessus avec un descriptif reproductible. N’accédez pas à des données qui ne vous appartiennent pas.</p><p lang="en">To responsibly report a security issue affecting this site, use the email address above and include reproducible details. Do not access data that does not belong to you.</p></article>
+            <article class="legal-card" data-reveal><span>06</span><h2><span lang="fr">Droit applicable</span><span lang="en">Applicable law</span></h2><p lang="fr">Le présent site est soumis au droit français. Toute difficulté doit d’abord faire l’objet d’une tentative de résolution amiable.</p><p lang="en">This website is governed by French law. Any dispute should first be addressed through an amicable resolution attempt.</p></article>
         </div>
     </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="legal_property_title"><i class="fas fa-copyright"></i>Propriété intellectuelle</h2>
-        <p data-translate="legal_property_text1">L'ensemble du contenu de ce site (textes, images, vidéos, etc.) est la propriété exclusive de Hugo Bisserier, sauf mention contraire.</p>
-        <p data-translate="legal_property_text2">Toute reproduction, représentation, modification, publication, adaptation totale ou partielle des éléments du site, par quelque procédé que ce soit, sans l'autorisation expresse écrite de Hugo Bisserier, est strictement interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la Propriété Intellectuelle.</p>
-    </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="legal_cookies_title"><i class="fas fa-cookie-bite"></i>Utilisation des cookies</h2>
-        <p data-translate="legal_cookies_text1">Ce site utilise des cookies pour améliorer l'expérience utilisateur. Les cookies sont de petits fichiers texte stockés sur votre ordinateur qui permettent d'analyser l'utilisation du site.</p>
-        <p data-translate="legal_cookies_text2">Les cookies utilisés sur ce site servent uniquement à mémoriser vos préférences de thème (clair/sombre) et de langue. Aucune donnée personnelle n'est collectée via ces cookies.</p>
-        
-        <ul class="droits-rgpd">
-            <li>Cookies essentiels : nécessaires au fonctionnement du site</li>
-            <li>Cookies de préférences : mémorisent vos choix (thème, langue)</li>
-        </ul>
-    </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="legal_data_title"><i class="fas fa-shield-alt"></i>Données personnelles</h2>
-        <p data-translate="legal_data_text1">Conformément à la loi « Informatique et Libertés » du 6 janvier 1978 modifiée et au Règlement européen n°2016/679/UE du 27 avril 2016, vous bénéficiez d'un droit d'accès, de rectification, de portabilité et d'effacement de vos données ou encore de limitation du traitement.</p>
-        <p data-translate="legal_data_text2">Pour toute information ou exercice de vos droits sur les traitements de données personnelles, vous pouvez contacter Hugo Bisserier à l'adresse email suivante : <a href="mailto:hugo.bisserier.pro@gmail.com">hugo.bisserier.pro@gmail.com</a>.</p>
-    </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="legal_links_title"><i class="fas fa-link"></i>Liens hypertextes</h2>
-        <p data-translate="legal_links_text">Ce site contient des liens hypertextes vers d'autres sites internet. Hugo Bisserier n'a pas la possibilité de vérifier le contenu de ces sites et n'assumera aucune responsabilité quant aux contenus de ces sites tiers.</p>
-    </section>
-    
-    <section class="legal-section">
-        <h2 data-translate="legal_applicable_title"><i class="fas fa-gavel"></i>Droit applicable</h2>
-        <p data-translate="legal_applicable_text">Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront compétents.</p>
-    </section>
-
-    <div class="meta-info">
-        <p><span>Dernière mise à jour :</span> <?php echo date('d/m/Y'); ?></p>
-    </div>
-    
-    <div class="back-link">
-        <a href="/" class="btn">
-            <i class="fas fa-arrow-left"></i> 
-            <span data-translate="legal_back">Retour à l'accueil</span>
-        </a>
-    </div>
-</main> 
+</main>
