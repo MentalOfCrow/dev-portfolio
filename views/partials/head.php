@@ -15,8 +15,8 @@
     <meta property="og:image" content="<?= SITE_URL ?>/assets/images/profile-640.webp">
     <meta name="twitter:card" content="summary">
     <link rel="canonical" href="<?= SITE_URL . escape($path) ?>">
-    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" href="<?= assetUrl('assets/images/favicon.svg') ?>" type="image/svg+xml">
+    <link rel="stylesheet" href="<?= assetUrl('assets/css/style.css') ?>">
     <title><?= escape($pageTitle) ?> — <?= SITE_NAME ?></title>
 </head>
 <body>

@@ -53,6 +53,6 @@
 </footer>
 
 <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast></div>
-<script src="/assets/js/main.js" defer></script>
+<script src="<?= assetUrl('assets/js/main.js') ?>" defer></script>
 </body>
 </html>

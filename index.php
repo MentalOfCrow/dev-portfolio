@@ -12,10 +12,22 @@ if (!in_array($requestMethod, ['GET', 'HEAD'], true)) {
 }
 
 header_remove('X-Powered-By');
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Pragma: no-cache');
+header('Expires: 0');
 
 function escape(string $value): string
 {
     return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+}
+
+function assetUrl(string $path): string
+{
+    $relativePath = ltrim($path, '/');
+    $absolutePath = __DIR__ . '/' . $relativePath;
+    $version = is_file($absolutePath) ? (string) filemtime($absolutePath) : '1';
+
+    return escape('/' . $relativePath . '?v=' . rawurlencode($version));
 }
 
 function isCurrentPage(string $page): bool
