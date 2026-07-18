@@ -2,6 +2,14 @@
 
 Portfolio professionnel orienté cybersécurité, infrastructure, réseau, développement full stack et applications mobiles.
 
+<div align="center">
+
+[![Étoiles de la communauté](https://img.shields.io/github/stars/MentalOfCrow/dev-portfolio?style=for-the-badge&logo=github&label=Communaut%C3%A9&color=181717)](https://github.com/MentalOfCrow/dev-portfolio)
+
+**Le portfolio vous plaît ?** Cliquez sur **Star ⭐** en haut de cette page pour l’enregistrer dans vos favoris et soutenir le projet.
+
+</div>
+
 Production : [hugobisserier.com](https://hugobisserier.com/)<br>
 Profil GitHub : [MentalOfCrow](https://github.com/MentalOfCrow)
 
