@@ -1,113 +1,83 @@
 <?php
-// Initialisation du site
-require_once __DIR__ . '/backend/init.php';
+declare(strict_types=1);
 
-// Chargement de l'autoloader de Composer s'il existe
-$autoloadFile = __DIR__ . '/vendor/autoload.php';
-if (file_exists($autoloadFile)) {
-    require_once $autoloadFile;
+const SITE_NAME = 'Hugo Bisserier';
+const SITE_URL = 'https://hugobisserier.com';
+
+$requestMethod = $_SERVER['REQUEST_METHOD'] ?? 'GET';
+if (!in_array($requestMethod, ['GET', 'HEAD'], true)) {
+    header('Allow: GET, HEAD');
+    http_response_code(405);
+    exit('Method Not Allowed');
 }
 
-// Configuration de la session avant tout
-session_start();
+header_remove('X-Powered-By');
 
-// Récupération de l'URL demandée
-$request = $_SERVER['REQUEST_URI'];
+function escape(string $value): string
+{
+    return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+}
 
-// Suppression des query strings éventuels
-$request = strtok($request, '?');
+function isCurrentPage(string $page): bool
+{
+    global $currentPage;
+    return $currentPage === $page;
+}
 
-// Routage simple
-// Gestion des documents PDF via /docs/<nom_du_fichier>
-if (strpos($request, '/docs/') === 0) {
-    // Nom demandé (peut contenir des espaces ou des caractères encodés)
-    $requested = urldecode(substr($request, strlen('/docs/')));
-    
-    // Utiliser directement le nom demandé
-    $filename = $requested;
+$path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+$path = rtrim($path, '/') ?: '/';
 
-    // Sécurisation: on n'autorise que le nom de fichier (pas de sous-répertoires)
-    $filename = basename($filename);
-    $filePath = __DIR__ . '/assets/docs/' . $filename;
+$routes = [
+    '/' => 'home',
+    '/home' => 'home',
+    '/about' => 'about',
+    '/skills' => 'skills',
+    '/experiences' => 'experiences',
+    '/projects' => 'projects',
+    '/contact' => 'contact',
+    '/cv' => 'cv',
+    '/mentions-legales' => 'mentions-legales',
+    '/politique-confidentialite' => 'politique-confidentialite',
+];
 
-    if (is_file($filePath)) {
-        // Envoi du PDF directement (téléchargement forcé)
-        header('Content-Type: application/pdf');
-        header('Content-Length: ' . filesize($filePath));
-        header('Content-Disposition: attachment; filename="' . $requested . '"');
-        header('Cache-Control: private, max-age=0, must-revalidate');
-        header('Pragma: public');
-        readfile($filePath);
-        exit;
-    }
+$currentPage = $routes[$path] ?? '404';
+$pageTitles = [
+    'home' => 'Cybersécurité, infrastructure et développement',
+    'about' => 'À propos',
+    'skills' => 'Compétences',
+    'experiences' => 'Expériences',
+    'projects' => 'Projets',
+    'contact' => 'Contact',
+    'cv' => 'CV',
+    'mentions-legales' => 'Mentions légales',
+    'politique-confidentialite' => 'Politique de confidentialité',
+    '404' => 'Page introuvable',
+];
+$pageTitle = $pageTitles[$currentPage];
 
-    // 404 si non trouvé
+if ($currentPage === '404') {
     http_response_code(404);
-    echo "<main class='container'><h1>Fichier non trouvé</h1><p>Le document demandé est introuvable.</p></main>";
-    exit;
 }
 
-switch ($request) {
-    case '/':
-    case '/home':
-        require_once __DIR__ . '/views/partials/head.php';
-        require_once __DIR__ . '/views/partials/header.php';
-        require_once __DIR__ . '/views/pages/home.php';
-        require_once __DIR__ . '/views/partials/footer.php';
-        break;
-    case '/about':
-        require_once __DIR__ . '/views/partials/head.php';
-        require_once __DIR__ . '/views/partials/header.php';
-        require_once __DIR__ . '/views/pages/about.php';
-        require_once __DIR__ . '/views/partials/footer.php';
-        break;
-    case '/skills':
-        require_once __DIR__ . '/views/partials/head.php';
-        require_once __DIR__ . '/views/partials/header.php';
-        require_once __DIR__ . '/views/pages/skills.php';
-        require_once __DIR__ . '/views/partials/footer.php';
-        break;
-    case '/experiences':
-        require_once __DIR__ . '/views/partials/head.php';
-        require_once __DIR__ . '/views/partials/header.php';
-        require_once __DIR__ . '/views/pages/experiences.php';
-        require_once __DIR__ . '/views/partials/footer.php';
-        break;
-    case '/projects':
-        require_once __DIR__ . '/views/partials/head.php';
-        require_once __DIR__ . '/views/partials/header.php';
-        require_once __DIR__ . '/views/pages/projects.php';
-        require_once __DIR__ . '/views/partials/footer.php';
-        break;
-    case '/contact':
-        require_once __DIR__ . '/views/partials/head.php';
-        require_once __DIR__ . '/views/partials/header.php';
-        require_once __DIR__ . '/views/pages/contact.php';
-        require_once __DIR__ . '/views/partials/footer.php';
-        break;
-    case '/cv':
-        require_once __DIR__ . '/views/partials/head.php';
-        require_once __DIR__ . '/views/partials/header.php';
-        require_once __DIR__ . '/views/pages/cv.php';
-        require_once __DIR__ . '/views/partials/footer.php';
-        break;
-    case '/mentions-legales':
-        require_once __DIR__ . '/views/partials/head.php';
-        require_once __DIR__ . '/views/partials/header.php';
-        require_once __DIR__ . '/views/pages/mentions-legales.php';
-        require_once __DIR__ . '/views/partials/footer.php';
-        break;
-    case '/politique-confidentialite':
-        require_once __DIR__ . '/views/partials/head.php';
-        require_once __DIR__ . '/views/partials/header.php';
-        require_once __DIR__ . '/views/pages/politique-confidentialite.php';
-        require_once __DIR__ . '/views/partials/footer.php';
-        break;
-    default:
-        http_response_code(404);
-        require_once __DIR__ . '/views/partials/head.php';
-        require_once __DIR__ . '/views/partials/header.php';
-        echo "<main class='container'><h1>Page non trouvée</h1><p>La page que vous recherchez n'existe pas.</p></main>";
-        require_once __DIR__ . '/views/partials/footer.php';
-        break;
-} 
+$securityHeaders = [
+    "Content-Security-Policy: default-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'none'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests",
+    'Referrer-Policy: strict-origin-when-cross-origin',
+    'X-Content-Type-Options: nosniff',
+    'X-Frame-Options: DENY',
+    'Permissions-Policy: accelerometer=(), autoplay=(), camera=(), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()',
+    'Cross-Origin-Opener-Policy: same-origin',
+    'Cross-Origin-Resource-Policy: same-origin',
+];
+
+foreach ($securityHeaders as $header) {
+    header($header);
+}
+
+if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https') {
+    header('Strict-Transport-Security: max-age=31536000; includeSubDomains');
+}
+
+require __DIR__ . '/views/partials/head.php';
+require __DIR__ . '/views/partials/header.php';
+require __DIR__ . '/views/pages/' . $currentPage . '.php';
+require __DIR__ . '/views/partials/footer.php';

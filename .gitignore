@@ -80,9 +80,14 @@ yarn-error.log*
 .temp
 .tmp
 
-# Fichiers de documentation générés
-/docs
+# Documentation générée uniquement (les plans du projet restent versionnés)
+/docs/generated
 /documentation
+
+# Audit local et archives privées — jamais publiés dans le dépôt public
+/graphify-out/
+/.private-archive/
+/.audit-artifacts/
 
 # Fichiers de déploiement
 .deploy
@@ -112,4 +117,4 @@ yarn-error.log*
 /public/uploads/blog/*
 !/public/uploads/blog/.gitkeep
 /public/uploads/temp/*
-!/public/uploads/temp/.gitkeep 
+!/public/uploads/temp/.gitkeep

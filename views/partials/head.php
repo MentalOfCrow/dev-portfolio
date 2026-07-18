@@ -1,27 +1,23 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html lang="fr" data-language="fr" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Hugo Bisserier - Développeur Web Full Stack">
-    <meta name="keywords" content="développeur web, full stack, PHP, JavaScript, portfolio">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio de Hugo Bisserier : cybersécurité, infrastructure et réseau, développement full stack et applications mobiles.">
     <meta name="author" content="Hugo Bisserier">
-    <title><?php echo isset($title) ? $title . ' - Portfolio Hugo Bisserier' : 'Portfolio Hugo Bisserier'; ?></title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-    
-    <!-- CSS Files -->
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#08111f">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Portfolio Hugo Bisserier">
+    <meta property="og:title" content="<?= escape($pageTitle) ?> — Hugo Bisserier">
+    <meta property="og:description" content="Cybersécurité, infrastructure et réseau, développement full stack et mobile.">
+    <meta property="og:url" content="<?= SITE_URL . escape($path) ?>">
+    <meta property="og:image" content="<?= SITE_URL ?>/assets/images/profile-640.webp">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="<?= SITE_URL . escape($path) ?>">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/assets/css/style.css">
-
-        <!-- Ajout du style de la page À propos pour l'image animée -->
-        <link rel="stylesheet" href="/assets/css/about.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title><?= escape($pageTitle) ?> — <?= SITE_NAME ?></title>
 </head>
-<body> 
+<body>
+<a class="skip-link" href="#main-content">Aller au contenu</a>

@@ -1,361 +1,151 @@
 <?php
-$title = "Compétences";
-$current_page = "skills";
+$skillGroups = [
+    [
+        'index' => '01',
+        'titleFr' => 'Cybersécurité & infrastructure',
+        'titleEn' => 'Cybersecurity & infrastructure',
+        'descriptionFr' => 'Environnements, outils et pratiques utilisés pour analyser, administrer, observer et sécuriser.',
+        'descriptionEn' => 'Environments, tools and practices used to analyze, administer, observe and secure.',
+        'items' => [
+            ['KALI', 'Kali Linux', 'https://www.kali.org/docs/'],
+            ['EXE', 'Exegol', 'https://docs.exegol.com/'],
+            ['DOCK', 'Docker', 'https://docs.docker.com/get-started/'],
+            ['VMW', 'VMware Workstation', 'https://techdocs.broadcom.com/us/en/vmware-cis/desktop-hypervisors/workstation-pro/17-0.html'],
+            ['WS', 'Windows Server', 'https://learn.microsoft.com/windows-server/'],
+            ['GRAF', 'Grafana', 'https://grafana.com/docs/grafana/latest/'],
+            ['NMAP', 'Nmap', 'https://nmap.org/book/man.html'],
+            ['BURP', 'Burp Suite', 'https://portswigger.net/burp/documentation'],
+            ['WIRE', 'Wireshark', 'https://www.wireshark.org/docs/'],
+            ['OWASP', 'OWASP', 'https://owasp.org/www-project-top-ten/'],
+        ],
+    ],
+    [
+        'index' => '02',
+        'titleFr' => 'Langages & web',
+        'titleEn' => 'Languages & web',
+        'descriptionFr' => 'Du navigateur aux services back-end, avec plusieurs écosystèmes adaptés au besoin.',
+        'descriptionEn' => 'From the browser to back-end services, using several ecosystems according to the need.',
+        'items' => [
+            ['HTML', 'HTML5', 'https://developer.mozilla.org/docs/Learn_web_development/Core/Structuring_content'],
+            ['CSS', 'CSS3', 'https://developer.mozilla.org/docs/Learn_web_development/Core/Styling_basics'],
+            ['JS', 'JavaScript', 'https://developer.mozilla.org/docs/Web/JavaScript/Guide'],
+            ['TS', 'TypeScript', 'https://www.typescriptlang.org/docs/handbook/intro.html'],
+            ['PHP', 'PHP', 'https://www.php.net/manual/fr/'],
+            ['PY', 'Python', 'https://docs.python.org/3/tutorial/'],
+            ['GO', 'Go', 'https://go.dev/learn/'],
+            ['JAVA', 'Java', 'https://dev.java/learn/'],
+            ['C#', 'C#', 'https://learn.microsoft.com/dotnet/csharp/'],
+            ['SH', 'Shell', 'https://www.gnu.org/software/bash/manual/'],
+        ],
+    ],
+    [
+        'index' => '03',
+        'titleFr' => 'Frameworks & interfaces',
+        'titleEn' => 'Frameworks & interfaces',
+        'descriptionFr' => 'Des interfaces classiques aux expériences interactives et 3D.',
+        'descriptionEn' => 'From classic interfaces to interactive and 3D experiences.',
+        'items' => [
+            ['NODE', 'Node.js', 'https://nodejs.org/en/learn/getting-started/introduction-to-nodejs'],
+            ['RE', 'React', 'https://react.dev/learn'],
+            ['VUE', 'Vue.js', 'https://vuejs.org/tutorial/'],
+            ['NG', 'Angular', 'https://angular.dev/tutorials'],
+            ['3JS', 'Three.js', 'https://threejs.org/manual/'],
+            ['TW', 'Tailwind CSS', 'https://tailwindcss.com/docs/installation'],
+            ['FAST', 'FastAPI', 'https://fastapi.tiangolo.com/tutorial/'],
+        ],
+    ],
+    [
+        'index' => '04',
+        'titleFr' => 'Mobile & temps réel',
+        'titleEn' => 'Mobile & real time',
+        'descriptionFr' => 'Flutter en priorité, complété par les environnements mobiles, jeu et messagerie IoT.',
+        'descriptionEn' => 'Flutter first, completed by mobile, game and IoT messaging environments.',
+        'items' => [
+            ['FL', 'Flutter', 'https://docs.flutter.dev/get-started/learn-flutter'],
+            ['DART', 'Dart', 'https://dart.dev/tutorials'],
+            ['RN', 'React Native', 'https://reactnative.dev/docs/getting-started'],
+            ['UNITY', 'Unity', 'https://learn.unity.com/'],
+            ['MQTT', 'MQTT', 'https://mqtt.org/getting-started/'],
+        ],
+    ],
+    [
+        'index' => '05',
+        'titleFr' => 'Données & bases',
+        'titleEn' => 'Data & databases',
+        'descriptionFr' => 'Bases relationnelles, plate-forme back-end et modélisation orientée graphe.',
+        'descriptionEn' => 'Relational databases, back-end platform and graph-oriented modelling.',
+        'items' => [
+            ['SUPA', 'Supabase', 'https://supabase.com/docs'],
+            ['MYSQL', 'MySQL', 'https://dev.mysql.com/doc/'],
+            ['MARIA', 'MariaDB', 'https://mariadb.com/docs/'],
+            ['PG', 'PostgreSQL', 'https://www.postgresql.org/docs/'],
+            ['NEO', 'Neo4j', 'https://neo4j.com/docs/'],
+            ['CYPH', 'Cypher', 'https://neo4j.com/docs/cypher-manual/current/'],
+        ],
+    ],
+    [
+        'index' => '06',
+        'titleFr' => 'Outils & livraison',
+        'titleEn' => 'Tools & delivery',
+        'descriptionFr' => 'Versionnement, poste de travail, automatisation et pipelines de qualité.',
+        'descriptionEn' => 'Version control, workstation tooling, automation and quality pipelines.',
+        'items' => [
+            ['GIT', 'Git', 'https://git-scm.com/doc'],
+            ['GHD', 'GitHub Desktop', 'https://docs.github.com/desktop'],
+            ['CI', 'CI/CD', 'https://docs.github.com/actions'],
+            ['GHA', 'GitHub Actions', 'https://docs.github.com/actions/quickstart'],
+            ['GL', 'GitLab CI/CD', 'https://docs.gitlab.com/ci/'],
+            ['VSC', 'VS Code', 'https://code.visualstudio.com/docs'],
+        ],
+    ],
+];
 ?>
 
-<main class="container">
-    <section class="page-header">
-        <h1 data-translate="skills_title">Mes Compétences</h1>
-        <p class="subtitle" data-translate="skills_subtitle">Expertise technique et outils maîtrisés</p>
+<main id="main-content">
+    <section class="page-hero section">
+        <div class="shell page-hero-grid">
+            <div data-reveal>
+                <span class="eyebrow"><span lang="fr">Stack technique</span><span lang="en">Technical stack</span> · 2026</span>
+                <h1><span lang="fr">Une matrice compacte, lisible et directement exploitable.</span><span lang="en">A compact, readable and directly useful matrix.</span></h1>
+            </div>
+            <div class="page-intro" data-reveal>
+                <p lang="fr">Chaque technologie est alignée, classée par usage et reliée à sa documentation officielle. Cette liste présente les environnements déjà pratiqués, sans prétendre au même niveau d’expertise partout.</p>
+                <p lang="en">Every technology is aligned, organized by use and linked to its official documentation. This list shows environments I have practiced without claiming equal expertise in all of them.</p>
+            </div>
+        </div>
     </section>
 
-    <div class="skills-container">
-        <!-- Infrastructure & Cloud • Cybersécurité -->
-        <section class="skill-section">
-            <h2 data-translate="skills_infra_title"><i class="fas fa-shield-alt"></i> Infrastructure & Cloud • Cybersécurité</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-server"></i>
-                        <h3>Virtualisation</h3>
+    <section class="section section-contrast">
+        <div class="shell skill-matrix">
+            <?php foreach ($skillGroups as $group): ?>
+                <article class="skill-group" data-reveal>
+                    <header class="skill-group-header">
+                        <span><?= escape($group['index']) ?></span>
+                        <div>
+                            <h2><span lang="fr"><?= escape($group['titleFr']) ?></span><span lang="en"><?= escape($group['titleEn']) ?></span></h2>
+                            <p><span lang="fr"><?= escape($group['descriptionFr']) ?></span><span lang="en"><?= escape($group['descriptionEn']) ?></span></p>
+                        </div>
+                    </header>
+                    <div class="tech-grid">
+                        <?php foreach ($group['items'] as [$short, $name, $url]): ?>
+                            <a class="tech-item" href="<?= escape($url) ?>" target="_blank" rel="noopener noreferrer" title="<?= escape($name) ?> — documentation officielle">
+                                <span class="tech-mark" aria-hidden="true"><?= escape($short) ?></span>
+                                <strong><?= escape($name) ?></strong>
+                                <span class="tech-arrow" aria-hidden="true">↗</span>
+                            </a>
+                        <?php endforeach; ?>
                     </div>
-                    <div class="skill-level" data-level="80">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_virt_1">Hyper-V</li>
-                        <li data-translate="skills_virt_2">VirtualBox</li>
-                        <li data-translate="skills_virt_3">VMware</li>
-                    </ul>
-                </div>
+                </article>
+            <?php endforeach; ?>
+        </div>
+    </section>
 
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fab fa-windows"></i>
-                        <h3>Systèmes d'Exploitation</h3>
-                    </div>
-                    <div class="skill-level" data-level="85">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_os_1">Windows Server</li>
-                        <li data-translate="skills_os_2">Linux (Ubuntu, CentOS)</li>
-                        <li data-translate="skills_os_3">Administration système</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-network-wired"></i>
-                        <h3>Réseaux & Infrastructure</h3>
-                    </div>
-                    <div class="skill-level" data-level="75">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_network_1">Configuration réseau</li>
-                        <li data-translate="skills_network_2">Routage et switching</li>
-                        <li data-translate="skills_network_3">Firewall et sécurité</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>Cybersécurité</h3>
-                    </div>
-                    <div class="skill-level" data-level="70">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_security_1">Analyse de vulnérabilités</li>
-                        <li data-translate="skills_security_2">Durcissement système</li>
-                        <li data-translate="skills_security_3">Monitoring et audit</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fab fa-docker"></i>
-                        <h3>Conteneurisation & DevOps</h3>
-                    </div>
-                    <div class="skill-level" data-level="65">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_devops_1">Docker</li>
-                        <li data-translate="skills_devops_2">CI/CD Pipelines</li>
-                        <li data-translate="skills_devops_3">Automatisation</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-cloud"></i>
-                        <h3>Cloud & Services</h3>
-                    </div>
-                    <div class="skill-level" data-level="60">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_cloud_1">Architecture cloud</li>
-                        <li data-translate="skills_cloud_2">Services web</li>
-                        <li data-translate="skills_cloud_3">Haute disponibilité</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Langages de Programmation -->
-        <section class="skill-section">
-            <h2 data-translate="skills_languages_title"><i class="fas fa-code"></i> Langages de Programmation</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fab fa-php"></i>
-                        <h3>PHP</h3>
-                    </div>
-                    <div class="skill-level" data-level="80">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_php_1">Développement Backend</li>
-                        <li data-translate="skills_php_2">API REST</li>
-                        <li data-translate="skills_php_3">Gestion BDD</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fab fa-js"></i>
-                        <h3>JavaScript</h3>
-                    </div>
-                    <div class="skill-level" data-level="85">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_js_1">ES6+</li>
-                        <li data-translate="skills_js_2">DOM Manipulation</li>
-                        <li data-translate="skills_js_3">Asynchrone</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fab fa-python"></i>
-                        <h3>Python</h3>
-                    </div>
-                    <div class="skill-level" data-level="75">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_python_1">Data Analysis</li>
-                        <li data-translate="skills_python_2">Pandas & NumPy</li>
-                        <li data-translate="skills_python_3">Automatisation</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fab fa-golang"></i>
-                        <h3>Golang</h3>
-                    </div>
-                    <div class="skill-level" data-level="65">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_go_1">Backend Development</li>
-                        <li data-translate="skills_go_2">Concurrence</li>
-                        <li data-translate="skills_go_3">APIs</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fab fa-windows"></i>
-                        <h3>C#</h3>
-                    </div>
-                    <div class="skill-level" data-level="70">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_csharp_1">Développement .NET</li>
-                        <li data-translate="skills_csharp_2">Blazor</li>
-                        <li data-translate="skills_csharp_3">Applications Windows</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fab fa-java"></i>
-                        <h3>Java</h3>
-                    </div>
-                    <div class="skill-level" data-level="65">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_java_1">POO</li>
-                        <li data-translate="skills_java_2">Spring Boot</li>
-                        <li data-translate="skills_java_3">Applications Android</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fab fa-react"></i>
-                        <h3>React Native</h3>
-                    </div>
-                    <div class="skill-level" data-level="60">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_reactnative_1">Applications mobiles</li>
-                        <li data-translate="skills_reactnative_2">Navigation</li>
-                        <li data-translate="skills_reactnative_3">Hooks</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fab fa-flutter"></i>
-                        <h3>Flutter</h3>
-                    </div>
-                    <div class="skill-level" data-level="55">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_flutter_1">Applications mobiles multiplateformes</li>
-                        <li data-translate="skills_flutter_2">Widgets personnalisés</li>
-                        <li data-translate="skills_flutter_3">Dart</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technologies Web -->
-        <section class="skill-section">
-            <h2 data-translate="skills_web_title"><i class="fas fa-globe"></i> Technologies Web</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fab fa-html5"></i>
-                        <h3>HTML5/CSS3</h3>
-                    </div>
-                    <div class="skill-level" data-level="90">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_html_1">Responsive Design</li>
-                        <li data-translate="skills_html_2">Flexbox/Grid</li>
-                        <li data-translate="skills_html_3">Animations</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fab fa-css3"></i>
-                        <h3>Frameworks CSS</h3>
-                    </div>
-                    <div class="skill-level" data-level="85">
-                        <div class="level-bar"></div>
-                    </div>
-                    <ul class="skill-details">
-                        <li data-translate="skills_css_1">Tailwind CSS</li>
-                        <li data-translate="skills_css_2">Bootstrap</li>
-                        <li data-translate="skills_css_3">SASS/SCSS</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Outils et Environnements -->
-        <section class="skill-section">
-            <h2 data-translate="skills_tools_title"><i class="fas fa-tools"></i> Outils et Environnements</h2>
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <i class="fab fa-git-alt"></i>
-                    <h3 data-translate="skills_git_title">Contrôle de Version</h3>
-                    <ul>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>GitLab</li>
-                    </ul>
-                </div>
-
-                <div class="tool-card">
-                    <i class="fas fa-database"></i>
-                    <h3 data-translate="skills_db_title">Bases de Données</h3>
-                    <ul>
-                        <li>MySQL</li>
-                        <li>PostgreSQL</li>
-                        <li>MongoDB</li>
-                    </ul>
-                </div>
-
-                <div class="tool-card">
-                    <i class="fas fa-server"></i>
-                    <h3 data-translate="skills_server_title">Serveurs & Déploiement</h3>
-                    <ul>
-                        <li>Apache</li>
-                        <li>Nginx</li>
-                        <li>Linux</li>
-                    </ul>
-                </div>
-
-                <div class="tool-card">
-                    <i class="fas fa-code-branch"></i>
-                    <h3 data-translate="skills_dev_title">Outils de Développement</h3>
-                    <ul>
-                        <li>VS Code</li>
-                        <li>Docker</li>
-                        <li>Postman</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </div>
+    <section class="section section-compact">
+        <div class="shell note-panel" data-reveal>
+            <span class="eyebrow"><span lang="fr">Lecture de la stack</span><span lang="en">Reading the stack</span></span>
+            <h2><span lang="fr">La technologie reste un moyen.</span><span lang="en">Technology remains a means.</span></h2>
+            <p lang="fr">Je choisis les outils selon le contexte, la sécurité, la maintenabilité et les contraintes d’exploitation — pas pour accumuler des logos.</p>
+            <p lang="en">I choose tools according to context, security, maintainability and operational constraints—not to accumulate logos.</p>
+        </div>
+    </section>
 </main>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Animation des barres de niveau avec chargement progressif optimisé
-    const skillLevels = document.querySelectorAll('.skill-level');
-    const skillCards = document.querySelectorAll('.skill-card, .tool-card');
-    
-    // Observer pour les barres de niveau
-    const levelObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const level = entry.target.dataset.level;
-                requestAnimationFrame(() => {
-                    entry.target.querySelector('.level-bar').style.width = `${level}%`;
-                });
-                levelObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2, rootMargin: '50px' });
-
-    // Observer pour l'apparition progressive des cartes
-    const cardObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                requestAnimationFrame(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                });
-                cardObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1, rootMargin: '20px' });
-
-    // Initialiser les cartes avec un état invisible
-    skillCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = `opacity 0.4s ease ${index % 6 * 0.05}s, transform 0.4s ease ${index % 6 * 0.05}s`;
-        cardObserver.observe(card);
-    });
-
-    skillLevels.forEach(level => levelObserver.observe(level));
-});
-</script> 
