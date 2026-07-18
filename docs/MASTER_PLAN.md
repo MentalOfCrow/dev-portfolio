@@ -7,7 +7,7 @@ Présenter Hugo Bisserier comme un profil orienté cybersécurité, infrastructu
 ## Principes de produit
 
 - Priorité éditoriale : cybersécurité, systèmes/réseaux, infrastructure, puis développement.
-- Message exact : entrée en quatrième année en septembre 2026 et parcours 2026–2028 à l’Aéroport Marseille Provence.
+- Message exact : entrée en quatrième année et début le 1er septembre 2026 d’une alternance 2026–2028 comme chef de projet intégration système à l’Aéroport Marseille Provence.
 - Contact principal pour les collaborations : Discord `ramenmakidaki`, puis e-mail, GitHub et LinkedIn.
 - Aucun numéro de téléphone public.
 - CV français et anglais téléchargeables ; rapports de stage retirés du site public.

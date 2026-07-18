@@ -1385,6 +1385,20 @@ html[data-theme="light"] .theme-icon-moon {
     font-size: 0.9rem;
 }
 
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    margin-top: 24px;
+}
+
+.project-actions .button {
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 0.68rem;
+}
+
 .project-future {
     border-color: color-mix(in srgb, var(--accent-2) 40%, transparent);
 }
@@ -2029,9 +2043,17 @@ html.js .page-hero [data-reveal] {
         height: 36px;
     }
 
+    .hero-copy,
+    .page-hero-grid > *,
+    .page-intro {
+        min-width: 0;
+    }
+
     .hero h1 {
-        font-size: clamp(2.75rem, 12vw, 3.8rem);
-        letter-spacing: -0.065em;
+        max-width: 100%;
+        font-size: clamp(2.15rem, 9.5vw, 3.25rem);
+        overflow-wrap: break-word;
+        letter-spacing: -0.055em;
     }
 
     .status-pill {
@@ -2117,7 +2139,9 @@ html.js .page-hero [data-reveal] {
     .next-step h2,
     .note-panel h2,
     .private-work h2 {
-        font-size: clamp(2.35rem, 12vw, 3.9rem);
+        max-width: 100%;
+        font-size: clamp(2.15rem, 9.5vw, 3.25rem);
+        overflow-wrap: break-word;
     }
 
     .tech-grid {

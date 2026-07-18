@@ -8,8 +8,8 @@
                     <span lang="fr">Cybersécurité.<br>Infrastructure.<br><em>Développement.</em></span>
                     <span lang="en">Cybersecurity.<br>Infrastructure.<br><em>Development.</em></span>
                 </h1>
-                <p class="hero-summary" lang="fr">Je conçois, déploie et sécurise des systèmes, des réseaux et des applications. Un profil polyvalent qui travaille aussi bien sur l’architecture technique que sur le produit final.</p>
-                <p class="hero-summary" lang="en">I design, deploy and secure systems, networks and applications. A versatile profile working across technical architecture and the final product.</p>
+                <p class="hero-summary" lang="fr">Développeur full stack orienté cybersécurité, infrastructure et réseau, je conçois, déploie et sécurise des systèmes et des applications de bout en bout.</p>
+                <p class="hero-summary" lang="en">Full-stack developer focused on cybersecurity, infrastructure and networking, I design, deploy and secure systems and applications end to end.</p>
                 <div class="hero-actions">
                     <a class="button button-primary" href="/projects"><span lang="fr">Explorer mes projets</span><span lang="en">Explore my work</span></a>
                     <a class="button button-secondary" href="/contact"><span lang="fr">Parler d’un projet</span><span lang="en">Discuss a project</span></a>
@@ -23,7 +23,7 @@
                     <img src="/assets/images/profile-640.webp" srcset="/assets/images/profile-320.webp 320w, /assets/images/profile-640.webp 640w" sizes="(max-width: 900px) 76vw, 460px" width="640" height="824" alt="Portrait professionnel de Hugo Bisserier" fetchpriority="high">
                     <div class="portrait-label"><span>04</span><strong><span lang="fr">Axes techniques</span><span lang="en">Technical fields</span></strong></div>
                 </div>
-                <div class="signal-card signal-card-top"><span>2026—2028</span><strong><span lang="fr">Aéroport Marseille Provence</span><span lang="en">Marseille Provence Airport</span></strong></div>
+                <div class="signal-card signal-card-top"><span><span lang="fr">AÉROPORT MARSEILLE PROVENCE · 2026—2028</span><span lang="en">MARSEILLE PROVENCE AIRPORT · 2026—2028</span></span><strong><span lang="fr">Chef de projet intégration système</span><span lang="en">Systems integration project manager</span></strong></div>
                 <div class="signal-card signal-card-bottom"><span>SEPT. 2026</span><strong><span lang="fr">Entrée en quatrième année</span><span lang="en">Starting fourth year</span></strong></div>
             </div>
         </div>
@@ -87,7 +87,10 @@
                 <p lang="fr">Cartographie d’un système d’information avec Neo4j, recherche de chemins d’attaque, matrice de risque et simulation de segmentation réseau.</p>
                 <p lang="en">Information-system mapping with Neo4j, attack-path research, risk matrix and network-segmentation simulation.</p>
                 <ul class="inline-tags" aria-label="Technologies"><li>Neo4j</li><li>Cypher</li><li>Python</li><li>Docker</li></ul>
-                <a class="text-link" href="https://github.com/MentalOfCrow/NoSQL_Project" target="_blank" rel="noopener noreferrer"><span lang="fr">Voir le code sur GitHub</span><span lang="en">View code on GitHub</span> <span aria-hidden="true">↗</span></a>
+                <div class="project-actions">
+                    <button class="button button-primary" type="button" data-copy="ramenmakidaki" data-copy-label="Discord copié">Discord · ramenmakidaki</button>
+                    <a class="button button-secondary" href="https://github.com/MentalOfCrow" target="_blank" rel="noopener noreferrer"><span lang="fr">Accéder à mon GitHub</span><span lang="en">Open my GitHub</span> <span aria-hidden="true">↗</span></a>
+                </div>
             </div>
         </div>
     </section>

@@ -14,8 +14,8 @@
                     <span class="brand-mark" aria-hidden="true">HB</span>
                     <span class="brand-copy"><strong id="footer-name">Hugo Bisserier</strong><small>France · Aix / Marseille</small></span>
                 </div>
-                <p lang="fr">Cybersécurité, infrastructure et réseau, développement web, logiciel et mobile. Je relie la sécurité, l’exploitation et le code pour construire des projets cohérents de bout en bout.</p>
-                <p lang="en">Cybersecurity, infrastructure and networking, web, software and mobile development. I connect security, operations and code to build coherent end-to-end projects.</p>
+                <p lang="fr">Développeur full stack orienté cybersécurité, infrastructure et réseau, avec une pratique active du web, du logiciel et du mobile. Je relie la sécurité, l’exploitation et le code pour construire des projets cohérents de bout en bout.</p>
+                <p lang="en">Full-stack developer focused on cybersecurity, infrastructure and networking, with active web, software and mobile practice. I connect security, operations and code to build coherent end-to-end projects.</p>
             </section>
 
             <nav class="footer-column" aria-label="Navigation du pied de page">
@@ -38,8 +38,7 @@
                 <h3 id="footer-social"><span lang="fr">Réseaux</span><span lang="en">Networks</span></h3>
                 <a href="https://github.com/MentalOfCrow" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
                 <a href="https://www.linkedin.com/in/hugo-bisserier-a67327324/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-                <p class="footer-note" lang="fr">Le profil DEV sera ajouté dès qu’une URL personnelle pourra être vérifiée.</p>
-                <p class="footer-note" lang="en">The DEV profile will be added once a personal URL can be verified.</p>
+                <a href="https://dev.to/" target="_blank" rel="noopener noreferrer">DEV Community <span aria-hidden="true">↗</span></a>
             </section>
         </div>
 

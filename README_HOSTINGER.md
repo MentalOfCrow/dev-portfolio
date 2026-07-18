@@ -1,8 +1,8 @@
 # GitHub → Hostinger
 
-Hostinger permet de déployer un dépôt Git depuis hPanel et propose une URL de webhook pour déclencher automatiquement un nouveau déploiement à chaque push. Cette automatisation sera activée après validation et fusion de la refonte.
+Hostinger permet de connecter un dépôt GitHub depuis hPanel et de redéployer automatiquement la branche choisie lorsqu’elle reçoit de nouveaux commits. Cette automatisation doit être reliée exclusivement à `main`, après validation et fusion de la refonte.
 
-Documentation officielle : [déployer un dépôt Git](https://support.hostinger.com/en/articles/1583302-how-to-deploy-a-git-repository).
+Documentation officielle : [déployer un dépôt Git sur Hostinger](https://www.hostinger.com/support/1583302-how-to-deploy-a-git-repository-in-hostinger/).
 
 ## 1. Déploiement Git initial
 
@@ -10,31 +10,32 @@ Dans hPanel :
 
 1. ouvrir le site `hugobisserier.com` ;
 2. accéder à **Git** dans les outils avancés ;
-3. ajouter `https://github.com/MentalOfCrow/dev-portfolio.git` ;
-4. sélectionner la branche `main` ;
-5. définir le chemin de déploiement sur la racine de `public_html` ;
-6. lancer un premier déploiement et vérifier le journal.
+3. connecter le compte GitHub `MentalOfCrow` avec l’autorisation OAuth demandée par Hostinger ;
+4. sélectionner le dépôt `MentalOfCrow/dev-portfolio` ;
+5. sélectionner exclusivement la branche `main` ;
+6. définir le chemin de déploiement sur la racine de `public_html` ;
+7. lancer un premier déploiement et vérifier le commit ainsi que le journal affichés dans hPanel.
 
-Le dépôt étant public, aucune clé GitHub n’est nécessaire pour la lecture. Ne renseigner aucun mot de passe dans un fichier du projet.
+Ne renseigner aucun mot de passe, jeton ou webhook dans un fichier du projet. L’autorisation GitHub reste gérée entre GitHub et Hostinger.
 
 ## 2. Déploiement automatique
 
 Après le premier déploiement réussi :
 
-1. dans Hostinger, activer **Auto Deployment** et copier l’URL de webhook ;
-2. dans GitHub, ouvrir `Settings → Webhooks → Add webhook` ;
-3. coller l’URL Hostinger sans l’enregistrer ailleurs ;
-4. choisir `application/json`, conserver la vérification SSL et sélectionner uniquement l’événement `push` ;
-5. valider, puis effectuer un petit commit de test après approbation.
+1. dans la vue Git du site Hostinger, activer **Auto Deployment** pour `main` ;
+2. vérifier que l’intégration affiche le dépôt, la branche et le dernier commit attendus ;
+3. effectuer un petit commit de test après approbation ;
+4. contrôler le statut et le journal dans l’onglet des déploiements ;
+5. une fois le mécanisme natif validé, supprimer dans GitHub l’ancien webhook personnalisé qui répond actuellement en 404.
 
-L’URL de webhook agit comme un secret : elle ne doit apparaître ni dans le dépôt, ni dans une capture d’écran, ni dans une issue publique.
+Ne jamais recréer un `deploy.php` public chargé d’exécuter un `git pull`. Un tel endpoint ajouterait une surface d’attaque inutile et contournerait les contrôles de la pull request.
 
 ## 3. Comportement attendu
 
 ```text
 branche de travail → pull request → contrôles GitHub → fusion sur main
                                                      ↓
-                                             webhook Hostinger
+                                      intégration Git native Hostinger
                                                      ↓
                                       mise à jour de hugobisserier.com
 ```

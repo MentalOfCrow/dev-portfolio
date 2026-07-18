@@ -13,7 +13,7 @@ AddDefaultCharset UTF-8
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE]
 
     # Les composants internes ne doivent jamais être servis directement.
-    RewriteRule ^(?:backend|views|docs|scripts|node_modules|vendor|graphify-out|\.private-archive|\.audit-artifacts)(?:/|$) - [F,L,NC]
+    RewriteRule ^(?:backend|views|docs|scripts|node_modules|vendor|graphify-out|\.git|\.github|\.private-archive|\.audit-artifacts)(?:/|$) - [F,L,NC]
 
     # Routage des URLs propres vers le contrôleur frontal.
     RewriteCond %{REQUEST_FILENAME} !-f

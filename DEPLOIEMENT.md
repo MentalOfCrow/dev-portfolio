@@ -43,7 +43,8 @@ Une sécurité absolue n’existe pas. Les principaux risques restants se trouve
 - protéger le compte du registrar et activer le verrouillage du domaine ;
 - surveiller les journaux Hostinger et maintenir PHP à jour ;
 - limiter les personnes et clés ayant accès au déploiement ;
-- conserver le webhook de déploiement comme une information sensible.
+- utiliser l’intégration Git native de Hostinger et supprimer l’ancien webhook personnalisé après validation du premier déploiement ;
+- ne jamais exposer un endpoint public `deploy.php` exécutant des commandes Git ou système.
 
 ## Retour arrière
 

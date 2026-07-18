@@ -4,7 +4,7 @@
             <span class="brand-mark" aria-hidden="true">HB</span>
             <span class="brand-copy">
                 <strong>Hugo Bisserier</strong>
-                <small>Cyber · Infra · Dev</small>
+                <small>Cyber · Infra · Full Stack</small>
             </span>
         </a>
 

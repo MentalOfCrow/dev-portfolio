@@ -19,6 +19,6 @@
 - Les rapports de stage ne sont plus servis ni reliés.
 - Discord est affiché comme nom d’utilisateur copiable, car un nom Discord seul ne fournit pas une URL d’ajout fiable.
 - Twitter est supprimé.
-- DEV Community ne sera ajouté qu’avec une URL de profil vérifiable.
+- DEV Community est conservé comme lien vers la plateforme, sans prétendre qu’une page d’accueil générique constitue un profil personnel vérifié.
 - Grafana, Neo4j, Cypher et MQTT sont des compétences/projets présentés ; ils ne deviennent pas des dépendances du portfolio.
 - Le comptage des dépôts est un instantané statique, sans API GitHub côté client.

@@ -8,7 +8,6 @@ $projects = [
         'descriptionFr' => 'Application Neo4j de cartographie d’un système d’information : chemins d’attaque, ressources critiques, vulnérabilités, matrice de risque et simulation de segmentation.',
         'descriptionEn' => 'Neo4j application for information-system mapping: attack paths, critical assets, vulnerabilities, risk matrix and segmentation simulation.',
         'tags' => ['Neo4j', 'Cypher', 'Python', 'FastAPI', 'Docker'],
-        'url' => 'https://github.com/MentalOfCrow/NoSQL_Project',
         'featured' => true,
     ],
     [
@@ -19,7 +18,6 @@ $projects = [
         'descriptionFr' => 'Industrialisation d’une base documentaire Wiki.js avec PostgreSQL, Docker, persistance, sauvegarde, restauration et pipeline GitLab CI/CD.',
         'descriptionEn' => 'Industrialized Wiki.js documentation platform with PostgreSQL, Docker, persistence, backup, restore and a GitLab CI/CD pipeline.',
         'tags' => ['Docker', 'PostgreSQL', 'GitLab CI/CD', 'Shell'],
-        'url' => 'https://github.com/MentalOfCrow/projet_devops',
         'featured' => true,
     ],
     [
@@ -30,7 +28,6 @@ $projects = [
         'descriptionFr' => 'Plateforme de gestion des commandes d’impression 3D, de la disponibilité des imprimantes, de la planification et du suivi d’avancement.',
         'descriptionEn' => 'Platform for managing 3D printing orders, printer availability, scheduling and progress tracking.',
         'tags' => ['PHP', 'MySQL', 'MariaDB', 'JavaScript'],
-        'url' => 'https://github.com/MentalOfCrow/projet-fablab',
         'featured' => false,
     ],
     [
@@ -41,7 +38,6 @@ $projects = [
         'descriptionFr' => 'Jeu de dames international avec authentification, matchmaking, mode contre une IA, plateau interactif et suivi des parties.',
         'descriptionEn' => 'International checkers game with authentication, matchmaking, AI mode, interactive board and game tracking.',
         'tags' => ['PHP', 'MySQL', 'JavaScript', 'Canvas'],
-        'url' => 'https://github.com/MentalOfCrow/Projet-UI-Developement',
         'featured' => false,
     ],
     [
@@ -52,7 +48,6 @@ $projects = [
         'descriptionFr' => 'Projet Go autour d’une API musicale, avec requêtes HTTP, OAuth, récupération d’albums et affichage de détails de pistes.',
         'descriptionEn' => 'Go project built around a music API with HTTP requests, OAuth, album retrieval and track-detail rendering.',
         'tags' => ['Go', 'Gin', 'OAuth 2.0', 'API REST'],
-        'url' => 'https://github.com/MentalOfCrow/API-TP-SPOTIFY1',
         'featured' => false,
     ],
     [
@@ -63,7 +58,6 @@ $projects = [
         'descriptionFr' => 'Jeu de course versus à deux joueurs conçu sous Unity pour une borne d’arcade, avec obstacles et progression en temps limité.',
         'descriptionEn' => 'Two-player versus runner built in Unity for an arcade cabinet, with obstacles and time-based progression.',
         'tags' => ['Unity', 'C#', '3D', 'Arcade'],
-        'url' => 'https://github.com/MentalOfCrow/YJamesRun',
         'featured' => false,
     ],
 ];
@@ -93,10 +87,10 @@ $projects = [
         <div class="shell project-grid">
             <?php foreach ($projects as $index => $project): ?>
                 <article class="project-card<?= $project['featured'] ? ' project-featured' : '' ?>" data-reveal>
-                    <a class="project-media" href="<?= escape($project['url']) ?>" target="_blank" rel="noopener noreferrer" aria-label="<?= escape($project['name']) ?> — GitHub">
+                    <div class="project-media">
                         <img src="/assets/images/projects/<?= escape($project['image']) ?>" width="1280" height="720" loading="lazy" alt="<?= escape($project['altFr']) ?>">
                         <span class="project-number"><?= str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT) ?></span>
-                    </a>
+                    </div>
                     <div class="project-content">
                         <div class="project-title-row"><h2><?= escape($project['name']) ?></h2><span class="project-visibility"><span lang="fr">Public</span><span lang="en">Public</span></span></div>
                         <p lang="fr"><?= escape($project['descriptionFr']) ?></p>
@@ -104,14 +98,17 @@ $projects = [
                         <ul class="inline-tags" aria-label="Technologies">
                             <?php foreach ($project['tags'] as $tag): ?><li><?= escape($tag) ?></li><?php endforeach; ?>
                         </ul>
-                        <a class="text-link" href="<?= escape($project['url']) ?>" target="_blank" rel="noopener noreferrer"><span lang="fr">Voir le code</span><span lang="en">View code</span> <span aria-hidden="true">↗</span></a>
+                        <div class="project-actions">
+                            <button class="button button-primary" type="button" data-copy="ramenmakidaki" data-copy-label="Discord copié">Discord · ramenmakidaki</button>
+                            <a class="button button-secondary" href="https://github.com/MentalOfCrow" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                        </div>
                     </div>
                 </article>
             <?php endforeach; ?>
 
             <article class="project-card project-featured project-future" data-reveal>
                 <div class="project-media">
-                    <img src="/assets/images/projects/future-cyber-mobile.webp" width="1280" height="720" loading="lazy" alt="Téléphone protégé par un bouclier numérique">
+                    <img src="/assets/images/projects/future-cyber-mobile-v2.webp" width="1280" height="720" loading="lazy" alt="Application mobile confidentielle représentée par un parcours de décisions et de sécurité">
                     <span class="project-number">07</span>
                 </div>
                 <div class="project-content">
@@ -120,6 +117,10 @@ $projects = [
                     <p lang="en">A mobile application in cybersecurity. A new project is coming soon; I cannot share more details yet.</p>
                     <ul class="inline-tags"><li>Flutter</li><li>Dart</li><li>Android</li></ul>
                     <span class="text-link text-link-muted"><span lang="fr">Lien Play Store bientôt</span><span lang="en">Play Store link coming soon</span></span>
+                    <div class="project-actions">
+                        <button class="button button-primary" type="button" data-copy="ramenmakidaki" data-copy-label="Discord copié">Discord · ramenmakidaki</button>
+                        <a class="button button-secondary" href="https://github.com/MentalOfCrow" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
                 </div>
             </article>
         </div>

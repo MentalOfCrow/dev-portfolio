@@ -43,9 +43,9 @@
 
                 <section>
                     <span class="eyebrow">03 · <span lang="fr">Étape suivante</span><span lang="en">Next step</span></span>
-                    <h2>Aéroport Marseille Provence · 2026—2028</h2>
-                    <p lang="fr">Début du parcours le 1er septembre 2026, en parallèle de ma quatrième année et de la poursuite de ma spécialisation.</p>
-                    <p lang="en">The program begins on September 1, 2026 alongside my fourth year and continued specialization.</p>
+                    <h2><span lang="fr">Chef de projet intégration système</span><span lang="en">Systems integration project manager</span></h2>
+                    <p lang="fr">Aéroport Marseille Provence · du 1er septembre 2026 à 2028, en parallèle de ma quatrième année.</p>
+                    <p lang="en">Marseille Provence Airport · from September 1, 2026 to 2028, alongside my fourth year.</p>
                 </section>
             </div>
         </div>

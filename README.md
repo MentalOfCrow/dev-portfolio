@@ -42,7 +42,7 @@ La même validation est exécutée dans GitHub Actions avant fusion.
 - Les CV français et anglais restent téléchargeables dans `assets/cv/`.
 - Les anciens rapports de stage et visuels ne font plus partie du dépôt publié.
 - Le compteur de dépôts GitHub est un instantané daté, sans jeton ni appel API côté client.
-- Les informations de contact publiques sont l’e-mail professionnel, GitHub, LinkedIn et le nom d’utilisateur Discord `ramenmakidaki`.
+- Les informations de contact publiques sont l’e-mail professionnel, GitHub, LinkedIn, DEV Community et le nom d’utilisateur Discord `ramenmakidaki`.
 
 ## Déploiement Hostinger
 
